@@ -9,3 +9,14 @@ D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\bin\Debug\NiveshMitra.DAL.dll
 D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\bin\Debug\NiveshMitra.Common.pdb
 D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\bin\Debug\NiveshMitra.DAL.pdb
 D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\obj\Debug\NiveshMi.B4D85529.Up2Date
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\bin\Debug\NiveshMitra.BAL.dll
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\bin\Debug\NiveshMitra.BAL.pdb
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\bin\Debug\NiveshMitra.Common.dll
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\bin\Debug\NiveshMitra.DAL.dll
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\bin\Debug\NiveshMitra.Common.pdb
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\bin\Debug\NiveshMitra.DAL.pdb
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.csproj.AssemblyReference.cache
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.csproj.CoreCompileInputs.cache
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMi.B4D85529.Up2Date
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.dll
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.pdb

@@ -4,16 +4,427 @@
 
 <html>
 <head runat="server">
-    <title>New File</title>
+    <title>Nivesh Mitra V3.0</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/logo/favicon.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="../css2?family=Sofia&display=swap" rel="stylesheet">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/animate.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/vendor/fontawesome-pro.css"> 
+    <link rel="stylesheet" href="assets/css/vendor/spacing.css">
+    <link rel="stylesheet" href="assets/css/vendor/custom-font.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
     <form id="form1" runat="server">
+
+        <!-- preloader start -->
+<div id="preloader">
+    <div class="preloader-close">x</div>
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child sk-bounce3"></div>
+    </div>
+</div>
+<!-- preloader start -->
+
+<!-- Backtotop start -->
+<div class="backtotop-wrap cursor-pointer">
+    <svg class="backtotop-circle svg-content" width="100%" height="100%" viewbox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"></path>
+    </svg>
+</div>
+<!-- Backtotop end -->
+
+<!-- Offcanvas area start -->
+<div class="fix">
+    <div class="offcanvas__area">
+        <div class="offcanvas__wrapper">
+            <div class="offcanvas__content">
+                <div class="offcanvas__top d-flex justify-content-between align-items-center">
+                    <div class="offcanvas__logo">
+                        <a href="index.html">
+                            <img src="assets/imgs/logo/offcanvas-logo.png" alt="logo not found">
+                        </a>
+                    </div>
+                    <div class="offcanvas__close">
+                        <button class="offcanvas-close-icon animation--flip">
+                                <span class="offcanvas-m-lines">
+                              <span class="offcanvas-m-line line--1"></span><span class="offcanvas-m-line line--2"></span><span class="offcanvas-m-line line--3"></span>
+                                </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="mobile-menu fix"></div>
+                <div class="offcanvas__social">
+                    <h3 class="offcanvas__title mb-20">Subscribe & Follow</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href="https://youtube.com/"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="offcanvas__overlay"></div>
+<div class="offcanvas__overlay-white"></div>
+<!-- Offcanvas area start -->
+
+<!-- Header area start -->
+<header>
+    <div id="header-sticky" class="header header-4">
+        <div class="header-4__top-bar">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="header-4__top-inner">
+                            <h6 class="discount"><span>Limited Offer:</span> Join Today And Receive 15 Off With Promo Code Seken10 <img src="assets/imgs/icon/header-top-4-icon.png" alt="img not found"></h6>
+                            <div class="header-4__top-inner-social">
+                                <div class="header-4__top-inner-social-link">
+                                    <a href="contact.html">Contact</a>
+                                    <div class="lan-select">
+                                        <form>
+                                            <select id="nice">
+                                                <option>English</option>
+                                                <option>China</option>
+                                                <option>Bangla</option>
+                                                <option>Hindi</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                                <ul class="social">
+                                    <li class="facebook"><a class="rr-btn" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="instagram"><a class="rr-btn" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                                    <li class="linkedin"><a class="rr-btn" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                    <li class="pinterest"><a class="rr-btn" href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-4__top-bar-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-between align-items-center">
+                        <div class="header__left">
+                            <div class="header__logo">
+                                <a href="index.html">
+                                    <div class="logo">
+                                        <img src="assets/imgs/logo1.png" alt="logo not found" style="width: 280%;">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__right">
+                            <div class="header__logo">
+                                <a href="index.html">
+                                    <div class="logo">
+                                        <img src="assets/imgs/logor.png" alt="logo not found" style="width: 80% !important;margin-top: -7px;z-index: -1;">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                            </div>
+                            </div>
+                            </div>
+                            </div>
+
+        <div class="container-fluid">
+            <div class="mega__menu-wrapper header-4__wrapper p-relative">
+                <div class="header__main header2__main header-4__main">
+                    
+                    <div class="header__middle header-4__middle">
+                        <div class="mean__menu-wrapper d-none d-xl-block">
+                            <div class="main-menu main-menu-2  main-menu-4">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="active">
+                                            <a href="Home.aspx">Home</a>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="aboutus.aspx">About UP</a>
+                                            <ul class="submenu">
+                                                <li><a href="index.html">Ai Co Pilot</a></li>
+                                                <li><a href="index-2.html">3D image Generator</a></li>
+                                                <li><a href="index-3.html">Chatbot</a></li>
+                                                <li class="active"><a href="index-4.html">Ai Shop</a></li>
+                                                <li><a href="index-5.html">Ai Text Generator</a></li>
+                                                <li><a href="index-6.html">Text Video</a></li>
+                                                <li><a href="index-7.html">Ai Digital Agency</a></li>
+                                                <li><a href="index-8.html">Ai Saas</a></li>
+                                                <li><a href="index-9.html">Ai Dall E</a></li>
+                                                <li><a href="index-10.html">Ai Voice Generator</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="about-us.html">Investor Assistance</a>
+                                        </li>
+                                        <li class="has-dropdown ">
+                                            <a href="javascript:void(0)">Pages</a>
+                                            <ul class="submenu">
+                                                <li><a href="team.html">team</a></li>
+                                                <li><a href="team-details.html">team-details</a></li>
+                                                <li><a href="project.html">project</a></li>
+                                                <li><a href="project-details.html">project Details</a></li>
+                                                <li><a href="testimonial.html">testimonial</a></li>
+                                                <li><a href="pricing.html">pricing</a></li>
+                                                <li><a href="faq.html">faq</a></li>
+                                                <li><a href="blog.html">blog</a></li>
+                                                <li><a href="blog-list.html">blog list</a></li>
+                                                <li><a href="blog-details.html">blog details</a></li>
+                                                <li><a href="404.html">404 Page</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="service.html">Feedback</a>
+                                            <ul class="submenu">
+                                                <li><a href="service.html">Service</a></li>
+                                                <li><a href="service-details.html">Service Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="blog.html">Media</a>
+                                            <ul class="submenu">
+                                                <li><a href="shop.html">shop</a></li>
+                                                <li><a href="shop-details.html">shop-details</a></li>
+                                                <li><a href="cart.html">cart</a></li>
+                                                <li><a href="wishlist.html">wishlist</a></li>
+                                                <li><a href="checkout.html">checkout</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="contact.html">Information</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__right header-4__right">
+                        <div class="header__action header-4__action d-flex align-items-center">
+                            <!-- <div class="search-form">
+                                <form action="#" class="rr-search-form">
+                                    <input class="search-control" type="email" name="email" placeholder="Search...">
+                                    <input type="hidden" name="action" value="mailchimpsubscribe">
+                                    <button class="icon"><i class="fa-sharp fa-regular fa-magnifying-glass"></i></button>
+                                    <div class="clearfix"></div>
+                                </form>
+                            </div> -->
+                            
+                            <div class="header__btn-wrap header-4__btn d-none d-sm-inline-flex">
+                                <a href="Login.aspx" class="rr-btn">Login <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                            <div class="header__btn-wrap header-4__btn d-none d-sm-inline-flex">
+                                <a href="Register.aspx" class="rr-btn">Register <i class="fa-solid fa-angle-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="popup-search-box">
+    <div class="box-inner-wrap d-flex align-items-center">
+        <%--<form id="form" action="#" method="get" role="search">
+            <input id="popup-search" type="text" name="s" placeholder="Type keywords here...">
+        </form>--%>
+        <div class="search-close"><i class="fa-sharp fa-regular fa-xmark"></i></div>
+    </div>
+</div>
+<!-- Header area end -->
+
+        <div id="smooth-wrapper">
+    <div id="smooth-content">
+        <main>
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+            </main>
+        
+        <!-- Footer area start -->
+        <footer>
+            <section class="footer-2 raisin-black footer-4 overflow-hidden p-relative z-1 pt-115">
+                <div class="footer-2__shapes">
+                    <div class="footer-2__shapes-shape-1 footer-2__shapes-shape-1-1 upDown">
+                        <img src="assets/imgs/shapes/footer-shape-2.png" alt="img not found">
+                    </div>
+                    <div class="footer-2__shapes-shape-2 footer-2__shapes-shape-2-2 rightLeft">
+                        <img src="assets/imgs/shapes/footer-shape-3.png" alt="img not found">
+                    </div>
+                    <div class="footer-2__shapes-shape-3 footer-2__shapes-shape-3-3 upDown-top">
+                        <img src="assets/imgs/shapes/footer-2-bg-shape.png" alt="img not found">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row footer-2__wrap p-relative">
+                        <div class="col-xl-4 col-lg-3 col-md-6">
+                            <div class="footer-2__widget">
+                                <div class="footer-2__logo mb-30">
+                                    <a href="index.html">
+                                        <img src="assets/imgs/logo/logo.png" alt="logo not found">
+                                    </a>
+                                </div>
+                                <div class="footer-2__content">
+                                    <p class="dec">Morbi pharetra, eros sed euismod <br> pellentesque, nulla risus lobortis purus, quis <br> maximus.</p>
+                                </div>
+                                <div class="footer-2__widget mt-30">
+                                    <div class="footer-2__subscribe">
+                                        <div class="footer-2-form">
+                                            <form action="#" class="rr-subscribe-form">
+                                                <input class="form-control form-control-1" type="email" name="email" placeholder="Enter your email">
+                                                <input type="hidden" name="action" value="mailchimpsubscribe">
+                                                <button class="submit submit-1"><i class="fa-regular fa-arrow-right"></i></button>
+                                                <div class="clearfix"></div>
+                                                <input type="checkbox" class="form-check-input form-check-input-1" id="agree">
+                                                <label class="form-check-label" for="agree">I agree to the <a href="#">Privacy Policy.</a></label>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="footer-2__widget footer-4__widget-2th-left">
+                                <div class="footer-2__widget-title mb-25 mb-md-10 mb-sm-10 mb-xs-10">
+                                    <h4 class="mt-md-0">Services</h4>
+                                </div>
+                                <div class="footer-2__link">
+                                    <ul>
+                                        <li><a href="about-us.html">Mindly Sensitivo</a></li>
+                                        <li><a href="faq.html">Visionize Emotivo</a></li>
+                                        <li><a href="service-details.html">Intelligensia Botify</a></li>
+                                        <li><a href="service.html">Cybermind Deep Quest</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="footer-2__widget footer-4__widget-3th-left">
+                                <div class="footer-2__widget-title mb-25 mb-md-10 mb-sm-10 mb-xs-10">
+                                    <h4>Useful Links</h4>
+                                </div>
+                                <div class="footer-2__link">
+                                    <ul>
+                                        <li><a href="about-us.html">Software Corner</a></li>
+                                        <li><a href="faq.html">Application Center</a> </li>
+                                        <li><a href="service-details.html">Research Section</a></li>
+                                        <li><a href="service.html">Developning Corner</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+                            <div class="footer-2__widget footer-4__widget footer-4__widget-4th-left">
+                                <div class="footer-2__widget-title mb-35 mb-md-20 mb-sm-20 mb-xs-20">
+                                    <h4>Contact Us</h4>
+                                </div>
+                                <div class="footer-4__contact">
+                                    <h6 class="footer-4__contact-link"><i class="fa-sharp fa-solid fa-location-dot"></i><a href="https://www.google.com/maps">New York</a></h6>
+                                    <h6 class="footer-4__contact-link"><i class="fa-sharp fa-solid fa-phone"></i><a href="tel:1237775643">(123) 777 - 5643</a></h6>
+                                    <h6 class="footer-4__contact-link"><i class="fa-sharp fa-solid fa-envelope"></i><a href="mailto:example@gmail.com">example@gmail.com</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-2__bottom-wrapper">
+                    <div class="container">
+                        <div class="footer-2__bottom">
+                            <div class="footer-2__copyright">
+                                <p>© 2024 All Rights Reserved by<a href="http://rrdevs.net">RRDevs</a></p>
+                            </div>
+                            <div class="footer-2__copyright-menu">
+                                <ul>
+                                    <li><a href="team-details.html">Privacy Policy</a></li> 
+                                    <li><a href="about-us.html">Term of Service</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <!-- Footer area end -->
+    </div>
+ </div>
+
+<div id="scroll-percentage"><span id="scroll-percentage-value"></span></div>
+        <!-- JS here -->
+<script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+<script src="assets/js/vendor/chroma.min.js"></script>
+<script src="assets/js/plugins/waypoints.min.js"></script>
+<script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script src="assets/js/plugins/meanmenu.min.js"></script>
+<script src="assets/js/plugins/swiper.min.js"></script>
+<script src="assets/js/plugins/gsap.js"></script>
+<script src="assets/js/plugins/ScrollSmoother.js"></script>
+<script src="assets/js/plugins/ScrollToPlugin.js"></script>
+<script src="assets/js/plugins/ScrollTrigger.js"></script>
+<script src="assets/js/plugins/SplitText.js"></script>
+<script src="assets/js/plugins/wow.js"></script>
+<script src="assets/js/vendor/magnific-popup.min.js"></script>
+<script src="assets/js/vendor/type.js"></script>
+<script src="assets/js/vendor/vanilla-tilt.js"></script>
+<script src="assets/js/plugins/nice-select.min.js"></script>
+<script src="assets/js/vendor/odometer.min.js"></script>
+<script src="assets/js/vendor/jquery-ui.min.js"></script>
+<script src="assets/js/plugins/parallax-scroll.js"></script>
+<script src="assets/js/plugins/jquery.countdown.min.js"></script>
+<script src="assets/js/plugins/isotope-docs.min.js"></script>
+<script src="assets/js/vendor/ajax-form.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 2500,   // Time between slides (in ms)
+    disableOnInteraction: false, // Keeps autoplay working after user interaction
+  },
+});
+
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 5,
+  spaceBetween: 20,
+  breakpoints: {
+    1024: {
+      slidesPerView: 5,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    480: {
+      slidesPerView: 2,
+    }
+  }
+});
+</script>
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     </form>
 </body>
 </html>

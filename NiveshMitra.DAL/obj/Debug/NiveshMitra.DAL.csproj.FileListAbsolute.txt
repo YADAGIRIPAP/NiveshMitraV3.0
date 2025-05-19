@@ -7,3 +7,12 @@ D:\PROJECTS\NiveshMitra\NiveshMitra.DAL\obj\Debug\NiveshMitra.DAL.pdb
 D:\PROJECTS\NiveshMitra\NiveshMitra.DAL\bin\Debug\NiveshMitra.Common.dll
 D:\PROJECTS\NiveshMitra\NiveshMitra.DAL\bin\Debug\NiveshMitra.Common.pdb
 D:\PROJECTS\NiveshMitra\NiveshMitra.DAL\obj\Debug\NiveshMi.B4D87EA7.Up2Date
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\bin\Debug\NiveshMitra.DAL.dll
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\bin\Debug\NiveshMitra.DAL.pdb
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\bin\Debug\NiveshMitra.Common.dll
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\bin\Debug\NiveshMitra.Common.pdb
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMitra.DAL.csproj.AssemblyReference.cache
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMitra.DAL.csproj.CoreCompileInputs.cache
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMi.B4D87EA7.Up2Date
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMitra.DAL.dll
+D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMitra.DAL.pdb
