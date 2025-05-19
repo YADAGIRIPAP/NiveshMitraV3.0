@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login Page-New</title>
+    <title>Login Page</title>
     <link rel="stylesheet" href="assets/css/main.css"/>
 
     <style>
