@@ -1,0 +1,6 @@
+D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\bin\Debug\NiveshMitra.BAL.dll
+D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\bin\Debug\NiveshMitra.BAL.pdb
+D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.csproj.AssemblyReference.cache
+D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.csproj.CoreCompileInputs.cache
+D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.dll
+D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.pdb

@@ -1,0 +1,6 @@
+D:\PROJECTS\NiveshMitra\NiveshMitra.Common\bin\Debug\NiveshMitra.Common.dll
+D:\PROJECTS\NiveshMitra\NiveshMitra.Common\bin\Debug\NiveshMitra.Common.pdb
+D:\PROJECTS\NiveshMitra\NiveshMitra.Common\obj\Debug\NiveshMitra.Common.csproj.AssemblyReference.cache
+D:\PROJECTS\NiveshMitra\NiveshMitra.Common\obj\Debug\NiveshMitra.Common.csproj.CoreCompileInputs.cache
+D:\PROJECTS\NiveshMitra\NiveshMitra.Common\obj\Debug\NiveshMitra.Common.dll
+D:\PROJECTS\NiveshMitra\NiveshMitra.Common\obj\Debug\NiveshMitra.Common.pdb
