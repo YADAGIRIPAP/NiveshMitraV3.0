@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>f6089b5a-a4f0-4826-a2c6-fffe1271a03a</ProjectGuid>
+    <ProjectGuid>{F6089B5A-A4F0-4826-A2C6-FFFE1271A03A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NiveshMitra.BAL</RootNamespace>
@@ -31,24 +31,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CFEBAL\CFEBAL.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="CommonBAL\MasterBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NiveshMitra.Common\NiveshMitra.Common.csproj">
+      <Project>{70a2509a-dfde-4b17-afe0-2ed7b82f994e}</Project>
+      <Name>NiveshMitra.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NiveshMitra.DAL\NiveshMitra.DAL.csproj">
+      <Project>{6322ce0d-c60b-4295-a792-8e95de469861}</Project>
+      <Name>NiveshMitra.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
