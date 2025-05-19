@@ -70,19 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
@@ -140,7 +132,7 @@
               "RelativeDocumentMoniker": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
               "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
               "RelativeToolTip": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
-              "ViewState": "AgIAADEHAAAAAAAAAAAmwEUHAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAYHAAAAAAAAAAAIwBQHAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-19T09:55:00.335Z",
               "EditorCaption": ""
@@ -192,8 +184,7 @@
               "RelativeToolTip": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-19T08:56:11.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T08:56:11.849Z"
             },
             {
               "$type": "Document",
@@ -229,8 +220,7 @@
               "RelativeToolTip": "NiveshMitra\\User\\User.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-19T08:55:25.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T08:55:25.766Z"
             },
             {
               "$type": "Document",
