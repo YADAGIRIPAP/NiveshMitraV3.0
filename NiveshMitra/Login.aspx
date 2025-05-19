@@ -4,8 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="assets/css/main.css">
+    <title>Login Page-New</title>
+    <link rel="stylesheet" href="assets/css/main.css"/>
 
     <style>
         button[type="submit"] {
