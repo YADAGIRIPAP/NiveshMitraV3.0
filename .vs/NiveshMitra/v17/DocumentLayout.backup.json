@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\CMS Projects\\InvestUp\\workingcode\\",
+  "WorkspaceRootPath": "D:\\PROJECTS\\NiveshMitra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\cms projects\\investup\\workingcode\\niveshmitra\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\home.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\outer.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\outer.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\user\\cfe\\cfequestionnaire.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\cfe\\cfequestionnaire.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\user\\cfe\\cfequestionnaire.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\cfe\\cfequestionnaire.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,23 +26,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CFEQuestionnaire.aspx.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
+              "RelativeDocumentMoniker": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
+              "RelativeToolTip": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
+              "ViewState": "AgIAADUHAAAAAAAAAAAqwEkHAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T12:39:09.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CFEQuestionnaire.aspx",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx",
+              "RelativeDocumentMoniker": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx",
+              "RelativeToolTip": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-19T12:39:02.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Outer.Master",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Outer.Master",
+              "RelativeDocumentMoniker": "NiveshMitra\\Outer.Master",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Outer.Master",
+              "RelativeToolTip": "NiveshMitra\\Outer.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-19T12:29:35.831Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Home.aspx",
-              "DocumentMoniker": "D:\\CMS Projects\\InvestUp\\workingcode\\NiveshMitra\\Home.aspx",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Home.aspx",
               "RelativeDocumentMoniker": "NiveshMitra\\Home.aspx",
-              "ToolTip": "D:\\CMS Projects\\InvestUp\\workingcode\\NiveshMitra\\Home.aspx",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Home.aspx",
               "RelativeToolTip": "NiveshMitra\\Home.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-19T12:58:23.694Z",
+              "WhenOpened": "2025-05-19T12:27:47.334Z",
               "EditorCaption": ""
             },
             {
