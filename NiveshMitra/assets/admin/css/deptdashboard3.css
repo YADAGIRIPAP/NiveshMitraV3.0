@@ -1,0 +1,92 @@
+﻿.text {
+    color: #efefef;
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.count {
+    color: #2c3340;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-weight: 900;
+    font-size: 22px;
+    text-shadow: 1px 2px 3px #ccc;
+}
+
+section#dashboardcount3 .card {
+    width: 99%;
+    height: 128%;
+}
+
+    section#dashboardcount3 .card.\31 {
+        background: url(../../../assets/admin/img/card1.png) !important;
+        background-size: cover !important;
+        background-position: left;
+    }
+
+    section#dashboardcount3 .card.\32 {
+        background: url(../../../assets/admin/img/card2.png) !important;
+        background-size: cover !important;
+        background-position: left;
+    }
+
+    section#dashboardcount3 .card.\33 {
+        background: url(../../../assets/admin/img/card3.png) !important;
+        background-size: cover !important;
+        background-position: left;
+    }
+
+    section#dashboardcount3 .card.\34 {
+        background: url(../../../assets/admin/img/card5.png) !important;
+        background-size: cover !important;
+        background-position: left;
+    }
+
+section#dashboardcount3 .iocn i.fi {
+    opacity: 0.5;
+    top: 23%;
+    right: 25%;
+    transition: all 0.9s ease-in-out 0s;
+    font-weight: 100;
+}
+
+section#dashboardcount4 .card {
+    width: 99%;
+    height: 128%;
+}
+
+    section#dashboardcount4 .card.\31 {
+        background: url(../../../assets/admin/img/card1.png) !important;
+        background-size: cover !important;
+        background-position: left;
+    }
+
+    section#dashboardcount4 .card.\32 {
+        background: url(../../../assets/admin/img/card2.png) !important;
+        background-size: cover !important;
+        background-position: left;
+    }
+
+    section#dashboardcount4 .card.\33 {
+        background: url(../../../assets/admin/img/card3.png) !important;
+        background-size: cover !important;
+        background-position: left;
+    }
+
+    section#dashboardcount4 .card.\34 {
+        background: url(../../../assets/admin/img/card5.png) !important;
+        background-size: cover !important;
+        background-position: left;
+    }
+
+section#dashboardcount4 .iocn i.fi {
+    opacity: 0.5;
+    top: 23%;
+    right: 25%;
+    transition: all 0.9s ease-in-out 0s;
+    font-weight: 100;
+}

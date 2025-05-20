@@ -46,6 +46,7 @@
     <Compile Include="Common.cs" />
     <Compile Include="MasterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SMSandMail.cs" />
     <Compile Include="UserInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

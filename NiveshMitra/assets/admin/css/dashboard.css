@@ -1,0 +1,486 @@
+
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+
+.card {
+border: 1px solid #fff;
+margin-bottom: 12px;
+box-shadow: 0px 0px 1px 1px #ccc;
+}
+
+
+
+span.badge.badge-light {
+    float: right;
+top: 47px;
+}
+
+
+
+
+.card-counter.primary.Reports {
+    background-image: linear-gradient(to right, #ca42e1 0%, #711481 51%, #610870 100%);
+}
+
+.modal-body button.btn.btn-primary {
+    
+    font-weight: 600;
+    padding: 6px 17px;
+    margin: 10px 20px;
+    min-height: 100px;
+    width: 80%;
+    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #000;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+}
+
+.modal-body button.btn.btn-primary:hover,div#apstatus button.btn.btn-primary:hover,div#ps button.btn.btn-primary:hover {
+    background-position: right center;
+    color: #000;
+    text-decoration: none;
+}
+.col-md-12.d-flex {
+padding: 0px 0px !important;
+}
+div#apstatus button.btn.btn-primary {
+font-weight: 600;
+padding: 6px 17px;
+    margin: 10px 20px;
+    min-height: 100px;
+    width: 80%;
+    background-image: linear-gradient(to right, #d4fc79 0%, #61dd72 51%, #d4fc79 100%);
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #000;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+}
+div#ps button.btn.btn-primary {
+font-weight: 600;
+padding: 6px 17px;
+    margin: 10px 20px;
+    min-height: 100px;
+    width: 80%;
+    background-image: linear-gradient(to right, #7986CB 0%, #3949AB 51%, var(--purple) 100%);
+    
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fff;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+}
+.btn.btn-primary {
+min-height: 108px !important;
+align-content: flex-start;
+flex-wrap: wrap;
+}
+div#pss button.btn.btn-primary{
+
+background-image:linear-gradient(to right, #FFA726 0%, #FFAB40 51%, var(--purple) 100%);
+color: #fff;
+}
+div#ais button.btn.btn-primary {
+background-image:linear-gradient(to right, #8D6E63 0%, #6D4C41 51%, var(--purple) 100%);
+color: #fff;
+}
+
+button.btn.btn-primary:hover {
+box-shadow: 5px 5px 8px #ccc;
+}
+/* dashboard cards css */
+.card-counter{
+box-shadow: 2px 2px 10px #DADADA;
+margin: 10px;
+padding: 24px 10px;
+background-color: #fff;
+height: 125px;
+border-radius: 11px;
+transition: .3s linear all;
+}
+
+.card-counter:hover{
+box-shadow: 4px 4px 20px #DADADA;
+transition: .3s linear all;
+}
+
+.card-counter.primary{
+background: linear-gradient(to bottom, #d23283, #771656);
+color: #FFF;
+}
+
+    .card-counter.primary.first {
+        background-image: linear-gradient(to right, #566deb 0%, #263192 51%, #05104c 100%);
+    }
+    .card-counter.danger.First {
+        background-image: linear-gradient(to right, #008080 0%, #3c9f9f 51%, #075252 100%);
+    }
+
+    .card-counter.primary {
+        background-image: linear-gradient(to right, #009245 0%, #085a28 51%, #008d42 100%);
+        margin: 10px;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        display: block;
+    }
+
+  .card-counter.primary:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 1px 2px 3px #ccc;
+  }
+ 
+
+ 
+  .card-counter.danger {
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .card-counter.danger:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 1px 2px 3px #ccc;
+  }
+ 
+
+
+ 
+.card-counter.success {
+    background-image: linear-gradient(to right, #24C6DC 0%, #514A9D  51%, #24C6DC  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+   
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .card-counter.success:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 1px 2px 3px #ccc;
+  }
+ 
+
+ 
+.card-counter.info {
+    background-image: linear-gradient(to right, #53a900 0%, #2c970d  51%, #ADD100  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .card-counter.info:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 1px 2px 3px #ccc;
+  }
+ 
+
+
+.card-counter i {
+opacity: 0.3;
+right: 36px;
+position: absolute;
+top: 30px;
+font-size: 4.5em;
+}
+
+.card-counter .count-numbers{
+position: absolute;
+left: 35px;
+top: 20px;
+font-size: 32px;
+display: block;
+}
+i.fa.fa-calendar-check-o {
+font-size: 4.5em;
+}
+
+.card-counter .count-name{
+position: absolute;
+left: 35px;
+top: 102px;
+font-style: normal;
+text-transform: capitalize;
+opacity: 0.7;
+display: block;
+font-size: 16px;
+}
+span.count-numbers {
+    font-family: 'Mada';
+    font-weight: 600;
+    text-shadow: 1px 2px 3px #333;
+    font-size: 23px !important;
+    text-transform: capitalize;
+    text-align: left;
+}
+.card-counter.primary img, .card-counter.danger img, .card-counter.success img {
+width: 28%;
+position: absolute;
+right: 38px;
+opacity: 0.5;
+}
+
+h4#myLargeModalLabel\ cfe {
+background: #F8FFE8;
+background: linear-gradient(to right, #02AAB0 0%, #106a5c 51%, #02AAB0 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+h4#myLargeModalLabel\ cfo{
+background: #F8FFE8;
+background: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.badge {
+font-size: 100%;
+font-weight: 600;
+}
+table th {
+    background: #3b4474 !important;
+    color: #fff;
+}
+
+section#dashboardcount\ ima {
+    background: #f8f9fa !important;
+}
+
+section#dashboardcount\ ima {
+    .info-box
+
+{
+    background: #fff !important;
+    color: #344767 !important;
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: rgba(0, 0, 0, .125);
+    --bs-card-border-radius: 1rem;
+    --bs-card-box-shadow: 0 20px 27px 0 rgba(0, 0, 0, .05);
+    --bs-card-inner-border-radius: 1rem;
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: #fff;
+    --bs-card-bg: #fff;
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    word-wrap: break-word;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+}
+
+i.fi {
+    opacity: 1 !important;
+    color: #fff !important;
+    font-size: 1.125rem !important;
+    font-weight: 900;
+    top: -12px;
+    right: 28px;
+}
+
+section#dashboardcount\ ima i.fi ::before {
+    margin-left: 60px;
+}
+
+.bg-gradient-primary {
+    background-image: linear-gradient(310deg, #7928ca, #ff0080);
+}
+
+.icon-shape {
+    width: 48px !important;
+    height: 48px !important;
+    background-position: 50%;
+    border-radius: .75rem;
+}
+
+.border-radius-md {
+    border-radius: .5rem;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.shadow {
+    box-shadow: 0 .3125rem .625rem 0 rgba(0, 0, 0, .12) !important;
+}
+
+.text-end {
+    text-align: right !important;
+}
+}
+
+.page-wrapper.tabs {
+    ul .nav.nav-tabs li.nav-item
+
+{
+    align-content: center;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+a#ContentPlaceHolder1_Link1 {
+    background: #dce775 !important;
+    padding: 10px 7px !important;
+    margin: 0px 6px;
+    color: #000 !important;
+    border-radius: 22px 0px !important;
+    font-weight: 500;
+}
+a#ContentPlaceHolder1_Link2 {
+    background: #aed581 !important;
+    padding: 10px 7px !important;
+    margin: 0px 6px;
+    color: #000 !important;
+    border-radius: 22px 0px !important;
+    font-weight: 500;
+}
+
+a#ContentPlaceHolder1_Link3 {
+    background: #4db6ac !important;
+    padding: 10px 7px !important;
+    margin: 0px 6px;
+    color: #000 !important;
+    border-radius: 22px 0px !important;
+    font-weight: 500;
+}
+a#ContentPlaceHolder1_Link4 {
+    background: #81baf7 !important;
+    padding: 10px 7px !important;
+    margin: 0px 6px;
+    color: #000 !important;
+    border-radius: 22px 0px !important;
+    font-weight: 500;
+}
+
+a#ContentPlaceHolder1_Link1:active {
+    background: #e8ebff;
+    padding: 10px 8px;
+}
+
+a#ContentPlaceHolder1_Link2:active {
+    background: #e8ebff;
+    padding: 10px 8px;
+}
+div#basictab1 {
+    border: 1px solid #004c6d;
+}
+
+div#basictab2 {
+    border: 1px solid #0067b7;
+}
+
+div#basictab3 {
+    border: 1px solid #007aff;
+}
+div#basictab4 {
+    border: 1px solid #81baf7;
+}
+
+span.icon {
+    position: absolute;
+    top: 70px;
+    color: #dce775;
+    left: 6.2%;
+}
+
+span.icon2 {
+    position: absolute;
+    top: 70px;
+    color: #aed581;
+    left: 22.6%;
+}
+
+span.icon3 {
+    position: absolute;
+    top: 70px;
+    color: #4db6ac;
+    left: 56% !important;
+}
+span.icon4 {
+    position: absolute;
+    top: 70px;
+    color: #81baf7;
+    right: 11% !important;
+}
+
+i.fi {
+    font-size: 30px;
+}
+}
+.page-wrapper.tabs.cfequestionnaire {
+    span.icon
+{
+    left: 8%;
+}
+span.icon3 {
+    left: 37% !important;
+}
+}
+.page-wrapper.tabs.cfequestionnaire.cfo {
+    span .icon{
+    left: 7%;
+}
+
+span.icon {
+    top: 72px;
+    left: 7%;
+}
+span.icon2 {
+    top: 74px;
+    left: 21%;
+}
+span.icon3 {
+    top: 74px;
+}
+}

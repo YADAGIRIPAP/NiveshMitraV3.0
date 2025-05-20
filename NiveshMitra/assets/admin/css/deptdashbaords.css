@@ -1,0 +1,345 @@
+﻿
+@import url('https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+.box {
+    padding: 3px;
+    border: 1px solid #673AB7;
+    border-radius: 8px;
+}
+
+.col-lg-2.col-md-2.col-sm-6.col-xs-12 {
+    max-width: 20% !important;
+    min-width: 20% !important;
+}
+
+.card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+    background: #f0f2f5 !important;
+    border: 1px solid #ccc !important;
+}
+
+.card-header:first-child {
+    border-radius: var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius) 0 0;
+}
+
+.border-radius-xl {
+    border-radius: .75rem;
+}
+
+.icon-lg {
+    width: 64px;
+    height: 64px;
+}
+
+.icon-shape {
+    width: 48px;
+    height: 48px;
+    background-position: 50%;
+    border-radius: .5rem;
+}
+
+.card-header h4 {
+    color: #344767 !important;
+    font-weight: 900;
+    font-size: 1.5rem !important;
+    /*margin-top: -19px;
+    margin-bottom: 17px !important;*/
+}
+
+.card-header.p-3.pt-2 {
+    display: flow;
+}
+
+.bg-gradient-dark {
+    background-image: linear-gradient(195deg, #414195, #13237c);
+}
+.bg-gradient-orange {
+    background-image: linear-gradient(195deg, #f35625b5, #FF5722);
+}
+
+.bg-gradient-wait {
+    background-image: linear-gradient(195deg, #FF5722, #F44336);
+}
+
+.shadow-dark {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(64, 64, 64, .4) !important;
+}
+
+.bg-gradient-primary {
+    background-image: linear-gradient(195deg, #ec407a, #d81b60);
+}
+
+.bg-gradient-success {
+    background-image: linear-gradient(195deg, #66bb6a, #43a047);
+}
+
+.bg-gradient-purpule {
+    background-image: linear-gradient(195deg, #7b4a83, #680978);
+}
+
+.bg-gradient-info {
+    background-image: linear-gradient(195deg, #49a3f1, #1a73e8);
+}
+
+.shadow-primary {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(233, 30, 99, .4) !important;
+}
+
+.shadow-dark {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(64, 64, 64, .4) !important;
+}
+
+.shadow-success {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(76, 175, 80, .4) !important;
+}
+
+.shadow-info {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, .14), 0 7px 10px -5px rgba(0, 188, 212, .4) !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+    top: 4px;
+}
+
+.icon {
+    fill: currentColor;
+    stroke: none;
+}
+
+.text-end {
+    text-align: right !important;
+}
+
+.text-sm {
+    font-size: .875rem !important;
+}
+
+.text-capitalize {
+    text-transform: capitalize !important;
+}
+
+hr.horizontal.dark {
+    background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, .4), transparent);
+    margin: 30px;
+    border-top: 1px solid #ddd;
+}
+
+.card-footer:last-child {
+    border-radius: 0 0 var(--bs-card-inner-border-radius) var(--bs-card-inner-border-radius);
+    padding: 1.5rem;
+    background-color: transparent;
+}
+
+.font-weight-bolder {
+    font-weight: 700 !important;
+}
+
+.icon-lg i {
+    top: 31%;
+    font-size: 1.5rem;
+}
+.page-wrapper.deptcfeodeptdashboard i.fi {
+    color: #fff;
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    transition: all 0.9s ease-in-out 0s;
+}
+.page-wrapper.cfodeptdashboard i.fi {
+    color: #fff;
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    transition: all 0.9s ease-in-out 0s;
+}
+
+.page-wrapper.deptcfeodeptdashboard .card:hover {
+    i .fi
+
+{
+    /* transition: transform 1s cubic-bezier(0.1, 0.2, 0.3, 0.4); */
+    transform: rotateY(360deg);
+}
+
+}
+.material-icons {
+    font-family: Material Icons Round;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "liga";
+}
+
+.card {
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-border-width: 0;
+    --bs-card-border-color: rgba(0,0,0,.125);
+    --bs-card-border-radius: 0.75rem;
+    --bs-card-box-shadow: 0 4px 6px -1px rgba(0,0,0,.1), 0 2px 4px -1px rgba(0,0,0,.06);
+    --bs-card-inner-border-radius: 0.75rem;
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: #fff;
+    --bs-card-bg: #fff;
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+}
+
+.card-header {
+    padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);
+    margin-bottom: 0;
+    color: var(--bs-card-cap-color);
+    background-color: var(--bs-card-cap-bg);
+    border-bottom: var(--bs-card-border-width) solid var(--bs-card-border-color);
+}
+
+section#dashboardcount1 {
+    padding: 32px 0px 0px;
+}
+
+.card-footer.p-3 {
+    background: #fff;
+}
+
+.card-footer.p-3 {
+    background: #fff;
+    padding: 8px 12px !important;
+    border: none !important;
+    font-weight: 500;
+}
+
+.card-header.p-3.pt-2 {
+    display: flow;
+    padding: 0px 16px 8px !important;
+}
+
+.card-header {
+    padding-bottom: 14px !important;
+}
+
+.page-wrapper.cfeuserapplstatus.icons i.fi {
+    opacity: 1;
+    top: 23%;
+    right: 11px;
+    transition: all 0.9s ease-in-out 0s;
+    color: #fff !important;
+}
+
+section#dashboardcount1 .card {
+    border: none !important;
+    padding-bottom: 2px !important;
+    *height: 170px;
+    background:#fff !important;
+}
+.card a {
+    color: #343a40;
+}
+    section#dashboardcount1 .card:hover {
+        i.fi{
+    /*transition: transform 1s cubic-bezier(0.1, 0.2, 0.3, 0.4) ;*/
+    //transition: transform 1s ease-in-out;
+    transform: rotateY(360deg);
+}
+
+.icon {
+    
+    border: 1.5px dotted #093a4c;
+}
+}
+section#dashboardcount2 .card:hover {
+    i.fi
+
+{
+    transform: rotateY(360deg);
+}
+
+.icon {
+    
+    border: 1.5px dotted #093a4c;
+}
+
+}
+section#dashboardcount2 .card {
+    border: none !important;
+    padding-bottom: 2px !important;
+    *height: 170px;
+    background: #fff !important;
+}
+section#dashboardcount2 {
+    padding: 32px 0px 0px;
+}
+
+
+    section#dashboardcount3 .card:hover {
+        i .fi
+
+{
+    transform: rotateY(360deg);
+}
+
+.icon {
+    border: 1.5px dotted #093a4c;
+}
+
+}
+
+section#dashboardcount3 .card {
+    border: none !important;
+    padding-bottom: 2px !important;
+    *height: 170px;
+    background: #fff !important;
+}
+
+section#dashboardcount3 {
+    padding: 32px 0px 0px;
+}
+
+.page-wrapper.cfeuserapplstatus .card h3 {
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 3px;
+    margin-bottom: -10px;
+    font-weight: 600;
+    color: #0b3654;
+}
+
+.page-wrapper.cfeuserapplstatus i.fi {
+    top: 19% !important;
+    position: absolute;
+}
+
+.page-wrapper.cfeuserapplstatus .card .card-header {
+    border-bottom: none !important;
+}
+
+.card.grievance i.fi {
+    color: #fff;
+    line-height: 54px;
+}

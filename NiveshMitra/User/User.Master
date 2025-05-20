@@ -2,18 +2,444 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
+
 <head runat="server">
-    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Invest Meghalaya - Dashboard</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <link rel="shortcut icon" type="image/x-icon" href="..assets/admin/images/favicon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/admin/css/bootstrap.min.css">
+
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="../assets/admin/css/font-awesome.min.css">
+
+    <!-- Feathericon CSS -->
+    <link rel="stylesheet" href="../assets/admin/css/feathericon.min.css">
+
+    <link rel="stylesheet" href="../assets/admin/plugins/morris/morris.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/admin/css/style.css">
+    <link rel="stylesheet" href="../assets/admin/css/menustyle.css">
+    <link rel="stylesheet" href="../assets/admin/css/dashboard.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <style>
+                .VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
+    display: none !important;
+}
+               iframe#\:2\.container {
+    display: none;
+}
+
+        body.VIpgJd-ZVi9od-ORHb {
+   display:none !important;
+}
+        img.goog-te-gadget-icon {
+            display: none;
+        }
+
+        div#\:0\.targetLanguage {
+    border-radius: 6px;
+    margin-top: -1px;
+    border-color: #b1b1b1;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 0;
+    padding: 4px 9px;
+}
+
+        body {
+            top: 0px !important;
+        }
+
+        .translate.d-flex.mt-1.rounded a span {
+            color: #192d66 !important;
+            font-weight: 600;
+        }
+
+        body.VIpgJd-ZVi9od-ORHb {
+            display: none;
+        }
+        div#google_translate_element {
+    margin-top: 8px;
+}
+        body.khasi {
+  font-size: 16px;
+        a.nav-link {
+   
+    font-size: 12px !important;
+}
+                  
+                   
+                   }
+                           div#google_translate_element {
+    margin-top: 8px;
+        position: fixed;
+        right: 34em;
+        top: 4px;
+        z-index: 9999;
+}
+    </style>
+    <style>
+        table#ContentPlaceHolder1_rblLbrAct1970 tr td,
+        table#ContentPlaceHolder1_rblLbrAct1979 tr td,
+        table#ContentPlaceHolder1_rblLbrAct1996 tr td,
+        table#ContentPlaceHolder1_rblLabourAct tr td,
+        table#ContentPlaceHolder1_rblForContr1970 tr td {
+            border: none;
+        }
+
+        .card-counter.primarydashboard {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: capitalize;
+            transition: 0.5s;
+            background-size: 100% auto !important;
+            color: #FAFAFA;
+            box-shadow: 0px 2px 0px #ccc;
+            display: block;
+            background: url(assets/img/opendashboard.gif);
+            background-position: center;
+        }
+
+            .card-counter.primarydashboard:hover {
+                box-shadow: 10px 12px 0px #ccc;
+            }
+
+        a.logo input#imgLogo {
+            width: 60%;
+            margin-top: 1px;
+        }
+
+        ul.navbar-nav i.fi {
+            position: absolute;
+            top: 14px;
+            margin-left: -18px;
+        }
+
+        i.fi.fi-br-house-chimney-user, i.fi.fi-br-source-document {
+            background: #fff;
+            padding: 9px 9px 3px;
+            margin: 2px;
+            color: #0b3654;
+            border-radius: 4px;
+            *box-shadow: 2px 3px 5px 3px #fbfbfb40;
+            box-shadow: 3px 3px #6c6c6cb8;
+        }
+
+        i.fi.fi-br-source-document {
+            background: #a7d1ff;
+        }
+
+        ul.navbar-nav li:hover {
+            background: #ffffff2b;
+            padding: 0px 0px 0px 0px;
+        }
+
+        i.fi.fi-br-lock {
+            margin-right: 10px;
+        }
+    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+        <div class="main-wrapper">
+            <!-- Header -->
+            <div class="header">
+                <!-- Logo -->
+                <div class="header-left">
+                    <a href="#" class="logo">
+                        <asp:ImageButton runat="server" ID="imgLogo" ImageUrl="~/assets/assetsnew/images/Logo.png" />
+                    </a>
+
+                </div>
+                              
+               
+                
+                <div class="language dropdownn" id="google_translate_element"></div>
+                <!-- /Logo -->
+                <!-- Mobile Menu Toggle -->
+                <a class="mobile_btn" id="mobile_btn">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <!-- /Mobile Menu Toggle -->
+
+                <!-- Header Right Menu -->
+                <%--<p style="display: contents;margin-top: 26px !important;line-height: 60px;color: #190966;
+font-style: italic;font-weight: bold;">"State Single<br /> Window System for<br /> Business Approvals"</p>--%>
+                <ul class="nav user-menu">
+
+                    <!-- Notifications -->
+                    <li id="datetime">
+
+                        <body onload="startTime()">
+
+                            <div id="txt" class="mt-3"></div>
+
+                        </body>
+                    </li>
+
+                    <li class="ml-4 mt-3 mr-2"><i class="fi fi-br-headset"></i>&nbsp;Help Line No : <b>+91 7085741695</b></li>
+                    <!-- /Notifications -->
+
+                    <!-- User Menu -->
+                    <li class="nav-item dropdown has-arrow">
+                        <a class="dropdown-toggle nav-link" data-toggle="dropdown">
+                            <span class="user-img">
+
+                                <%--<asp:ImageButton runat="server" ImageUrl="~/assets/admin/img/profiles/avatar-01.jpg" Width="31" CssClass="rounded-circle" />--%>
+                                <i class="fi fi-br-user" style="color: #000;"></i>
+                                <asp:Label class="text-dark mb-3" ID="lblUser" runat="server"></asp:Label>&nbsp;&nbsp;
+                            </span>
+
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="user-header">
+
+                                <div class="user-text">
+
+                                    <p class="text-muted mb-0">
+                                        Last Login:<br />
+                                        <b>
+                                            <label id="lbltime" runat="server"></label>
+                                        </b>
+                                    </p>
+                                    <hr />
+                                    <p class="text-muted mb-0">
+                                        <label id="lblusername" runat="server"></label>
+                                    </p>
+                                </div>
+                            </div>
+                            <asp:LinkButton ID="linkChngPswd" runat="server" class="dropdown-item"><i class="fi fi-br-lock"></i> Change Password</asp:LinkButton>
+
+                            <%--<a class="dropdown-item" href="ChangePassword.aspx"></i>Change Password</a>--%>
+                            <asp:LinkButton ID="linklogout" runat="server" class="dropdown-item"><i class="fi fi-br-sign-out-alt"></i> Logout</asp:LinkButton>
+                        </div>
+                    </li>
+                    <!-- /User Menu -->
+
+                </ul>
+                <!-- /Header Right Menu -->
+
+            </div>
+            <!-- /Header -->
+
+            <!-- Sidebar -->
+            <div class="mainmenu" style="margin-top: 60px; background: #0b3654;">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="display: flex !important; justify-content: space-between;">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="linkuserdshbrd" runat="server" class="nav-link"><i class="fi fi-br-dashboard"></i> Dashboard </asp:LinkButton>
+                                </li>
+                              <%--  <li class="nav-item">
+                                    <asp:LinkButton ID="linkIndReg" runat="server" OnClick="linkIndReg_Click" class="nav-link"><i class="fi fi-br-industry-alt"></i> Industry Registration </asp:LinkButton>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="linkland" runat="server" class="nav-link" OnClick="linkland_Click"><i class="fi fi-br-land-layer-location"></i> Land Allotment </asp:LinkButton>
+                                </li>--%>
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="linkCFEDashbrd" runat="server" class="nav-link"><i class="fi fi-br-form"></i> Pre-Establishment </asp:LinkButton>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="LinkCFODashBoard" runat="server" class="nav-link"><i class="fi fi-br-operation"></i> Pre-Operational </asp:LinkButton>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="linkINC" runat="server" class="nav-link"><i class="fi fi-br-tools"></i> Incentives </asp:LinkButton>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:LinkButton ID="LinkRENDashBoard" runat="server" class="nav-link"><i class="fi fi-br-function-process"></i> Renewals </asp:LinkButton>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fi fi-br-person-circle-question"></i>Grievance
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <asp:LinkButton ID="lnkGrievance" runat="server" class="dropdown-item">Register Grievance<span class="sr-only">(current)</span></asp:LinkButton>
+                                        <asp:LinkButton ID="lnkGrvStatus" runat="server" class="dropdown-item">Grievance Status<span class="sr-only">(current)</span></asp:LinkButton>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fi fi-br-person-circle-question"></i>Other Services
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <asp:LinkButton ID="lnkServices" runat="server" class="dropdown-item">Other Services<span class="sr-only">(current)</span></asp:LinkButton>
+                                        <asp:LinkButton ID="SRVCAnnualReturns" runat="server" class="dropdown-item">Annual Returns<span class="sr-only">(current)</span></asp:LinkButton>
+                                        <asp:LinkButton ID="lnkCentralRep" runat="server" class="dropdown-item">Central Repository<span class="sr-only">(current)</span></asp:LinkButton> 
+                                        <asp:LinkButton ID="lnkCompliance" runat="server" class="dropdown-item">Compliance Dashboard<span class="sr-only">(current)</span></asp:LinkButton>                                       
+                                        
+                                    </div>
+                                </li>
+                               
+    
+
+                            </ul>
+
+                            <ul style="list-style: none; margin-bottom: -3px !important; width: 8%; text-align: right; justify-content: right;" class="d-flex">
+                                <li class="nav-item">
+
+                                    <asp:LinkButton ID="LinkButton1" runat="server" class="nav-link" Style="margin-bottom: -3px !important;"><i class="fi fi-br-house-chimney-user" Title="Back to Home"></i> </asp:LinkButton>
+                                    <%--<a class="nav-link" href="#"></a>--%>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <asp:HiddenField ID="hdnUToken" runat="server" Value="" />
         </div>
+        <!-- /Main Wrapper -->
+
+        <!-- jQuery -->
+        <script src="../../assets/admin/js/jquery-T.T.O.min.js"></script>
+
+        <!-- Bootstrap Core JS -->
+        <script src="../../assets/admin/js/popper.min.js"></script>
+        <script src="../../assets/admin/js/bootstrap.min.js"></script>
+
+        <!-- Slimscroll JS -->
+        <script src="../../assets/admin/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <script src="../../assets/admin/plugins/raphael/raphael.min.js"></script>
+        <script src="../../assets/admin/plugins/morris/morris.min.js"></script>
+        <script src="../../assets/admin/js/chart.morris.js"></script>
+
+        <!-- Custom JS -->
+        <script src="../../assets/admin/js/script.js"></script>
+        <script>
+            function startTime() {
+                var today = new Date();
+                var day = today.getDate();
+                var month = 1 + today.getMonth();
+                var year = today.getFullYear();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML = "Date: " + day + "/" + month + "/" + year + " " + ": " + h + ":" + m + ":" + s;
+                var t = setTimeout(function () { startTime() }, 500);
+            }
+
+            function checkTime(i) {
+                if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"> </script>
+        <script>
+
+            $(".datepicker").datepicker({
+                format: "dd-mm-yyyy",
+            });
+
+            //$('.datepicker').datepicker('setDate', new Date());
+
+        </script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('input[type="text"], textarea').forEach(function (input) {
+                    input.setAttribute('autocomplete', 'off')
+                    input.addEventListener('keypress', preventInvalidChars)
+                    input.addEventListener('paste', function (e) {
+                        e.preventDefault();
+                    });
+                });
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('input[type="text"]').forEach(function (input) {
+                    input.addEventListener('keypress', preventInvalidChars)
+                    input.setAttribute('autocomplete', 'off')
+                    input.addEventListener('paste', function (e) {
+                        e.preventDefault();
+                    });
+                });
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                // Apply to input[type="text"], textarea, and input[type="password"]
+                document.querySelectorAll('input[type="text"], textarea, input[type="password"]').forEach(function (input) {
+                    input.setAttribute('autocomplete', 'off'); // Disable autocomplete
+                    input.addEventListener('keypress', preventInvalidChars); // Prevent invalid characters
+                    input.addEventListener('paste', function (e) {
+                        e.preventDefault(); // Disable paste
+                    });
+                });
+            });
+            function preventInvalidChars(event) {
+                var charCode = event.charCode || event.keyCode;
+                var charStr = String.fromCharCode(charCode);
+
+                // Check if the character is < or >
+                if (charStr === '<' || charStr === '>') {
+                    event.preventDefault();
+                }
+            }
+            function disablePasteForAll() {
+                // Disable copy-paste for all textboxes across the page
+                $('input[type="text"]').on('paste', function (e) {
+                    e.preventDefault();
+                });
+            }
+
+            window.onbeforeunload = function () {
+                // Programmatically click the logout button when the page is unloaded
+                document.getElementById('<% =linklogout.ClientID %>').click();
+
+            };
+        </script>
+                  <script type="text/javascript">
+                      function googleTranslateElementInit() {
+                          new google.translate.TranslateElement({
+                              //pageLanguage: 'en',
+                              includedLanguages: 'kha,en', // Include Khasi (kha) as a target language
+                              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                          }, 'google_translate_element');
+                      }
+
+                      // Load Google Translate script
+                      (function () {
+                          var gtScript = document.createElement('script');
+                          gtScript.type = 'text/javascript';
+                          gtScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                          document.body.appendChild(gtScript);
+                      })();
+
+                      // Adjust font size when language changes
+                      const observer = new MutationObserver(() => {
+                          const htmlLang = document.querySelector('html').getAttribute('lang');
+                          const body = document.body;
+
+                          if (htmlLang === 'kha') {
+                              body.classList.add('khasi'); // Apply decreased font size
+                          } else {
+                              body.classList.remove('khasi'); // Reset to default font size
+                          }
+                      });
+
+                      // Observe changes in the `lang` attribute of the <html> tag
+                      observer.observe(document.documentElement, {
+                          attributes: true,
+                          attributeFilter: ['lang'],
+                      });
+                  </script>
     </form>
 </body>
 </html>
