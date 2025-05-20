@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="CFEDAL\CFEDAL.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="CommonDAL\LoginDAL.cs" />
     <Compile Include="CommonDAL\MasterDAL.cs" />
+    <Compile Include="MGCommonDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper.cs" />
   </ItemGroup>

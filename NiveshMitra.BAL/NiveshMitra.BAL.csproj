@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="CFEBAL\CFEBAL.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="CommonBAL\LoginBAL.cs" />
     <Compile Include="CommonBAL\MasterBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

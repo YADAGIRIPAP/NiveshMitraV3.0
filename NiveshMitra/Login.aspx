@@ -5,8 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login Page</title>
-    <link rel="stylesheet" href="assets/css/main.css"/>
-
+    <link rel="stylesheet" href="assets/css/main.css" />
     <style>
         button[type="submit"] {
     width: 100%;
@@ -223,73 +222,156 @@ a {
     margin-bottom: 12px;
 }
                 </style>
+    <script type="text/javascript">       
+
+        function Generate() {
+            var pass;
+            var passObj = $("#<%= txtPswrd.ClientID%>").val();
+            if (passObj != "") {
+                var x = (Math.random() * 1973);
+                $("input[id*='asp_hidden']").val(x);
+                asp_hiddenVal = $("input[id*='asp_hidden']").val();
+                pass = MD5(passObj + asp_hiddenVal);
+                $("#<%= txtPswrd.ClientID%>").val(pass);
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        function ResetBorderColor() {
+            var txtUsername = document.getElementById('<%= txtUsername.ClientID %>');
+
+            if (txtUsername.value.trim() != '') {
+                txtUsername.style.borderColor = '1px solid #767575b5';
+            }
+
+        }
+        function BorderColor() {
+            var txtPswrd = document.getElementById('<%= txtPswrd.ClientID %>');
+
+            if (txtPswrd.value.trim() != '') {
+                txtPswrd.style.borderColor = '1px solid #767575b5';
+            }
+        }
+        function BorderCaptchaColor() {
+            var txtcaptcha = document.getElementById('<%= txtcaptcha.ClientID %>');
+
+            if (txtcaptcha.value.trim() != '') {
+                txtcaptcha.style.borderColor = '1px solid #767575b5';
+            }
+        }
+
+    </script>
 </head>
 <body class="login-page">
     <form id="form1" runat="server">
         <div class="login-box">
-  <!-- /.login-logo -->
-  <div class="card card-outline card-primary mt-4">
-    <div class="card-header text-center">
-          <div class="logo_sec">
-                <img src="assets/imgs/logo1.png" alt="logo.png" class="">
-              </div>
-    </div>
-    <div class="card-body">
-      <p class="login-box-msg">Welcome! Access Your Dashboard.</p>
+            <!-- /.login-logo -->
+            <div class="card card-outline card-primary mt-4">
+                <div class="card-header text-center">
+                    <div class="logo_sec">
+                        <img src="assets/imgs/logo1.png" alt="logo.png" class="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <table style="width: 100%">
+                        <tr>
+                            <td>
+                                <div id="success" runat="server" visible="false" class="alert alert-success m-0" align="Center">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Success!</strong>
+                                    <asp:Label ID="lblmsg" runat="server"></asp:Label>
+                                </div>
+                                <div id="Failure" runat="server" visible="false" class="alert alert-danger m-0" align="Center">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> <strong>Warning!</strong>
+                                    <asp:Label ID="lblmsg0" runat="server"></asp:Label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card-body">
+                    <p class="login-box-msg">Welcome! Access Your Dashboard.</p>
 
-      
-        <div class="input-group mb-3">
-          <select class="contact__input1">
-            <option selected disabled>Choose your User</option>
-            <option value="1">Entrepreneur</option>
-            <option value="2">Admin</option>
-          </select>
-          
 
-        </div>
-        <div class="input-group">
-            <div class="contact__input">
- <input type="text" placeholder="Login ID (PAN No)"/>
- </div>
-          
-        </div>
-        <div class="input-group">
-         <div class="contact__input">
-          <input type="password" placeholder="Your Password"/>
-          </div>
-        </div>
-        <div class="captcha-container">
-            
-          <img src="assets/imgs/captch.jpg" alt="CAPTCHA" class="captcha-image" style=" width: 55%;border-radius: 5px;margin-right: 14px;">
-          <button type="button" onclick="generateCaptcha()">↻</button>
-          <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA"/>
-        </div>
-        
-       
-        <div class="row">
-          
-          <!-- /.col -->
-          <div class="col-12">
-            <a href="Quesstionniare_cfe.html" class="rr-btn mt-35">Login</a>
-          </div>
-          <!-- /.col -->
-        </div>
-    
+                    <%--   <div class="input-group mb-3">
+                        <select class="contact__input1">
+                            <option selected disabled>Choose your User</option>
+                            <option value="1">Entrepreneur</option>
+                            <option value="2">Admin</option>
+                        </select>                      
 
-   
-      <!-- /.social-auth-links -->
-<div class="wrapper_footer">
-      
-      <p class="mb-0 mt-4  text-center fnt_sb_14">
-        <a href="Register.aspx" class="text-center"> Don’t have an account?
-            <span class="text_highlighted"> Register</span> </a>
-      </p>
-    </div>
-    </div>
-    <!-- /.card-body -->
-  </div>
-  <!-- /.card -->
-</div>
+                    </div>--%>
+
+                    <div class="input-group mb-3">
+                        <asp:DropDownList ID="ddlUserType" runat="server" CssClass="contact__input1">
+                            <asp:ListItem Text="Choose your User" Value="" Disabled="true" Selected="true" />
+                            <asp:ListItem Text="Entrepreneur" Value="1" />
+                            <asp:ListItem Text="Admin" Value="2" />
+                        </asp:DropDownList>
+
+                    </div>
+
+
+                    <div class="input-group">
+                        <div class="contact__input">
+                            <%-- <input type="text" placeholder="Login ID (PAN No)" />--%>
+                            <asp:TextBox ID="txtUsername" runat="server" CssClass="contact__input1" placeholder="Login ID (PAN No)" TabIndex="1"></asp:TextBox>
+                        </div>
+
+                    </div>
+                    <div class="input-group">
+                        <div class="contact__input">
+                            <%--<input type="password" placeholder="Your Password" />--%>
+                            <asp:TextBox ID="txtPswrd" runat="server" CssClass="contact__input1" placeholder="Your Password" onblur="return Generate();" TabIndex="1" TextMode="Password"></asp:TextBox>
+
+                        </div>
+                    </div>
+                    <div class="captcha-container">
+
+                        <%--<img src="assets/imgs/captch.jpg" alt="CAPTCHA" class="captcha-image" style="width: 55%; border-radius: 5px; margin-right: 14px;">
+                        <button type="button" onclick="generateCaptcha()">↻</button>
+                        <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA" />--%>
+
+                        <asp:Image ID="imgCaptcha" runat="server" class="captcha-image" Style="width: 55%; border-radius: 5px; margin-right: 14px;" />
+                        <asp:Button ID="btnRefresh" runat="server" AlternateText="Refresh" OnClick="btnRefresh_Click" ImageUrl="assets/imgs/Refresh.jpg" Height="35px" Width="40px" />
+                        <asp:TextBox ID="txtcaptcha" runat="server" CssClass="form-control w-50" Placeholder="Enter CAPTCHA" />
+
+                    </div>
+                    <%-- ImageUrl="~/GenerateCaptcha.aspx"--%>
+
+
+                    <div class="row">
+
+                        <!-- /.col -->
+                        <%-- <div class="col-12">
+                            <a href="Quesstionniare_cfe.html" class="rr-btn mt-35">Login</a>
+                            <%--  <asp:Button runat="server" ID="btnLogint" Text="Login" class="rr-btn mt-35" />--%>
+                        <%--</div>--%>
+                        <div class="col-12">
+                            <%--<asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="rr-btn mt-35" />--%>
+                            <asp:Button runat="server" ID="btnLogin" OnClick="btnLogin_Click" Text="Login" class="rr-btn mt-35" />
+                        </div>
+
+                        <!-- /.col -->
+                    </div>
+
+
+
+                    <!-- /.social-auth-links -->
+                    <div class="wrapper_footer">
+                        <asp:HiddenField runat="server" ID="asp_hidden" />
+                        <p class="mb-0 mt-4  text-center fnt_sb_14">
+                            <a href="Register.aspx" class="text-center">Don’t have an account?
+           
+                                <span class="text_highlighted">Register</span> </a>
+                        </p>
+                    </div>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
     </form>
 </body>
 </html>
