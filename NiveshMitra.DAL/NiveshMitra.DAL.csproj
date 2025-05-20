@@ -50,6 +50,7 @@
     <Compile Include="MGCommonDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlHelper.cs" />
+    <Compile Include="UserRegDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NiveshMitra.Common\NiveshMitra.Common.csproj">

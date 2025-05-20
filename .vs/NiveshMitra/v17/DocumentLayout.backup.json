@@ -3,88 +3,68 @@
   "WorkspaceRootPath": "D:\\PROJECTS\\NiveshMitra\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F6089B5A-A4F0-4826-A2C6-FFFE1271A03A}|NiveshMitra.BAL\\NiveshMitra.BAL.csproj|d:\\projects\\niveshmitra\\niveshmitra.bal\\commonbal\\loginbal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6089B5A-A4F0-4826-A2C6-FFFE1271A03A}|NiveshMitra.BAL\\NiveshMitra.BAL.csproj|solutionrelative:niveshmitra.bal\\commonbal\\loginbal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\user\\cfe\\cfequestionnaire.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\cfe\\cfequestionnaire.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A2509A-DFDE-4B17-AFE0-2ED7B82F994E}|NiveshMitra.Common\\NiveshMitra.Common.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra.common\\smsandmail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A2509A-DFDE-4B17-AFE0-2ED7B82F994E}|NiveshMitra.Common\\NiveshMitra.Common.csproj|solutionrelative:niveshmitra.common\\smsandmail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70A2509A-DFDE-4B17-AFE0-2ED7B82F994E}|NiveshMitra.Common\\NiveshMitra.Common.csproj|d:\\projects\\niveshmitra\\niveshmitra.common\\cfecommon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A2509A-DFDE-4B17-AFE0-2ED7B82F994E}|NiveshMitra.Common\\NiveshMitra.Common.csproj|solutionrelative:niveshmitra.common\\cfecommon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|d:\\projects\\niveshmitra\\niveshmitra.dal\\cfedal\\cfedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|solutionrelative:niveshmitra.dal\\cfedal\\cfedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6089B5A-A4F0-4826-A2C6-FFFE1271A03A}|NiveshMitra.BAL\\NiveshMitra.BAL.csproj|d:\\projects\\niveshmitra\\niveshmitra.bal\\cfebal\\cfebal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6089B5A-A4F0-4826-A2C6-FFFE1271A03A}|NiveshMitra.BAL\\NiveshMitra.BAL.csproj|solutionrelative:niveshmitra.bal\\cfebal\\cfebal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\user\\cfe\\cfeuserdashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\cfe\\cfeuserdashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\user\\user.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\user.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:NiveshMitra\\Login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\user\\cfe\\cfeuserdashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\cfe\\cfeuserdashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|d:\\projects\\niveshmitra\\niveshmitra.dal\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|solutionrelative:niveshmitra.dal\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|d:\\projects\\niveshmitra\\niveshmitra\\common\\mgcommonclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\common\\mgcommonclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\MGCommonDAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|solutionrelative:NiveshMitra.DAL\\MGCommonDAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{70A2509A-DFDE-4B17-AFE0-2ED7B82F994E}|NiveshMitra.Common\\NiveshMitra.Common.csproj|d:\\projects\\niveshmitra\\niveshmitra.common\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{70A2509A-DFDE-4B17-AFE0-2ED7B82F994E}|NiveshMitra.Common\\NiveshMitra.Common.csproj|solutionrelative:niveshmitra.common\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:NiveshMitra\\User\\MainDashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\user\\maindashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\maindashboard.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:NiveshMitra\\Web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra.dal\\mgcommondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|solutionrelative:niveshmitra.dal\\mgcommondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|solutionrelative:NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\CaptchaHandler.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:NiveshMitra\\CaptchaHandler.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{70A2509A-DFDE-4B17-AFE0-2ED7B82F994E}|NiveshMitra.Common\\NiveshMitra.Common.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra.common\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{70A2509A-DFDE-4B17-AFE0-2ED7B82F994E}|NiveshMitra.Common\\NiveshMitra.Common.csproj|solutionrelative:niveshmitra.common\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6089B5A-A4F0-4826-A2C6-FFFE1271A03A}|NiveshMitra.BAL\\NiveshMitra.BAL.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6089B5A-A4F0-4826-A2C6-FFFE1271A03A}|NiveshMitra.BAL\\NiveshMitra.BAL.csproj|solutionrelative:NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\CaptchaHandler.ashx||{DAB1E6DB-4119-49A3-ACE3-0FE8F3E0669F}",
-      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:NiveshMitra\\CaptchaHandler.ashx||{DAB1E6DB-4119-49A3-ACE3-0FE8F3E0669F}"
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\user\\cfe\\cfequestionnaire.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\cfe\\cfequestionnaire.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\user\\user.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\user.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\user\\maindashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\user\\maindashboard.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra.dal\\commondal\\logindal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6322CE0D-C60B-4295-A792-8E95DE469861}|NiveshMitra.DAL\\NiveshMitra.DAL.csproj|solutionrelative:niveshmitra.dal\\commondal\\logindal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\captchahandler.ashx||{DAB1E6DB-4119-49A3-ACE3-0FE8F3E0669F}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\captchahandler.ashx||{DAB1E6DB-4119-49A3-ACE3-0FE8F3E0669F}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|D:\\PROJECTS\\NiveshMitra\\niveshmitra\\captchahandler.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BE9CDBF-EBB2-47E1-ABF8-B37336A12DFD}|NiveshMitra\\NiveshMitra.csproj|solutionrelative:niveshmitra\\captchahandler.ashx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -94,115 +74,129 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.Master",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\User.Master",
-              "RelativeDocumentMoniker": "NiveshMitra\\User\\User.Master",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\User.Master",
-              "RelativeToolTip": "NiveshMitra\\User\\User.Master",
+              "DocumentIndex": 0,
+              "Title": "LoginBAL.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs",
+              "RelativeDocumentMoniker": "NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs",
+              "RelativeToolTip": "NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wBYAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:25:00.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Register.aspx",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Register.aspx",
+              "RelativeDocumentMoniker": "NiveshMitra\\Register.aspx",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Register.aspx",
+              "RelativeToolTip": "NiveshMitra\\Register.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-20T11:44:05.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CFEDAL.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\CFEDAL\\CFEDAL.cs",
-              "RelativeDocumentMoniker": "NiveshMitra.DAL\\CFEDAL\\CFEDAL.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\CFEDAL\\CFEDAL.cs",
-              "RelativeToolTip": "NiveshMitra.DAL\\CFEDAL\\CFEDAL.cs",
-              "ViewState": "AgIAAEsBAAAAAAAAAAD4v1sBAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:31:22.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SqlHelper.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\SqlHelper.cs",
-              "RelativeDocumentMoniker": "NiveshMitra.DAL\\SqlHelper.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\SqlHelper.cs",
-              "RelativeToolTip": "NiveshMitra.DAL\\SqlHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:31:19.921Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MGCommonClass.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Common\\MGCommonClass.cs",
-              "RelativeDocumentMoniker": "NiveshMitra\\Common\\MGCommonClass.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Common\\MGCommonClass.cs",
-              "RelativeToolTip": "NiveshMitra\\Common\\MGCommonClass.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAiwFoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:29:23.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Common.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.Common\\Common.cs",
-              "RelativeDocumentMoniker": "NiveshMitra.Common\\Common.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.Common\\Common.cs",
-              "RelativeToolTip": "NiveshMitra.Common\\Common.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:24:48.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CFEUserDashboard.aspx.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEUserDashboard.aspx.cs",
-              "RelativeDocumentMoniker": "NiveshMitra\\User\\CFE\\CFEUserDashboard.aspx.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEUserDashboard.aspx.cs",
-              "RelativeToolTip": "NiveshMitra\\User\\CFE\\CFEUserDashboard.aspx.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAMwFEAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:23:46.484Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T09:09:27.154Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "CFEUserDashboard.aspx",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEUserDashboard.aspx",
-              "RelativeDocumentMoniker": "NiveshMitra\\User\\CFE\\CFEUserDashboard.aspx",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEUserDashboard.aspx",
-              "RelativeToolTip": "NiveshMitra\\User\\CFE\\CFEUserDashboard.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-20T11:20:05.985Z",
+              "Title": "Web.config",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Web.config",
+              "RelativeDocumentMoniker": "NiveshMitra\\Web.config",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Web.config",
+              "RelativeToolTip": "NiveshMitra\\Web.config",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwBYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-20T11:14:27.301Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "SMSandMail.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.Common\\SMSandMail.cs",
+              "RelativeDocumentMoniker": "NiveshMitra.Common\\SMSandMail.cs",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.Common\\SMSandMail.cs",
+              "RelativeToolTip": "NiveshMitra.Common\\SMSandMail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T10:22:56.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Register.aspx.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Register.aspx.cs",
+              "RelativeDocumentMoniker": "NiveshMitra\\Register.aspx.cs",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Register.aspx.cs",
+              "RelativeToolTip": "NiveshMitra\\Register.aspx.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAQwFgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T09:30:04.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserInfo.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.Common\\UserInfo.cs",
+              "RelativeDocumentMoniker": "NiveshMitra.Common\\UserInfo.cs",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.Common\\UserInfo.cs",
+              "RelativeToolTip": "NiveshMitra.Common\\UserInfo.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAA4wCsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:26:48.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Login.aspx.cs",
               "RelativeDocumentMoniker": "NiveshMitra\\Login.aspx.cs",
               "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Login.aspx.cs",
               "RelativeToolTip": "NiveshMitra\\Login.aspx.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAqwPEAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAFwBAAAAAAAAAAAawGwBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T06:23:38.227Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T06:23:38.227Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
+              "Title": "MGCommonDAL.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\MGCommonDAL.cs",
+              "RelativeDocumentMoniker": "NiveshMitra.DAL\\MGCommonDAL.cs",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\MGCommonDAL.cs",
+              "RelativeToolTip": "NiveshMitra.DAL\\MGCommonDAL.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCwAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T08:14:29.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainDashboard.aspx.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx.cs",
+              "RelativeDocumentMoniker": "NiveshMitra\\User\\MainDashboard.aspx.cs",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx.cs",
+              "RelativeToolTip": "NiveshMitra\\User\\MainDashboard.aspx.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T08:07:23.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Login.aspx",
               "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Login.aspx",
               "RelativeDocumentMoniker": "NiveshMitra\\Login.aspx",
@@ -210,116 +204,23 @@
               "RelativeToolTip": "NiveshMitra\\Login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-19T13:03:07.345Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T13:03:07.345Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CFECommon.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.Common\\CFECommon.cs",
-              "RelativeDocumentMoniker": "NiveshMitra.Common\\CFECommon.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.Common\\CFECommon.cs",
-              "RelativeToolTip": "NiveshMitra.Common\\CFECommon.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAD4vxAAAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:31:52.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CFEBAL.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.BAL\\CFEBAL\\CFEBAL.cs",
-              "RelativeDocumentMoniker": "NiveshMitra.BAL\\CFEBAL\\CFEBAL.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.BAL\\CFEBAL\\CFEBAL.cs",
-              "RelativeToolTip": "NiveshMitra.BAL\\CFEBAL\\CFEBAL.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAtwCgAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:32:45.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CFEQuestionnaire.aspx.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
-              "RelativeDocumentMoniker": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
-              "RelativeToolTip": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAIAwwCkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T11:05:24.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MGCommonDAL.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\MGCommonDAL.cs",
-              "RelativeDocumentMoniker": "NiveshMitra.DAL\\MGCommonDAL.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\MGCommonDAL.cs",
-              "RelativeToolTip": "NiveshMitra.DAL\\MGCommonDAL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAwwDUAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T08:14:29.417Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MainDashboard.aspx.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx.cs",
-              "RelativeDocumentMoniker": "NiveshMitra\\User\\MainDashboard.aspx.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx.cs",
-              "RelativeToolTip": "NiveshMitra\\User\\MainDashboard.aspx.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCsAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T08:07:23.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MainDashboard.aspx",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx",
-              "RelativeDocumentMoniker": "NiveshMitra\\User\\MainDashboard.aspx",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx",
-              "RelativeToolTip": "NiveshMitra\\User\\MainDashboard.aspx",
+              "DocumentIndex": 11,
+              "Title": "User.Master",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\User.Master",
+              "RelativeDocumentMoniker": "NiveshMitra\\User\\User.Master",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\User.Master",
+              "RelativeToolTip": "NiveshMitra\\User\\User.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-20T08:05:06.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T09:11:14.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Web.config",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Web.config",
-              "RelativeDocumentMoniker": "NiveshMitra\\Web.config",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\Web.config",
-              "RelativeToolTip": "NiveshMitra\\Web.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-20T07:28:29.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginDAL.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs",
-              "RelativeDocumentMoniker": "NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs",
-              "RelativeToolTip": "NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAqwDAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T06:25:27.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "CFEQuestionnaire.aspx",
               "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx",
               "RelativeDocumentMoniker": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx",
@@ -327,12 +228,35 @@
               "RelativeToolTip": "NiveshMitra\\User\\CFE\\CFEQuestionnaire.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-05-19T12:39:02.773Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T12:39:02.773Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 13,
+              "Title": "LoginDAL.cs",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs",
+              "RelativeDocumentMoniker": "NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs",
+              "RelativeToolTip": "NiveshMitra.DAL\\CommonDAL\\LoginDAL.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAqwDAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T06:25:27.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainDashboard.aspx",
+              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx",
+              "RelativeDocumentMoniker": "NiveshMitra\\User\\MainDashboard.aspx",
+              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\User\\MainDashboard.aspx",
+              "RelativeToolTip": "NiveshMitra\\User\\MainDashboard.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-20T08:05:06.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "CaptchaHandler.ashx.cs",
               "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\CaptchaHandler.ashx.cs",
               "RelativeDocumentMoniker": "NiveshMitra\\CaptchaHandler.ashx.cs",
@@ -340,25 +264,11 @@
               "RelativeToolTip": "NiveshMitra\\CaptchaHandler.ashx.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAQwCgAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T06:38:09.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T06:38:09.828Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "LoginBAL.cs",
-              "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs",
-              "RelativeDocumentMoniker": "NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs",
-              "ToolTip": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs",
-              "RelativeToolTip": "NiveshMitra.BAL\\CommonBAL\\LoginBAL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T06:25:00.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 14,
               "Title": "CaptchaHandler.ashx",
               "DocumentMoniker": "D:\\PROJECTS\\NiveshMitra\\NiveshMitra\\CaptchaHandler.ashx",
               "RelativeDocumentMoniker": "NiveshMitra\\CaptchaHandler.ashx",
@@ -366,8 +276,7 @@
               "RelativeToolTip": "NiveshMitra\\CaptchaHandler.ashx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000192|",
-              "WhenOpened": "2025-05-20T06:38:49.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-20T06:38:49.079Z"
             }
           ]
         }

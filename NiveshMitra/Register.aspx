@@ -302,6 +302,11 @@
                                             <asp:TextBox ID="txtMobileNo" runat="server" placeholder="Please Enter Mobile No"></asp:TextBox>
                                         </div>
                                     </div>
+                                  <%--  <div class="col-sm-6 p-0-5-20">
+                                        <div class="contact__input">
+                                            <asp:TextBox ID="txtPswd" runat="server" placeholder="Please Enter Password" Visible="false"></asp:TextBox>
+                                        </div>
+                                    </div>--%>
                                     <div class="col-md-12 d-flex">
                                         <div class="col-md-12">
                                             <div class="captcha-container">
@@ -309,9 +314,9 @@
                                                 <button type="button" onclick="generateCaptcha()">↻</button>
                                                 <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA">--%>
 
-                                                <asp:Image ID="imgCaptcha" runat="server" class="captcha-image" Style="width: 55%; border-radius: 5px; margin-right: 14px;" />
-                                                <asp:Button ID="btnRefresh" runat="server" AlternateText="Refresh" OnClick="btnRefresh_Click" ImageUrl="assets/imgs/Refresh.jpg" Height="35px" Width="40px" />
-                                                <asp:TextBox ID="txtCaptcha" runat="server" CssClass="form-control w-50" Placeholder="Enter CAPTCHA" />
+                                                <asp:Image ID="imgCaptcha" runat="server" class="captcha-image" Style="width: 35%; border-radius: 5px; margin-right: 14px;" Height="35px" />
+                                                <asp:ImageButton ID="btnRefresh" runat="server" AlternateText="Refresh" OnClick="btnRefresh_Click" ImageUrl="assets/imgs/Refresh.jpg" Height="35px" Width="40px" />
+                                                <asp:TextBox ID="txtCaptcha" runat="server" CssClass="form-control w-50" Placeholder="Enter CAPTCHA" Height="35px" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
