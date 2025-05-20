@@ -214,12 +214,14 @@
         a {
             color: #17a2b8;
         }
+
         .contact__form-wrapper {
-    margin-top: 0px;
-}
+            margin-top: 0px;
+        }
+
         .contact__input {
-    margin-bottom: 12px;
-}
+            margin-bottom: 12px;
+        }
     </style>
 </head>
 <body class="login-page">
@@ -234,7 +236,25 @@
                 </div>
                 <div class="card-body">
                     <p class="login-box-msg">Entrepreneur Registration.</p>
-
+                    <div class="row" align="Center">
+                        <div class="col-md-12 ">
+                            <div id="success" runat="server" visible="false" class="alert alert-success alert-dismissible fade show" align="Center">
+                                <strong>Success!</strong><asp:Label ID="lblmsg" runat="server"></asp:Label>
+                                <asp:Label ID="Label1" runat="server"></asp:Label>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">×</span></button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 ">
+                            <div id="Failure" runat="server" visible="false" class="alert alert-danger alert-dismissible fade show" align="Center">
+                                <strong>Warning!</strong>
+                                <asp:Label ID="lblmsg0" runat="server"></asp:Label>
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
 
 
                     <div class="row">
@@ -243,54 +263,63 @@
                             <div class="contact__form-wrapper">
                                 <div class="col-sm-12">
                                     <div class="contact__input">
-                                        <input type="text" placeholder="Company/Enterprise Name" />
+                                        <%--<input type="text"  />--%>
+                                        <asp:TextBox ID="txtEnterPrice" runat="server" placeholder="Company/Enterprise Name"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="contact__input">
-                                            <input type="text" placeholder="Please Enter Pan Number" />
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6 p-0-5-20">
-                                        <div class="contact__input">
-                                            <input type="email" placeholder="Date of Incorporation" />
+                                            <%--    <input type="text" placeholder="Please Enter Pan Number" />--%>
+                                            <asp:TextBox ID="txtPan" runat="server" placeholder="Please Enter Pan Number"></asp:TextBox>
+
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="contact__input">
-                                            <input type="number" placeholder="Please Enter First Name" />
+                                            <%-- <input type="number" placeholder="Please Enter First Name" />--%>
+                                            <asp:TextBox ID="txtFirstName" runat="server" placeholder="Please Enter First Name"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 p-0-5-20">
                                         <div class="contact__input">
-                                            <input type="tel" placeholder="Please Enter Last Name" />
+                                            <%--  <input type="tel" placeholder="Please Enter Last Name" />--%>
+                                            <asp:TextBox ID="txtLastName" runat="server" placeholder="Please Enter Last Name"></asp:TextBox>
+
                                         </div>
                                     </div>
 
                                     <div class="col-sm-6">
                                         <div class="contact__input">
-                                            <input type="number" placeholder="Please Enter Email" />
+                                            <%--                                            <input type="number" placeholder="Please Enter Email" />--%>
+                                            <asp:TextBox ID="txtEmail" runat="server" placeholder="Please Enter Email"></asp:TextBox>
+
                                         </div>
                                     </div>
                                     <div class="col-sm-6 p-0-5-20">
                                         <div class="contact__input">
-                                            <input type="tel" placeholder="Please Enter Mobile No" />
+                                            <%-- <input type="tel" placeholder="Please Enter Mobile No" />--%>
+                                            <asp:TextBox ID="txtMobileNo" runat="server" placeholder="Please Enter Mobile No"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="col-md-12 d-flex">
                                         <div class="col-md-12">
                                             <div class="captcha-container">
-                                               <img src="assets/imgs/captch.jpg" alt="CAPTCHA" class="captcha-image" style=" width: 20%;border-radius: 5px;margin-right: 14px;">
+                                                <%--   <img src="assets/imgs/captch.jpg" alt="CAPTCHA" class="captcha-image" style="width: 20%; border-radius: 5px; margin-right: 14px;">
                                                 <button type="button" onclick="generateCaptcha()">↻</button>
-                                                <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA">
+                                                <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA">--%>
+
+                                                <asp:Image ID="imgCaptcha" runat="server" class="captcha-image" Style="width: 55%; border-radius: 5px; margin-right: 14px;" />
+                                                <asp:Button ID="btnRefresh" runat="server" AlternateText="Refresh" OnClick="btnRefresh_Click" ImageUrl="assets/imgs/Refresh.jpg" Height="35px" Width="40px" />
+                                                <asp:TextBox ID="txtCaptcha" runat="server" CssClass="form-control w-50" Placeholder="Enter CAPTCHA" />
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button type="submit" class="rr-btn mt-35" style="width:95%;">Submit now</button>
+                                        <%--  <button type="submit" class="rr-btn mt-35" style="width: 95%;">Submit now</button>--%>
+                                        <asp:Button runat="server" class="rr-btn mt-35" Style="width: 95%;" OnClick="btnSubmit_Click" Text="Submit" ID="btnSubmit"></asp:Button>
                                     </div>
                                 </div>
 
@@ -315,7 +344,8 @@
 
                         <p class="mb-0 mt-4  text-center fnt_sb_14">
                             <a href="Login.aspx" class="text-center">If you have already Register?
-            <span class="text_highlighted">Login</span> </a>
+           
+                                <span class="text_highlighted">Login</span> </a>
                         </p>
                     </div>
                 </div>
