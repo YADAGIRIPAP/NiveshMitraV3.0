@@ -305,8 +305,8 @@ a {
 
                     <div class="input-group mb-3">
                         <asp:DropDownList ID="ddlUserType" runat="server" CssClass="contact__input1">
-                            <asp:ListItem Text="Choose your User" Value="" Disabled="true" Selected="true" />
-                            <asp:ListItem Text="Entrepreneur" Value="1" />
+                            <asp:ListItem Text="Choose User" Value="" Disabled="true" />
+                            <asp:ListItem Text="Entrepreneur" Value="1" Selected="true" />
                             <asp:ListItem Text="Admin" Value="2" />
                         </asp:DropDownList>
 
@@ -332,10 +332,10 @@ a {
                         <%--<img src="assets/imgs/captch.jpg" alt="CAPTCHA" class="captcha-image" style="width: 55%; border-radius: 5px; margin-right: 14px;">
                         <button type="button" onclick="generateCaptcha()">↻</button>
                         <input type="text" id="captchaInput" class="form-control w-50" placeholder="Enter CAPTCHA" />--%>
-
+                          <asp:TextBox ID="txtcaptcha" Height="40px" runat="server" CssClass="contact__input1" Width="170px" Placeholder="Enter CAPTCHA" />
                         <asp:Image ID="imgCaptcha" runat="server" class="captcha-image" Style="width: 55%; border-radius: 5px; margin-right: 14px;" />
-                        <asp:Button ID="btnRefresh" runat="server" AlternateText="Refresh" OnClick="btnRefresh_Click" ImageUrl="assets/imgs/Refresh.jpg" Height="35px" Width="40px" />
-                        <asp:TextBox ID="txtcaptcha" runat="server" CssClass="form-control w-50" Placeholder="Enter CAPTCHA" />
+                        <asp:ImageButton ID="btnRefresh" runat="server"  OnClick="btnRefresh_Click" ImageUrl="assets/imgs/Refresh.jpg" Height="35px" Width="40px" />
+                      
 
                     </div>
                     <%-- ImageUrl="~/GenerateCaptcha.aspx"--%>
@@ -348,11 +348,12 @@ a {
                             <a href="Quesstionniare_cfe.html" class="rr-btn mt-35">Login</a>
                             <%--  <asp:Button runat="server" ID="btnLogint" Text="Login" class="rr-btn mt-35" />--%>
                         <%--</div>--%>
-                        <div class="col-12">
+                         <div class="col-4"></div>
+                        <div class="col-4">
                             <%--<asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="rr-btn mt-35" />--%>
                             <asp:Button runat="server" ID="btnLogin" OnClick="btnLogin_Click" Text="Login" class="rr-btn mt-35" />
                         </div>
-
+                         <div class="col-4"></div>
                         <!-- /.col -->
                     </div>
 

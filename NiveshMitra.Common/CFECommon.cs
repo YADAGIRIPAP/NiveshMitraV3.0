@@ -8,6 +8,7 @@ namespace NiveshMitra.Common
 {
     public class CFEConstants
     {
+        public static string CFEapplications = "USP_GETPREREGANDCFEUSERDASHBOARD";
         public static string InsertCFEQuestionnaire = "USP_INSCFEQUESTIONNAREDETAILS";
         public static string InsertCFEQuestionnaireApprovals = "USP_INSCFEREQUIREDAPPROVALS";
         public static string DeleteDepartmentApprovals = "USP_DELETECFEDEPARTMENTAPPROVALS";

@@ -160,7 +160,8 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <a href="#" class="logo">
-                        <asp:ImageButton runat="server" ID="imgLogo" ImageUrl="~/assets/assetsnew/images/Logo.png" />
+                        <img src="../assets/imgs/logo1.png"   width="250px" />
+                        <%--<asp:ImageButton runat="server" ID="imgLogo" ImageUrl="~/assets/assetsnew/images/Logo.png" />--%>
                     </a>
 
                 </div>

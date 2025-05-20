@@ -18,7 +18,7 @@
         <div class="content container-fluid">
             <div class="card" id="NoApplications" runat="server" visible="false">
                 <div class="card-header d-flex justify-content-between">
-                    <h3 class="card-title mt-1"><b>pre-established</b></h3>
+                    <h3 class="card-title mt-1"><b>User Dashboard</b></h3>
                     <h4 class="card-title mt-1">
                         <label id="Label1" runat="server"></label>
 
@@ -31,8 +31,8 @@
                         <h4 style="display: flex; align-items: center;">
                             <asp:Label ID="lblunitname" runat="server"></asp:Label>
                             &nbsp;&nbsp;
-                            <asp:Label ID="lblinterest" runat="server">Interested in starting a new project or working on an existing project?</asp:Label></h4>
-                        <h4><a href="../PreReg/IndustryRegistration.aspx"><span class="badge rounded-pill bg-dark text-sm p-2" style="font-size: 16px; color: #fff; background: #033260 !important; display: flex; align-items: center;"><i class="fi fi-tr-bullseye-arrow"></i>&nbsp; Click Here</span></a></h4>
+                            <asp:Label ID="lblinterest" runat="server">Do you require any Pre-Establishment approvals??</asp:Label></h4>
+                        <h4><a href="CFE/CFEQuestionnaire.aspx"><span class="badge rounded-pill bg-dark text-sm p-2" style="font-size: 16px; color: #fff; background: #033260 !important; display: flex; align-items: center;"><i class="fi fi-tr-bullseye-arrow"></i>&nbsp; Click Here</span></a></h4>
 
                     </div>
                     <div class="card item1" style="width: 13rem;" id="divfuture" runat="server" visible="false">

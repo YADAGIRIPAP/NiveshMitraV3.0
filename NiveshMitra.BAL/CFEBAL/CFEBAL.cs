@@ -13,6 +13,10 @@ namespace NiveshMitra.BAL.CFEBAL
     {
         public CFEQuestionnaireDet objCFEQ { get; } = new CFEQuestionnaireDet();
         public CFEDAL objCFEDAL { get; } = new CFEDAL();
+        public DataSet GetCFEapplications(string USERID, string UnitID)
+        {
+            return objCFEDAL.GetCFEapplications(USERID, UnitID);
+        }
         public string InsertQuestionnaireCFE(CFEQuestionnaireDet objCFEQsnaire)
         {
             return objCFEDAL.InsertQuestionnaireCFE(objCFEQsnaire);

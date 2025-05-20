@@ -21,20 +21,49 @@ namespace NiveshMitra.User.CFE
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!IsPostBack)
+            try
             {
-                MVQues.ActiveViewIndex = index;
-                BindSectors();
-                BindConstitutionType();
-                BindIndustryType();
-                BindPowerReq();
-                GetElectricRegulations();
-                GetVoltageMaster();
-                GetPowerPlants();
-                GetMunicipalAreas();
-                BindData();
+                if (Session["UserInfo"] != null)
+                {
+                    var ObjUserInfo = new UserInfo();
+                    if (Session["UserInfo"] != null && Session["UserInfo"].ToString() != "")
+                    {
+                        ObjUserInfo = (UserInfo)Session["UserInfo"];
+                    }
+                    if (hdnUserID.Value == "")
+                    {
+                        hdnUserID.Value = ObjUserInfo.Userid;
+                    }
+                    if (Convert.ToString(Session["CFEUNITID"]) != "")
+                    { UnitID = Convert.ToString(Session["CFEUNITID"]); }
+                    else
+                    {
+                        //string newurl = "~/User/CFE/CFEUserDashboard.aspx";
+                        //Response.Redirect(newurl);
+                    }
+                    Page.MaintainScrollPositionOnPostBack = true;
+                    if (!IsPostBack)
+                    {
+                        MVQues.ActiveViewIndex = index;
+                        BindSectors();
+                        BindDistricts();
+                        BindConstitutionType();
+                        BindIndustryType();
+                        BindPowerReq();
+                        GetElectricRegulations();
+                        GetVoltageMaster();
+                        GetPowerPlants();
+                        GetMunicipalAreas();
+                        BindData();
+                    }
+                }
             }
-            hdnUserID.Value = "1001";
+            catch (Exception ex)
+            {
+                Failure.Visible = true;
+                lblmsg0.Text = ex.Message;
+                //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
 
         }
         protected void MVQues_ActiveViewChanged(object sender, EventArgs e)

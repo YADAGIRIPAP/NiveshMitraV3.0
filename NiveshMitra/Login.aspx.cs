@@ -268,7 +268,7 @@ namespace NiveshMitra
                                     if (ObjUserInfo != null && ObjUserInfo.Userid != null)
                                     {
                                         Session["UserInfo"] = ObjUserInfo;
-                                        Response.Redirect("~/User/CFE/CFEQuestionnaire.aspx", false);
+                                        Response.Redirect("~/User/MainDashboard.aspx", false);
                                     }
                                     else
                                     {

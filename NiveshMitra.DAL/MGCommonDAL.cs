@@ -1,12 +1,13 @@
-﻿using System;
+﻿using NiveshMitra.Common;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NiveshMitra.Common;
 
 namespace NiveshMitra.DAL
 {
@@ -50,4 +51,5 @@ namespace NiveshMitra.DAL
             return valid;
         }
     }
+    
 }
