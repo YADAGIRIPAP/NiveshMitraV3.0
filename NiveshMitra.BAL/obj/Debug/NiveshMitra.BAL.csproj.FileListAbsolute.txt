@@ -20,3 +20,4 @@ D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.c
 D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMi.B4D85529.Up2Date
 D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.dll
 D:\CMS Projects\InvestUp\workingcode\NiveshMitra.BAL\obj\Debug\NiveshMitra.BAL.pdb
+D:\PROJECTS\NiveshMitra\NiveshMitra.BAL\bin\Debug\AjaxControlToolkit.dll

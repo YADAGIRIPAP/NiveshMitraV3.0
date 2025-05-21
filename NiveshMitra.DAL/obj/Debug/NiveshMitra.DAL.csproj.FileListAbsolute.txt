@@ -16,3 +16,4 @@ D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMitra.DAL.c
 D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMi.B4D87EA7.Up2Date
 D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMitra.DAL.dll
 D:\CMS Projects\InvestUp\workingcode\NiveshMitra.DAL\obj\Debug\NiveshMitra.DAL.pdb
+D:\PROJECTS\NiveshMitra\NiveshMitra.DAL\bin\Debug\AjaxControlToolkit.dll

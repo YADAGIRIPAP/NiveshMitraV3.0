@@ -3,6 +3,13 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <!-- Banner area start -->
+    <h2 style="
+    margin-top: 200px;
+    margin-left: 50px;
+    color: #d70202;
+">"This website is currently under review by our internal team.<br />
+        We kindly ask that it not be shared or made <b>Client until the final version is approved</b>.<br />
+        Thank you for your understanding and support...!"</h2>
              <section class="banner4__area p-relative overflow-hidden z-1">
                 <div class="banner4__shapes">
                     <div class="banner4__shapes-shape-1"></div>
