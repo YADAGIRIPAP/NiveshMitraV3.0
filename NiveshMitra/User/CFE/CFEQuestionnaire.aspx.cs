@@ -81,7 +81,7 @@ namespace NiveshMitra.User.CFE
             try
             {
                 DataSet ds = new DataSet();
-                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]));
+                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]??string.Empty));
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     hdnPreRegUID.Value = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PREREGUIDNO"]);
@@ -335,6 +335,16 @@ namespace NiveshMitra.User.CFE
                     errormsg = errormsg + slno + ". Please Select Proposed Location Village \\n";
                     slno = slno + 1;
                 }
+                if (string.IsNullOrEmpty(txtFullAddress.Text) || txtFullAddress.Text == "" || txtFullAddress.Text == null)
+                {
+                    errormsg = errormsg + slno + ". Please Enter Full Address \\n";
+                    slno = slno + 1;
+                }
+                if (string.IsNullOrEmpty(txtPinCode.Text) || txtPinCode.Text == "" || txtPinCode.Text == null)
+                {
+                    errormsg = errormsg + slno + ". Please Enter Pin Code \\n";
+                    slno = slno + 1;
+                }
                 if (string.IsNullOrEmpty(txtLandArea.Text) || txtLandArea.Text == "" || txtLandArea.Text == null || txtLandArea.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txtLandArea.Text, @"^0+(\.0+)?$"))
                 {
                     errormsg = errormsg + slno + ". Please Enter Total Extend Land  \\n";
@@ -367,7 +377,7 @@ namespace NiveshMitra.User.CFE
                 }
                 if (rblMIDCL.SelectedIndex == -1)
                 {
-                    errormsg = errormsg + slno + ". Please Select Whether land purchased from MIDCL or not \\n";
+                    errormsg = errormsg + slno + ". Please Select Whether land purchased from Authority or not \\n";
                     slno = slno + 1;
                 }
                 return errormsg;
@@ -1793,8 +1803,8 @@ namespace NiveshMitra.User.CFE
 
                 ddlDistrict.Items.Clear();
                 ddlTehsil.Items.Clear();
-                ddlGramPanchayat.Items.Clear();
-                ddlBlockPanchayat.Items.Clear();
+                //ddlGramPanchayat.Items.Clear();
+                //ddlBlockPanchayat.Items.Clear();
                 ddlVillage.Items.Clear();
 
                 List<MasterDistrcits> objDistrictModel = new List<MasterDistrcits>();
@@ -1816,8 +1826,8 @@ namespace NiveshMitra.User.CFE
                 }
                 AddSelect(ddlDistrict);
                 AddSelect(ddlTehsil);
-                AddSelect(ddlGramPanchayat);
-                AddSelect(ddlBlockPanchayat);
+                //AddSelect(ddlGramPanchayat);
+                //AddSelect(ddlBlockPanchayat);
                 AddSelect(ddlVillage);
 
             }
@@ -1888,15 +1898,15 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                ddlTehsil.ClearSelection();
-                ddlTehsil.Items.Clear();
-                AddSelect(ddlTehsil);
+                //ddlTehsil.ClearSelection();
+                //ddlTehsil.Items.Clear();
+                //AddSelect(ddlTehsil);
                 ddlVillage.ClearSelection();
                 ddlVillage.Items.Clear();
                 AddSelect(ddlVillage);
-                if (ddlDistrict.SelectedItem.Text != "--Select--")
+                if (ddlTehsil.SelectedItem.Text != "--Select--")
                 {
-                    BindTehsil(ddlTehsil, ddlDistrict.SelectedValue);
+                    BindVillages(ddlVillage, ddlTehsil.SelectedValue);
                 }
                 else return;
             }
@@ -1968,14 +1978,44 @@ namespace NiveshMitra.User.CFE
                 //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
         }
-        protected void BindVillages(DropDownList ddlvlg, string GramPanchayatCode)
+        //protected void BindVillages(DropDownList ddlvlg, string GramPanchayatCode)
+        //{
+        //    try
+        //    {
+        //        List<MasterVillages> objVillage = new List<MasterVillages>();
+        //        string strmode = string.Empty;
+
+        //        objVillage = mstrBAL.GetVillages(GramPanchayatCode);
+
+        //        if (objVillage != null)
+        //        {
+        //            ddlvlg.DataSource = objVillage;
+        //            ddlvlg.DataValueField = "VillageId";
+        //            ddlvlg.DataTextField = "VillageName";
+        //            ddlvlg.DataBind();
+        //        }
+        //        else
+        //        {
+        //            ddlvlg.DataSource = null;
+        //            ddlvlg.DataBind();
+        //        }
+        //        AddSelect(ddlvlg);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        lblmsg0.Text = ex.Message;
+        //        Failure.Visible = true;
+        //        // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+        //    }
+        //}
+        protected void BindVillages(DropDownList ddlvlg, string TehsilCode)
         {
             try
             {
                 List<MasterVillages> objVillage = new List<MasterVillages>();
                 string strmode = string.Empty;
 
-                objVillage = mstrBAL.GetVillages(GramPanchayatCode);
+                objVillage = mstrBAL.GetVillages(TehsilCode);
 
                 if (objVillage != null)
                 {

@@ -72,7 +72,7 @@
         div#google_translate_element {
     margin-top: 8px;
 }
-        body.khasi {
+        body.hindi {
   font-size: 16px;
         a.nav-link {
    
@@ -160,7 +160,7 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <a href="#" class="logo">
-                        <img src="../assets/imgs/logo1.png"   width="250px" />
+                        <img src="/assets/imgs/logo1.png"   width="250px" />
                         <%--<asp:ImageButton runat="server" ID="imgLogo" ImageUrl="~/assets/assetsnew/images/Logo.png" />--%>
                     </a>
 
@@ -410,7 +410,7 @@ font-style: italic;font-weight: bold;">"State Single<br /> Window System for<br 
                       function googleTranslateElementInit() {
                           new google.translate.TranslateElement({
                               //pageLanguage: 'en',
-                              includedLanguages: 'kha,en', // Include Khasi (kha) as a target language
+                              includedLanguages: 'hi,en', // Include Khasi (kha) as a target language
                               layout: google.translate.TranslateElement.InlineLayout.SIMPLE
                           }, 'google_translate_element');
                       }
@@ -428,10 +428,10 @@ font-style: italic;font-weight: bold;">"State Single<br /> Window System for<br 
                           const htmlLang = document.querySelector('html').getAttribute('lang');
                           const body = document.body;
 
-                          if (htmlLang === 'kha') {
-                              body.classList.add('khasi'); // Apply decreased font size
+                          if (htmlLang === 'hi') {
+                              body.classList.add('hindi'); // Apply decreased font size
                           } else {
-                              body.classList.remove('khasi'); // Reset to default font size
+                              body.classList.remove('hindi'); // Reset to default font size
                           }
                       });
 

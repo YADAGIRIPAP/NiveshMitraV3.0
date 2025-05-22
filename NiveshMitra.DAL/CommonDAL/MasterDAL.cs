@@ -497,7 +497,8 @@ namespace NiveshMitra.DAL.CommonDAL
                 {
                     new SqlParameter("@GramPanchayat",Convert.ToInt32(MandalId))
                 };
-                drOptions = SqlHelper.ExecuteReader(connstr, MasterConstants.GetVillagesmaster, param);
+                //drOptions = SqlHelper.ExecuteReader(connstr, MasterConstants.GetVillagesmaster, param);
+                drOptions = SqlHelper.ExecuteReader(connstr, MasterConstants.GetVillagesmaster1, param);
                 if (drOptions != null && drOptions.HasRows)
                 {
                     while (drOptions.Read())

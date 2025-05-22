@@ -59,9 +59,13 @@ namespace NiveshMitra.BAL.CommonBAL
             return objMasterDAL.GetGramPanchayat(BlockPanchayatCode);
         }
 
-        public List<MasterVillages> GetVillages(string GramPanchayatCode)
+        //public List<MasterVillages> GetVillages(string GramPanchayatCode)
+        //{
+        //    return objMasterDAL.GetVillages(GramPanchayatCode);
+        //}
+        public List<MasterVillages> GetVillages(string TehsilCode)
         {
-            return objMasterDAL.GetVillages(GramPanchayatCode);
+            return objMasterDAL.GetVillages(TehsilCode);
         }
     }
 }

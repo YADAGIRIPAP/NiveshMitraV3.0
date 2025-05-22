@@ -353,8 +353,8 @@ namespace NiveshMitra.DAL.CFEDAL
                 da.SelectCommand.Connection = connection;
 
                 da.SelectCommand.Parameters.AddWithValue("@CREATEDBY", Convert.ToInt32(userid));
-                da.SelectCommand.Parameters.AddWithValue("@UNITID", Convert.ToInt32(UnitID));
-
+                //da.SelectCommand.Parameters.AddWithValue("@UNITID", Convert.ToInt32(UnitID));
+                da.SelectCommand.Parameters.Add("@UNITID", SqlDbType.Int).Value =string.IsNullOrWhiteSpace(UnitID) ? (object)DBNull.Value : int.Parse(UnitID);
                 da.Fill(ds);
                 transaction.Commit();
                 return ds;

@@ -213,24 +213,6 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.DropDownList ddlTehsil;
 
         /// <summary>
-        /// ddlBlockPanchayat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBlockPanchayat;
-
-        /// <summary>
-        /// ddlGramPanchayat control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlGramPanchayat;
-
-        /// <summary>
         /// ddlVillage control.
         /// </summary>
         /// <remarks>
@@ -238,6 +220,24 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlVillage;
+
+        /// <summary>
+        /// txtFullAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFullAddress;
+
+        /// <summary>
+        /// txtPinCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPinCode;
 
         /// <summary>
         /// txtLandArea control.

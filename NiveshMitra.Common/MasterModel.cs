@@ -24,6 +24,7 @@ namespace NiveshMitra.Common
         public static string GetGetBlockPanchayat = "USP_GET_BLOCKPANCHAYAT";
         public static string GetGetGramPanchayat = "USP_GET_GRAMPANCHAYAT";
         public static string GetVillagesmaster = "USP_GET_VILLAGE";
+        public static string GetVillagesmaster1 = "USP_GET_VILLAGE_V1";
 
     }
     public class MasterConstType

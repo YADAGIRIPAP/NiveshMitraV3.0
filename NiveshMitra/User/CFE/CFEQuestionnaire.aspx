@@ -44,7 +44,7 @@
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
 
     <asp:UpdatePanel ID="UpdatePanel1" runat="server" UpdateMode="Always">
-        <contenttemplate>
+        <ContentTemplate>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../Dashboard/Dashboarddrill.aspx">Dashboard</a></li>
@@ -177,13 +177,13 @@
                                                                             <label class="col-lg-6 col-form-label">2. Tehsil<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:DropDownList ID="ddlTehsil" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" onchange="validateDropdown(this)" OnSelectedIndexChanged="ddlTehsil_SelectedIndexChanged">
-                                                                                    <asp:ListItem Text="Select Mandal" Value="0" />
+                                                                                    <asp:ListItem Text="Select Tehsil" Value="0" />
                                                                                 </asp:DropDownList>
                                                                             </div>
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="col-md-4">
+                                                                    <%--<div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">3. Block Panchayat<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -192,12 +192,41 @@
                                                                                 </asp:DropDownList>
                                                                             </div>
                                                                         </div>
+                                                                    </div>--%>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-lg-6 col-form-label">3. Village/Town/City<span class="star">*</span></label>
+                                                                            <div class="col-lg-6 d-flex">
+                                                                                <asp:DropDownList ID="ddlVillage" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" onchange="validateDropdown(this)">
+                                                                                    <asp:ListItem Text="Select Village" Value="0" />
+                                                                                </asp:DropDownList>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
 
-
-
                                                                 <div class="col-md-12 d-flex">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-lg-6 col-form-label">
+                                                                                4. Full Address
+                                                                               <span class="star">*</span></label>
+                                                                            <div class="col-lg-6 d-flex">
+                                                                                <asp:TextBox ID="txtFullAddress" runat="server" class="form-control" onkeypress="return Names()" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-lg-6 col-form-label">5. Pin Code<span class="star">*</span></label>
+                                                                            <div class="col-lg-6 d-flex">
+                                                                                <asp:TextBox ID="txtPinCode" runat="server" class="form-control" onkeypress="return validateNumberAndDot(event)" MaxLength="6" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <%--<div class="col-md-12 d-flex">
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
@@ -220,15 +249,13 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
-
-
+                                                                </div>--%>
 
                                                                 <div class="col-md-12 d-flex">
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                4. Total
+                                                                                6. Total
 																		Extent of Land<br />
                                                                                 (in sq.m)<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -239,7 +266,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                5. Built up Area
+                                                                                7. Built up Area
                                                                                 <br />
                                                                                 (In Sq.m)<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
@@ -249,7 +276,7 @@
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">6. Sector<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">8. Sector<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:DropDownList ID="ddlSector" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" OnSelectedIndexChanged="ddlSector_SelectedIndexChanged" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Select" Value="0" />
@@ -263,7 +290,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                7. Line of
+                                                                               9. Line of
 																		Activity<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
                                                                                 <asp:DropDownList ID="ddlLine_Activity" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" OnSelectedIndexChanged="ddlLine_Activity_SelectedIndexChanged" onchange="validateDropdown(this)">
@@ -275,7 +302,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                8. Pollution
+                                                                                10. Pollution
 																		Category of Enterprise<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
                                                                                 <asp:Label ID="lblPCBCategory" Font-Bold="true" runat="server" class="form-control" TabIndex="1"></asp:Label>
@@ -285,9 +312,9 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                9. Whether land
+                                                                                11. Whether land
                                                                                 <br />
-                                                                                purchased from MIDCL<span class="star">*</span></label>
+                                                                                purchased from Authority<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <div class="form-check form-check-inline ">
                                                                                     <asp:RadioButtonList ID="rblMIDCL" runat="server" RepeatDirection="Horizontal" TabIndex="1" onchange="validateRadioButtonList(this)">
@@ -304,7 +331,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                10. Location of the unit<span class="star">*</span></label>
+                                                                                12. Location of the unit<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
                                                                                 <asp:TextBox ID="txtUnitLocation" runat="server" class="form-control" onkeypress="return Names()" MaxLength="100" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
@@ -1093,40 +1120,40 @@
                                             <asp:GridView ID="grdApprovals" runat="server" AutoGenerateColumns="False" CellPadding="4"
                                                 CssClass="GRD table-bordered " Width="100%" ShowFooter="true"
                                                 OnRowDataBound="grdApprovals_RowDataBound" HorizontalAlign="Center" VerticalAlign="Middle">
-                                                <footerstyle backcolor="#013161" font-bold="True" forecolor="White" />
-                                                <rowstyle cssclass="GRDITEM" horizontalalign="Left" verticalalign="Middle" />
-                                                <headerstyle backcolor="#013161" cssclass="GRDHEADER" font-bold="True" forecolor="White" />
+                                                <FooterStyle BackColor="#013161" Font-Bold="True" ForeColor="White" />
+                                                <RowStyle CssClass="GRDITEM" HorizontalAlign="Left" VerticalAlign="Middle" />
+                                                <HeaderStyle BackColor="#013161" CssClass="GRDHEADER" Font-Bold="True" ForeColor="White" />
 
-                                                <columns>
+                                                <Columns>
                                                     <asp:TemplateField HeaderStyle-HorizontalAlign="Center" HeaderText="S No">
-                                                        <itemtemplate>
+                                                        <ItemTemplate>
                                                             <%# Container.DataItemIndex + 1%>
-                                                        </itemtemplate>
-                                                        <headerstyle horizontalalign="Center" />
-                                                        <itemstyle width="50px" />
+                                                        </ItemTemplate>
+                                                        <HeaderStyle HorizontalAlign="Center" />
+                                                        <ItemStyle Width="50px" />
                                                     </asp:TemplateField>
                                                     <asp:BoundField DataField="ApprovalName" HeaderText="Approval Required ">
-                                                        <itemstyle width="750px" />
+                                                        <ItemStyle Width="750px" />
                                                     </asp:BoundField>
                                                     <asp:BoundField DataField="TMD_DeptName" HeaderText="Department">
-                                                        <itemstyle width="280px" />
+                                                        <ItemStyle Width="280px" />
                                                     </asp:BoundField>
                                                     <asp:BoundField DataField="FEE" FooterStyle-HorizontalAlign="Left" HeaderText="Fees (Rs.)">
-                                                        <footerstyle cssclass="GRDITEM2" font-bold="True" forecolor="White" horizontalalign="Left" />
-                                                        <headerstyle horizontalalign="Right" />
-                                                        <itemstyle cssclass="GRDITEM2" width="100px" horizontalalign="Left" />
+                                                        <FooterStyle CssClass="GRDITEM2" Font-Bold="True" ForeColor="White" HorizontalAlign="Left" />
+                                                        <HeaderStyle HorizontalAlign="Right" />
+                                                        <ItemStyle CssClass="GRDITEM2" Width="100px" HorizontalAlign="Left" />
                                                     </asp:BoundField>
                                                     <asp:TemplateField HeaderText="Approval ID" Visible="false">
-                                                        <itemtemplate>
+                                                        <ItemTemplate>
                                                             <asp:Label ID="lblApprID" runat="server" Text='<%# Eval("ApprovalID") %>'></asp:Label>
-                                                        </itemtemplate>
+                                                        </ItemTemplate>
                                                     </asp:TemplateField>
                                                     <asp:TemplateField HeaderText=" Dept ID" Visible="false">
-                                                        <itemtemplate>
+                                                        <ItemTemplate>
                                                             <asp:Label ID="lblDeptID" runat="server" Text='<%# Eval("TMD_DEPTID") %>'></asp:Label>
-                                                        </itemtemplate>
+                                                        </ItemTemplate>
                                                     </asp:TemplateField>
-                                                </columns>
+                                                </Columns>
                                             </asp:GridView>
                                         </div>
                                     </div>
@@ -1138,11 +1165,11 @@
             </div>
 
             <asp:UpdateProgress ID="UpdateProgress" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
-                <progresstemplate>
+                <ProgressTemplate>
                     <div class="update">
                     </div>
-                </progresstemplate>
+                </ProgressTemplate>
             </asp:UpdateProgress>
-        </contenttemplate>
+        </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>
