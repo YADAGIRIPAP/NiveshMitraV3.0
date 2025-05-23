@@ -416,7 +416,7 @@
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">5. Expected Annual Turnover(In INR)<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
-                                                                                <asp:TextBox ID="txtAnnualTurnOver" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="8" AutoPostBack="true" OnTextChanged="txtAnnualTurnOver_TextChanged" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtAnnualTurnOver" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="11" AutoPostBack="true" OnTextChanged="txtAnnualTurnOver_TextChanged" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
                                                                         </div>
                                                                     </div>

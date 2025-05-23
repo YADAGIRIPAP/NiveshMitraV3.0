@@ -1,12 +1,13 @@
-﻿using System;
+﻿using NiveshMitra.Common;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NiveshMitra.Common;
-using System.Configuration;
+using System.Web.UI.WebControls;
 
 namespace NiveshMitra.DAL.CFEDAL
 {
@@ -70,8 +71,8 @@ namespace NiveshMitra.DAL.CFEDAL
 
 
                 com.Parameters.AddWithValue("@CFEQDID", objCFEQsnaire.CFEQDID);
-
-                com.Parameters.AddWithValue("@CFEQD_UNITID", Convert.ToInt32(objCFEQsnaire.UNITID));
+                //com.Parameters.AddWithValue("@CFEQD_UNITID", Convert.ToInt32(objCFEQsnaire.UNITID));
+                com.Parameters.Add("@CFEQD_UNITID", SqlDbType.Int).Value = string.IsNullOrWhiteSpace(objCFEQsnaire.UNITID) ? (object)DBNull.Value : int.Parse(objCFEQsnaire.UNITID);
                 com.Parameters.AddWithValue("@CFEQD_PREREGUIDNO", objCFEQsnaire.PREREGUIDNO);
                 com.Parameters.AddWithValue("@CFEQD_APPLSTATUS", 2);
                 com.Parameters.AddWithValue("@CFEQD_COMPANYNAME", objCFEQsnaire.CompanyName);
@@ -306,7 +307,8 @@ namespace NiveshMitra.DAL.CFEDAL
 
                 SqlCommand com = new SqlCommand();
                 com.CommandType = CommandType.StoredProcedure;
-                com.CommandText = CFEConstants.CFEENTERPRISETYPEDET;
+                //com.CommandText = CFEConstants.CFEENTERPRISETYPEDET;
+                com.CommandText = CFEConstants.CFEENTERPRISETYPEDET1;
 
                 com.Transaction = transaction;
                 com.Connection = connection;
