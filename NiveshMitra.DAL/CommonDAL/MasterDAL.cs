@@ -525,5 +525,40 @@ namespace NiveshMitra.DAL.CommonDAL
             }
             return lstVillagesMstr;
         }
+
+        public List<MasterState> GetState()
+        {
+            List<MasterState> lstStateMstr = new List<MasterState>();
+            SqlDataReader drOptions = null;
+            try
+            {
+                drOptions = SqlHelper.ExecuteReader(connstr, MasterConstants.GetState);
+
+                if (drOptions != null && drOptions.HasRows)
+                {
+                    while (drOptions.Read())
+                    {
+                        var State = new MasterState()
+                        {
+                            MS_ID = Convert.ToString(drOptions["MS_ID"]),
+                            MS_NAME = Convert.ToString(drOptions["MS_NAME"])
+                        };
+                        lstStateMstr.Add(State);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                if (drOptions != null)
+                {
+                    drOptions.Close();
+                }
+            }
+            return lstStateMstr;
+        }
     }
 }
