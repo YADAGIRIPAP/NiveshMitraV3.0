@@ -16,6 +16,7 @@ namespace NiveshMitra.Common
         public static string CFEENTERPRISETYPEDET = "USP_GETENTERPRISETYPEDET";
         public static string RetrieveQuestionnaire = "USP_RETRIEVECFEQUESFILLEDDATA";
         public static string CFEENTERPRISETYPEDET1 = "USP_GETENTERPRISETYPEDET_V1";
+        public static string GetApprovalsReqFromTable = "USP_GETCFEQUESTIONNAIREAPPROVALS";
 
     }
     public class CFEQuestionnaireDet
