@@ -39,5 +39,10 @@ namespace NiveshMitra.BAL.CFEBAL
         }
         public DataSet RetrieveQuestionnaireDetails(string userid, string UnitID)
         { return objCFEDAL.RetrieveQuestionnaireDetails(userid, UnitID); }
+
+        public DataSet GetApprovalsReqFromTable(CFEQuestionnaireDet objCFEQsnaire)
+        {
+            return objCFEDAL.GetApprovalsReqFromTable(objCFEQsnaire);
+        }
     }
 }

@@ -332,6 +332,7 @@
     <Content Include="Register.aspx" />
     <Content Include="User\CFE\CFEQuestionnaire.aspx" />
     <Content Include="User\CFE\CFEUserDashboard.aspx" />
+    <Content Include="User\CFE\frmDepartmentApprovalDetails.aspx" />
     <Content Include="User\MainDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -389,6 +390,13 @@
     </Compile>
     <Compile Include="User\CFE\CFEUserDashboard.aspx.designer.cs">
       <DependentUpon>CFEUserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\frmDepartmentApprovalDetails.aspx.cs">
+      <DependentUpon>frmDepartmentApprovalDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\frmDepartmentApprovalDetails.aspx.designer.cs">
+      <DependentUpon>frmDepartmentApprovalDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\MainDashboard.aspx.cs">
       <DependentUpon>MainDashboard.aspx</DependentUpon>
