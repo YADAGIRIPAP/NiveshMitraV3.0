@@ -114,7 +114,7 @@
         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="text-align:center;margin-top:10px">
             <input type="button" class="btn btn-info" value="Previous" style="width:100px" />
             <input type="button" class="btn btn-success" value="Save" style="width:100px"/>
-            <input type="button" class="btn btn-warning" value="Next" style="width:100px"/>
+            <input type="button" class="btn btn-warning" value="Next" onclick="location.href='CFEIndustryDetails.aspx'" style="width:100px"/>
         </div>
     </div>
 </asp:Content>
