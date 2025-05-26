@@ -889,7 +889,8 @@ namespace NiveshMitra.User.CFE
             {
                 btnSave3_Click(sender, e);
                 if (ErrorMsg == "")
-                    Response.Redirect("~/User/CFE/CFECommonApplication.aspx");
+                    //Response.Redirect("~/User/CFE/CFECommonApplication.aspx");
+                    Response.Redirect("~/User/CFE/frmDepartmentApprovalDetails.aspx");
             }
             catch (Exception ex)
             {
