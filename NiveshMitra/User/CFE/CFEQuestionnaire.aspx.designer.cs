@@ -222,13 +222,22 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.DropDownList ddlVillage;
 
         /// <summary>
-        /// txtFullAddress control.
+        /// txtHouseNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFullAddress;
+        protected global::System.Web.UI.WebControls.TextBox txtHouseNumber;
+
+        /// <summary>
+        /// txtStreet control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtStreet;
 
         /// <summary>
         /// txtPinCode control.
@@ -501,24 +510,6 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.RadioButtonList rblRoadCutting;
 
         /// <summary>
-        /// rblNonEncCert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblNonEncCert;
-
-        /// <summary>
-        /// rblCommericalTax control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblCommericalTax;
-
-        /// <summary>
         /// rblHighTension control.
         /// </summary>
         /// <remarks>
@@ -600,24 +591,6 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divpowerplants2;
 
         /// <summary>
-        /// rblfrstDistncLtr control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblfrstDistncLtr;
-
-        /// <summary>
-        /// rblNonForstLandCert control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblNonForstLandCert;
-
-        /// <summary>
         /// rblFelltrees control.
         /// </summary>
         /// <remarks>
@@ -645,15 +618,6 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.TextBox txtNoofTrees;
 
         /// <summary>
-        /// rblwaterbody control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblwaterbody;
-
-        /// <summary>
         /// rblborewell control.
         /// </summary>
         /// <remarks>
@@ -663,24 +627,6 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.RadioButtonList rblborewell;
 
         /// <summary>
-        /// rblNocGroundWater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblNocGroundWater;
-
-        /// <summary>
-        /// rblwatersupply control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblwatersupply;
-
-        /// <summary>
         /// rblRiverTanks control.
         /// </summary>
         /// <remarks>
@@ -688,24 +634,6 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblRiverTanks;
-
-        /// <summary>
-        /// rblMunicipal control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblMunicipal;
-
-        /// <summary>
-        /// rblGrantwater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblGrantwater;
 
         /// <summary>
         /// MunicipalArea control.
@@ -733,60 +661,6 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList rblDrawing;
-
-        /// <summary>
-        /// rblLbrAct1970 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblLbrAct1970;
-
-        /// <summary>
-        /// trworkers1970 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trworkers1970;
-
-        /// <summary>
-        /// txt1970Workers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt1970Workers;
-
-        /// <summary>
-        /// rblLbrAct1979 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblLbrAct1979;
-
-        /// <summary>
-        /// trworkers1979 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trworkers1979;
-
-        /// <summary>
-        /// txt1979Workers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt1979Workers;
 
         /// <summary>
         /// rblLbrAct1996 control.
@@ -832,60 +706,6 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt1996Workers;
-
-        /// <summary>
-        /// rblLabourAct control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblLabourAct;
-
-        /// <summary>
-        /// trContrctworkers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trContrctworkers;
-
-        /// <summary>
-        /// txtContractWorkers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContractWorkers;
-
-        /// <summary>
-        /// rblForContr1970 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblForContr1970;
-
-        /// <summary>
-        /// trcontrworkers1970 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow trcontrworkers1970;
-
-        /// <summary>
-        /// txtContr1970wrkrs control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtContr1970wrkrs;
 
         /// <summary>
         /// btnApprvlsReq control.

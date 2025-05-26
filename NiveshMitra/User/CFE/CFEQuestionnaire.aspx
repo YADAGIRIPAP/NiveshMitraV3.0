@@ -209,16 +209,26 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                4. Full Address
+                                                                                4. House Number/Survey Number
                                                                                <span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
-                                                                                <asp:TextBox ID="txtFullAddress" runat="server" class="form-control" onkeypress="return Names()" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtHouseNumber" runat="server" class="form-control" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">5. Pin Code<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">
+                                                                                5. Street/Area
+                                                                              <span class="star">*</span></label>
+                                                                            <div class="col-lg-6 d-flex">
+                                                                                <asp:TextBox ID="txtStreet" runat="server" class="form-control" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-lg-6 col-form-label">6. Pin Code<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:TextBox ID="txtPinCode" runat="server" class="form-control" onkeypress="return validateNumberAndDot(event)" MaxLength="6" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
@@ -255,7 +265,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                6. Total
+                                                                                7. Total
 																		Extent of Land<br />
                                                                                 (in sq.m)<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -266,7 +276,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                7. Built up Area
+                                                                                8. Built up Area
                                                                                 <br />
                                                                                 (In Sq.m)<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
@@ -276,7 +286,7 @@
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">8. Sector<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">9. Sector<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:DropDownList ID="ddlSector" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" OnSelectedIndexChanged="ddlSector_SelectedIndexChanged" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Select" Value="0" />
@@ -290,7 +300,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                               9. Line of
+                                                                                10. Line of
 																		Activity<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
                                                                                 <asp:DropDownList ID="ddlLine_Activity" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" OnSelectedIndexChanged="ddlLine_Activity_SelectedIndexChanged" onchange="validateDropdown(this)">
@@ -302,7 +312,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                10. Pollution
+                                                                                11. Pollution
 																		Category of Enterprise<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
                                                                                 <asp:Label ID="lblPCBCategory" Font-Bold="true" runat="server" class="form-control" TabIndex="1"></asp:Label>
@@ -312,7 +322,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                11. Whether land
+                                                                                12. Whether land
                                                                                 <br />
                                                                                 purchased from Authority<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -331,7 +341,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                12. Location of the unit<span class="star">*</span></label>
+                                                                                13. Location of the unit<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
                                                                                 <asp:TextBox ID="txtUnitLocation" runat="server" class="form-control" onkeypress="return Names()" MaxLength="100" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
@@ -666,7 +676,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6">
+                                                                    <%--<div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 8. Do you require Non-Encumbrance
@@ -679,11 +689,11 @@
                                                                                 </asp:RadioButtonList>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
-                                                                </div>
+                                                                    </div>--%>
+                                                               <%-- </div>
 
-                                                                <div class="col-md-12 d-flex">
-                                                                    <div class="col-md-6">
+                                                                <div class="col-md-12 d-flex">--%>
+                                                                   <%-- <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 9. Do you require approval from
@@ -696,7 +706,7 @@
                                                                                 </asp:RadioButtonList>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div>--%>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
@@ -758,7 +768,7 @@
                                                                 </div>
                                                                 <div class="col-md-12 d-flex">
                                                                     <div class="col-md-6">
-                                                                        <div class="form-group row">
+                                                                        <%--<div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 11. Do You require Letter for distance
                                                                                 <br />
@@ -769,11 +779,11 @@
                                                                                     <asp:ListItem Text="No" Value="N" />
                                                                                 </asp:RadioButtonList>
                                                                             </div>
-                                                                        </div>
+                                                                        </div>--%>
                                                                     </div>
 
                                                                     <div class="col-md-6">
-                                                                        <div class="form-group row">
+                                                                        <%--<div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 12. Do you require Non-Forest Land
                                                                                 <br />
@@ -784,7 +794,7 @@
                                                                                     <asp:ListItem Text="No" Value="N" />
                                                                                 </asp:RadioButtonList>
                                                                             </div>
-                                                                        </div>
+                                                                        </div>--%>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-12 d-flex">
@@ -817,7 +827,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-12 d-flex">
-                                                                    <div class="col-md-6">
+                                                                   <%-- <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 14. Does the unit Location fall within 
@@ -830,7 +840,7 @@
                                                                                 </asp:RadioButtonList>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div>--%>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
@@ -845,9 +855,9 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                               <%-- </div>--%>
 
-                                                                <div class="col-md-12 d-flex">
+                                                                <%--<div class="col-md-12 d-flex">
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
@@ -879,9 +889,9 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div>--%>
 
-                                                                <div class="col-md-12 d-flex">
+                                                                <%--<div class="col-md-12 d-flex">--%>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
@@ -897,7 +907,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <div class="col-md-6">
+                                                                    <%--<div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 19. Do You Require Water Connection 
@@ -910,10 +920,10 @@
                                                                                 </asp:RadioButtonList>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div>--%>
                                                                 </div>
                                                                 <div class="col-md-12 d-flex">
-                                                                    <div class="col-md-6">
+                                                                    <%--<div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 20. Do You Required Grant of Water 
@@ -928,7 +938,7 @@
                                                                                 </asp:RadioButtonList>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div>--%>
                                                                     <div class="col-md-6" id="MunicipalArea" runat="server" visible="false">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
@@ -967,7 +977,7 @@
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
-                                                                            <tr>
+                                                                       <%--     <tr>
                                                                                 <td>21 a.</td>
                                                                                 <td>Does your Establishment employ 05 or more contract Labour as defined in the
                                                                        
@@ -1004,7 +1014,7 @@
                                                                                 <td>
                                                                                     <asp:TextBox ID="txt1979Workers" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="7" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                                 </td>
-                                                                            </tr>
+                                                                            </tr>--%>
 
                                                                             <tr>
                                                                                 <td>21 c.</td>
@@ -1037,7 +1047,7 @@
                                                                                 </td>
                                                                             </tr>
 
-                                                                            <tr>
+                                                                         <%--   <tr>
                                                                                 <td>21 d.</td>
                                                                                 <td>License under Contract Labour Act (For Contractor) <span class="text-danger">*</span>
                                                                                     <br />
@@ -1076,7 +1086,7 @@
                                                                                 <td>
                                                                                     <asp:TextBox ID="txtContr1970wrkrs" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="7" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                                 </td>
-                                                                            </tr>
+                                                                            </tr>--%>
                                                                         </tbody>
                                                                     </table>
                                                                 </div>

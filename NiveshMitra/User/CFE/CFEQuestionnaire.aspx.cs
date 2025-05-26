@@ -125,8 +125,8 @@ namespace NiveshMitra.User.CFE
                     rblexplosives.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MANFEXPLOSIVES"]);
                     rblPetrlManf.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MANFPETROL"]);
                     rblRoadCutting.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_RDCTNGREQ"]);
-                    rblNonEncCert.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NONENCMCERTREQ"]);
-                    rblCommericalTax.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMMTAXREQ"]);
+                    //rblNonEncCert.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NONENCMCERTREQ"]);
+                    //rblCommericalTax.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMMTAXREQ"]);
                     rblHighTension.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_USINGHTMETER"]);
                     rblHighTension_SelectedIndexChanged(null, EventArgs.Empty);
                     ddlRegulation.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_CEIGREGULATION"]);
@@ -134,46 +134,46 @@ namespace NiveshMitra.User.CFE
                     ddlPowerPlant.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_POWERPLANT"]);
                     txtAggrCapacity.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_AGGRCAPACITY"]);
                     ddlVoltage.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_VOLTAGERATING"]);
-                    rblfrstDistncLtr.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_FORSTDISTLTRREQ"]);
-                    rblNonForstLandCert.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NONFORSTLANDCERTREQ"]);
+                    //rblfrstDistncLtr.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_FORSTDISTLTRREQ"]);
+                    //rblNonForstLandCert.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NONFORSTLANDCERTREQ"]);
                     rblFelltrees.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_TREESFELLING"]);
                     txtNoofTrees.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFTREES"]);
                     rblFelltrees_SelectedIndexChanged(null, EventArgs.Empty);
-                    rblwaterbody.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_WATERBODYVICINITY"]);
+                    //rblwaterbody.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_WATERBODYVICINITY"]);
                     rblborewell.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_BOREWELLEXISTS"]);
 
-                    rblNocGroundWater.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOCGROUNDWATER"]);
-                    rblwatersupply.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NONAVAILABILITYCERT"]);
+                    //rblNocGroundWater.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOCGROUNDWATER"]);
+                    //rblwatersupply.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NONAVAILABILITYCERT"]);
                     rblRiverTanks.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PERRIVERPUBLICTANKERS"]);
-                    rblMunicipal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MUNICIPALAREAWATERCON"]);
-                    if (rblMunicipal.SelectedValue == "Y")
-                    {
-                        MunicipalArea.Visible = true;
-                        ddlMunicipal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_WATERMUNICIPALAREA"]);
-                    }
-                    else { MunicipalArea.Visible = false; }
-                    rblGrantwater.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_WATERCONNONMUNICIPALURBAN"]);
+                   // rblMunicipal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MUNICIPALAREAWATERCON"]);
+                    //if (rblMunicipal.SelectedValue == "Y")
+                    //{
+                    //    MunicipalArea.Visible = true;
+                    //    ddlMunicipal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_WATERMUNICIPALAREA"]);
+                    //}
+                    //else { MunicipalArea.Visible = false; }
+                    //rblGrantwater.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_WATERCONNONMUNICIPALURBAN"]);
                     rblDrawing.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_DRAWINGPLANAPPROVAL"]);
 
 
 
-                    rblLbrAct1970.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LABOURACT1970"]);
+                    //rblLbrAct1970.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LABOURACT1970"]);
                     rblLbrAct1970_SelectedIndexChanged(null, EventArgs.Empty);
-                    txt1970Workers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERS1970"]);
-                    rblLbrAct1979.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LABOURACT1979"]);
+                    //txt1970Workers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERS1970"]);
+                    //rblLbrAct1979.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LABOURACT1979"]);
                     rblLbrAct1979_SelectedIndexChanged(null, EventArgs.Empty);
-                    txt1979Workers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERS1979"]);
+                    //txt1979Workers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERS1979"]);
                     rblLbrAct1996.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LABOURACT1996"]);
                     rblLbrAct1996_SelectedIndexChanged(null, EventArgs.Empty);
                     rblbuildingwork.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_BUILDINGWORKS1996"]);
                     rblbuildingwork_SelectedIndexChanged(null, EventArgs.Empty);
                     txt1996Workers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERS1996"]);
-                    rblLabourAct.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_CONTRLABOURACT"]);
+                    //rblLabourAct.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_CONTRLABOURACT"]);
                     rblLabourAct_SelectedIndexChanged(null, EventArgs.Empty);
-                    txtContractWorkers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERSCONTR"]);
-                    rblForContr1970.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_CONTRLABOURACT1970"]);
+                    //txtContractWorkers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERSCONTR"]);
+                    //rblForContr1970.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_CONTRLABOURACT1970"]);
                     rblForContr1970_SelectedIndexChanged(null, EventArgs.Empty);
-                    txtContr1970wrkrs.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERSCONTR1970"]);
+                    //txtContr1970wrkrs.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERSCONTR1970"]);
 
                     GetApprovals();
                 }
@@ -335,9 +335,14 @@ namespace NiveshMitra.User.CFE
                     errormsg = errormsg + slno + ". Please Select Proposed Location Village \\n";
                     slno = slno + 1;
                 }
-                if (string.IsNullOrEmpty(txtFullAddress.Text) || txtFullAddress.Text == "" || txtFullAddress.Text == null)
+                if (string.IsNullOrEmpty(txtHouseNumber.Text) || txtHouseNumber.Text == "" || txtHouseNumber.Text == null)
                 {
-                    errormsg = errormsg + slno + ". Please Enter Full Address \\n";
+                    errormsg = errormsg + slno + ". Please Enter House Number/Survey Number \\n";
+                    slno = slno + 1;
+                }
+                if (string.IsNullOrEmpty(txtStreet.Text) || txtStreet.Text == "" || txtStreet.Text == null)
+                {
+                    errormsg = errormsg + slno + ". Please Enter Street/Area \\n";
                     slno = slno + 1;
                 }
                 if (string.IsNullOrEmpty(txtPinCode.Text) || txtPinCode.Text == "" || txtPinCode.Text == null)
@@ -476,16 +481,16 @@ namespace NiveshMitra.User.CFE
                     errormsg = errormsg + slno + ". Please Select Whether you require Road Cutting Permission or not \\n";
                     slno = slno + 1;
                 }
-                if (rblNonEncCert.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Whether you require Non-Encumbrance Certificate or not \\n";
-                    slno = slno + 1;
-                }
-                if (rblCommericalTax.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Whether you require approval from Commerical Tax or not \\n";
-                    slno = slno + 1;
-                }
+                //if (rblNonEncCert.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Whether you require Non-Encumbrance Certificate or not \\n";
+                //    slno = slno + 1;
+                //}
+                //if (rblCommericalTax.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Whether you require approval from Commerical Tax or not \\n";
+                //    slno = slno + 1;
+                //}
                 if (rblHighTension.SelectedIndex == -1)
                 {
                     errormsg = errormsg + slno + ". Please Select Whether you Use (High Tension)HT meter Above 70KVA or not \\n";
@@ -521,16 +526,16 @@ namespace NiveshMitra.User.CFE
                     }
 
                 }
-                if (rblfrstDistncLtr.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Whether You require Letter for distance from Forest or not \\n";
-                    slno = slno + 1;
-                }
-                if (rblNonForstLandCert.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Whether You require Non-Forest Land Certificate or not \\n";
-                    slno = slno + 1;
-                }
+                //if (rblfrstDistncLtr.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Whether You require Letter for distance from Forest or not \\n";
+                //    slno = slno + 1;
+                //}
+                //if (rblNonForstLandCert.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Whether You require Non-Forest Land Certificate or not \\n";
+                //    slno = slno + 1;
+                //}
                 if (rblFelltrees.SelectedIndex == -1)
                 {
                     errormsg = errormsg + slno + ". Please Select Whether any need to Fell trees in Proposed Site or not \\n";
@@ -544,72 +549,72 @@ namespace NiveshMitra.User.CFE
                         slno = slno + 1;
                     }
                 }
-                if (rblwaterbody.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Whether unit Location fall within 100mts vicinity of any water body or not \\n";
-                    slno = slno + 1;
-                }
+                //if (rblwaterbody.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Whether unit Location fall within 100mts vicinity of any water body or not \\n";
+                //    slno = slno + 1;
+                //}
                 if (rblborewell.SelectedIndex == -1)
                 {
                     errormsg = errormsg + slno + ". Please Select Whether You have Existing borewell in proposed factory Location or not \\n";
                     slno = slno + 1;
                 }
-                if (rblNocGroundWater.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Require NoC for Ground  or not \\n";
-                    slno = slno + 1;
-                }
-                if (rblwatersupply.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Require Certificate for non - availability of water supply from water supply agency or not \\n";
-                    slno = slno + 1;
-                }
+                //if (rblNocGroundWater.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Require NoC for Ground  or not \\n";
+                //    slno = slno + 1;
+                //}
+                //if (rblwatersupply.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Require Certificate for non - availability of water supply from water supply agency or not \\n";
+                //    slno = slno + 1;
+                //}
                 if (rblRiverTanks.SelectedIndex == -1)
                 {
                     errormsg = errormsg + slno + ". Please Select Require Permission to Draw Water from River/Public Tanks or not \\n";
                     slno = slno + 1;
                 }
-                if (rblMunicipal.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Require Water Connection for the Municipal Area or not \\n";
-                    slno = slno + 1;
-                }
-                if (rblGrantwater.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Required Grant of Water Connection to Non Municipal urban or not \\n";
-                    slno = slno + 1;
-                }
+                //if (rblMunicipal.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Require Water Connection for the Municipal Area or not \\n";
+                //    slno = slno + 1;
+                //}
+                //if (rblGrantwater.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Required Grant of Water Connection to Non Municipal urban or not \\n";
+                //    slno = slno + 1;
+                //}
                 if (rblDrawing.SelectedIndex == -1)
                 {
                     errormsg = errormsg + slno + ". Please Select Required Grant of Drawing Plan Approval or not \\n";
                     slno = slno + 1;
                 }
-                if (rblLbrAct1970.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Contract Labour(Regulation and Abolition)Act, 1970? \\n";
-                    slno = slno + 1;
-                }
-                if (rblLbrAct1970.SelectedValue == "Y")
-                {
-                    if (string.IsNullOrEmpty(txt1970Workers.Text) || txt1970Workers.Text == "" || txt1970Workers.Text == null || txt1970Workers.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txt1970Workers.Text, @"^0+(\.0+)?$"))
-                    {
-                        errormsg = errormsg + slno + ". Please Enter No.of workers under Contract Labour(Regulation and Abolition)Act, 1970 \\n";
-                        slno = slno + 1;
-                    }
-                }
-                if (rblLbrAct1979.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Inter-state Migrant Workmen Act, 1979? \\n";
-                    slno = slno + 1;
-                }
-                if (rblLbrAct1979.SelectedValue == "Y")
-                {
-                    if (string.IsNullOrEmpty(txt1979Workers.Text) || txt1979Workers.Text == "" || txt1979Workers.Text == null || txt1979Workers.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txt1979Workers.Text, @"^0+(\.0+)?$"))
-                    {
-                        errormsg = errormsg + slno + ". Please Enter No.of workers under Inter-state Migrant Workmen Act, 1979? \\n";
-                        slno = slno + 1;
-                    }
-                }
+                //if (rblLbrAct1970.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Contract Labour(Regulation and Abolition)Act, 1970? \\n";
+                //    slno = slno + 1;
+                //}
+                //if (rblLbrAct1970.SelectedValue == "Y")
+                //{
+                //    if (string.IsNullOrEmpty(txt1970Workers.Text) || txt1970Workers.Text == "" || txt1970Workers.Text == null || txt1970Workers.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txt1970Workers.Text, @"^0+(\.0+)?$"))
+                //    {
+                //        errormsg = errormsg + slno + ". Please Enter No.of workers under Contract Labour(Regulation and Abolition)Act, 1970 \\n";
+                //        slno = slno + 1;
+                //    }
+                //}
+                //if (rblLbrAct1979.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Inter-state Migrant Workmen Act, 1979? \\n";
+                //    slno = slno + 1;
+                //}
+                //if (rblLbrAct1979.SelectedValue == "Y")
+                //{
+                //    if (string.IsNullOrEmpty(txt1979Workers.Text) || txt1979Workers.Text == "" || txt1979Workers.Text == null || txt1979Workers.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txt1979Workers.Text, @"^0+(\.0+)?$"))
+                //    {
+                //        errormsg = errormsg + slno + ". Please Enter No.of workers under Inter-state Migrant Workmen Act, 1979? \\n";
+                //        slno = slno + 1;
+                //    }
+                //}
                 if (rblLbrAct1996.SelectedIndex == -1)
                 {
                     errormsg = errormsg + slno + ". Please Select Building and Other Constrution Worker(RE&COS) Act, 1996? \\n";
@@ -631,32 +636,32 @@ namespace NiveshMitra.User.CFE
                         }
                     }
                 }
-                if (rblLabourAct.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Whether You require License under Contract Labour Act (For Contractor) or not \\n";
-                    slno = slno + 1;
-                }
-                if (rblLabourAct.SelectedValue == "Y")
-                {
-                    if (string.IsNullOrEmpty(txtContractWorkers.Text) || txtContractWorkers.Text == "" || txtContractWorkers.Text == null || txtContractWorkers.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txtContractWorkers.Text, @"^0+(\.0+)?$"))
-                    {
-                        errormsg = errormsg + slno + ". Please Enter No.of Workers under License under Contract Labour Act (For Contractor) \\n";
-                        slno = slno + 1;
-                    }
-                }
-                if (rblForContr1970.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select (License for Contractors) as defined in the contract labour\r\n(Regulation and Abolition) Act,1970? \\n";
-                    slno = slno + 1;
-                }
-                if (rblForContr1970.SelectedValue == "Y")
-                {
-                    if (string.IsNullOrEmpty(txtContr1970wrkrs.Text) || txtContr1970wrkrs.Text == "" || txtContr1970wrkrs.Text == null || txtContr1970wrkrs.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txtContr1970wrkrs.Text, @"^0+(\.0+)?$"))
-                    {
-                        errormsg = errormsg + slno + ". Please Enter No.of workers under License for Contractors) as defined in the contract labour\r\n(Regulation and Abolition) Act,1970? \\n";
-                        slno = slno + 1;
-                    }
-                }
+                //if (rblLabourAct.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Whether You require License under Contract Labour Act (For Contractor) or not \\n";
+                //    slno = slno + 1;
+                //}
+                //if (rblLabourAct.SelectedValue == "Y")
+                //{
+                //    if (string.IsNullOrEmpty(txtContractWorkers.Text) || txtContractWorkers.Text == "" || txtContractWorkers.Text == null || txtContractWorkers.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txtContractWorkers.Text, @"^0+(\.0+)?$"))
+                //    {
+                //        errormsg = errormsg + slno + ". Please Enter No.of Workers under License under Contract Labour Act (For Contractor) \\n";
+                //        slno = slno + 1;
+                //    }
+                //}
+                //if (rblForContr1970.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select (License for Contractors) as defined in the contract labour\r\n(Regulation and Abolition) Act,1970? \\n";
+                //    slno = slno + 1;
+                //}
+                //if (rblForContr1970.SelectedValue == "Y")
+                //{
+                //    if (string.IsNullOrEmpty(txtContr1970wrkrs.Text) || txtContr1970wrkrs.Text == "" || txtContr1970wrkrs.Text == null || txtContr1970wrkrs.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txtContr1970wrkrs.Text, @"^0+(\.0+)?$"))
+                //    {
+                //        errormsg = errormsg + slno + ". Please Enter No.of workers under License for Contractors) as defined in the contract labour\r\n(Regulation and Abolition) Act,1970? \\n";
+                //        slno = slno + 1;
+                //    }
+                //}
                 return errormsg;
 
 
@@ -793,37 +798,37 @@ namespace NiveshMitra.User.CFE
                     objCFEQsnaire.ManfExplosives = rblexplosives.SelectedValue;
                     objCFEQsnaire.ManfPetroleum = rblPetrlManf.SelectedValue;
                     objCFEQsnaire.RdCtngPermission = rblRoadCutting.SelectedValue;
-                    objCFEQsnaire.NonEncmbrnceCert = rblNonEncCert.SelectedValue;
-                    objCFEQsnaire.CommTaxApproval = rblCommericalTax.SelectedValue;
+                    //objCFEQsnaire.NonEncmbrnceCert = rblNonEncCert.SelectedValue;
+                    //objCFEQsnaire.CommTaxApproval = rblCommericalTax.SelectedValue;
                     objCFEQsnaire.HTMeteruse = rblHighTension.SelectedValue;
                     objCFEQsnaire.CEARegulationID = ddlRegulation.SelectedValue;
                     objCFEQsnaire.PowerPlantID = ddlPowerPlant.SelectedValue;
                     objCFEQsnaire.AggCapacity = txtAggrCapacity.Text.Trim();
                     objCFEQsnaire.VoltageRating = ddlVoltage.SelectedValue;
-                    objCFEQsnaire.TreesFelling = rblfrstDistncLtr.SelectedValue;
+                    //objCFEQsnaire.TreesFelling = rblfrstDistncLtr.SelectedValue;
                     objCFEQsnaire.NoofTrees = txtNoofTrees.Text.Trim();
-                    objCFEQsnaire.NonForstLandCert = rblNonForstLandCert.SelectedValue;
+                    //objCFEQsnaire.NonForstLandCert = rblNonForstLandCert.SelectedValue;
                     objCFEQsnaire.ForstDistLetr = rblFelltrees.SelectedValue;
-                    objCFEQsnaire.NearWaterBodyLocation = rblwaterbody.SelectedValue;
+                    //objCFEQsnaire.NearWaterBodyLocation = rblwaterbody.SelectedValue;
                     objCFEQsnaire.ExistingBoreWell = rblborewell.SelectedValue;
-                    objCFEQsnaire.LabourAct1970 = rblLbrAct1970.SelectedValue;
-                    objCFEQsnaire.LabourAct1970_Workers = txt1970Workers.Text.Trim();
-                    objCFEQsnaire.LabourAct1979 = rblLbrAct1979.SelectedValue;
-                    objCFEQsnaire.LabourAct1979_Workers = txt1979Workers.Text.Trim();
+                    //objCFEQsnaire.LabourAct1970 = rblLbrAct1970.SelectedValue;
+                    //objCFEQsnaire.LabourAct1970_Workers = txt1970Workers.Text.Trim();
+                    //objCFEQsnaire.LabourAct1979 = rblLbrAct1979.SelectedValue;
+                    //objCFEQsnaire.LabourAct1979_Workers = txt1979Workers.Text.Trim();
                     objCFEQsnaire.LabourAct1996 = rblLbrAct1996.SelectedValue;
                     objCFEQsnaire.LabourAct1996_10Workers = rblbuildingwork.SelectedValue;
                     objCFEQsnaire.LabourAct1996_Workers = txt1996Workers.Text.Trim();
-                    objCFEQsnaire.ContractLabourAct = rblLabourAct.SelectedValue;
-                    objCFEQsnaire.ContractLabourAct_Workers = txtContractWorkers.Text.Trim();
-                    objCFEQsnaire.ContractLabourAct1970 = rblForContr1970.SelectedValue;
-                    objCFEQsnaire.ContractLabourAct1970_Workers = txtContr1970wrkrs.Text.Trim();
+                    //objCFEQsnaire.ContractLabourAct = rblLabourAct.SelectedValue;
+                    //objCFEQsnaire.ContractLabourAct_Workers = txtContractWorkers.Text.Trim();
+                   // objCFEQsnaire.ContractLabourAct1970 = rblForContr1970.SelectedValue;
+                    //objCFEQsnaire.ContractLabourAct1970_Workers = txtContr1970wrkrs.Text.Trim();
                     objCFEQsnaire.CreatedBy = hdnUserID.Value;
 
-                    objCFEQsnaire.GrandWaterConnection = rblNocGroundWater.SelectedValue;
-                    objCFEQsnaire.WaterSupplyAgency = rblwatersupply.SelectedValue;
+                    //objCFEQsnaire.GrandWaterConnection = rblNocGroundWater.SelectedValue;
+                    //objCFEQsnaire.WaterSupplyAgency = rblwatersupply.SelectedValue;
                     objCFEQsnaire.RiverPublicTanker = rblRiverTanks.SelectedValue;
-                    objCFEQsnaire.MuncipalAreawater = rblMunicipal.SelectedValue;
-                    objCFEQsnaire.NonMuncipalAreaUrban = rblGrantwater.SelectedValue;
+                    //objCFEQsnaire.MuncipalAreawater = rblMunicipal.SelectedValue;
+                   // objCFEQsnaire.NonMuncipalAreaUrban = rblGrantwater.SelectedValue;
                     objCFEQsnaire.MunicipalArea = ddlMunicipal.SelectedValue;
                     objCFEQsnaire.DrawingPlan = rblDrawing.SelectedValue;
 
@@ -1164,14 +1169,14 @@ namespace NiveshMitra.User.CFE
 
             return result;
         }
-        protected void rblMunicipal_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (rblMunicipal.SelectedValue == "Y")
-            {
-                MunicipalArea.Visible = true;
-            }
-            else { MunicipalArea.Visible = false; }
-        }
+        //protected void rblMunicipal_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (rblMunicipal.SelectedValue == "Y")
+        //    {
+        //        MunicipalArea.Visible = true;
+        //    }
+        //    else { MunicipalArea.Visible = false; }
+        //}
 
         protected void txtAnnualTurnOver_TextChanged(object sender, EventArgs e)
         {
@@ -1194,7 +1199,7 @@ namespace NiveshMitra.User.CFE
                         if (Result != "")
                         {
                             lblEntCategory.Text = Result;
-
+                            lblTotProjCost.Text = Convert.ToString(Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text));
                         }
                     }
                 }
@@ -1332,15 +1337,15 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                if (rblLbrAct1970.SelectedValue == "Y")
-                {
-                    trworkers1970.Visible = true;
-                }
-                else
-                {
-                    trworkers1970.Visible = false;
-                    txt1970Workers.Text = "";
-                }
+                //if (rblLbrAct1970.SelectedValue == "Y")
+                //{
+                //    trworkers1970.Visible = true;
+                //}
+                //else
+                //{
+                //    trworkers1970.Visible = false;
+                //    txt1970Workers.Text = "";
+                //}
             }
             catch (Exception ex)
             {
@@ -1354,15 +1359,15 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                if (rblLbrAct1979.SelectedValue == "Y")
-                {
-                    trworkers1979.Visible = true;
-                }
-                else
-                {
-                    trworkers1979.Visible = false;
-                    txt1979Workers.Text = "";
-                }
+                //if (rblLbrAct1979.SelectedValue == "Y")
+                //{
+                //    trworkers1979.Visible = true;
+                //}
+                //else
+                //{
+                //    trworkers1979.Visible = false;
+                //    txt1979Workers.Text = "";
+                //}
             }
             catch (Exception ex)
             {
@@ -1423,15 +1428,15 @@ namespace NiveshMitra.User.CFE
 
             try
             {
-                if (rblLabourAct.SelectedValue == "Y")
-                {
-                    trContrctworkers.Visible = true;
-                }
-                else
-                {
-                    trContrctworkers.Visible = false;
-                    txtContractWorkers.Text = "";
-                }
+                //if (rblLabourAct.SelectedValue == "Y")
+                //{
+                //    trContrctworkers.Visible = true;
+                //}
+                //else
+                //{
+                //    trContrctworkers.Visible = false;
+                //    txtContractWorkers.Text = "";
+                //}
             }
             catch (Exception ex)
             {
@@ -1445,15 +1450,15 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                if (rblForContr1970.SelectedValue == "Y")
-                {
-                    trcontrworkers1970.Visible = true;
-                }
-                else
-                {
-                    trcontrworkers1970.Visible = false;
-                    txtContr1970wrkrs.Text = "";
-                }
+                //if (rblForContr1970.SelectedValue == "Y")
+                //{
+                //    trcontrworkers1970.Visible = true;
+                //}
+                //else
+                //{
+                //    trcontrworkers1970.Visible = false;
+                //    txtContr1970wrkrs.Text = "";
+                //}
             }
             catch (Exception ex)
             {
