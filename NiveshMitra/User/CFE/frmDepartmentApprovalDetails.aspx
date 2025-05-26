@@ -113,7 +113,8 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12" style="text-align:center;margin-top:10px">
             <input type="button" class="btn btn-info" value="Previous" style="width:100px" />
-            <input type="button" class="btn btn-success" value="Save" style="width:100px"/>
+           <%-- <input type="button" class="btn btn-success" value="Save" style="width:100px"/>--%>
+            <asp:Button ID="btnSubmit" runat="server" Text="Save" OnClick="btnSubmit_Click" class="btn btn-rounded btn-success btn-lg" Width="150px" />
             <input type="button" class="btn btn-warning" value="Next" style="width:100px"/>
         </div>
     </div>

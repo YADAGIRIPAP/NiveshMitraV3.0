@@ -259,5 +259,130 @@ namespace NiveshMitra.User.CFE
             }
 
         }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int cnt = 0;
+                int selectedcount = 0;
+                int selectedcount1 = 0;
+                foreach (GridViewRow row in grdApprovals.Rows)
+                {
+                    RadioButtonList rblobtained = (RadioButtonList)row.FindControl("rblAlrdyObtained");
+                    if (rblobtained.SelectedValue == "N")
+                    {
+                        selectedcount = selectedcount + 1;
+                        if (((CheckBox)row.FindControl("ChkApproval")).Checked)
+                        {
+                            selectedcount1 = selectedcount1 + 1;
+                        }
+                    }
+                    if (((CheckBox)row.FindControl("ChkApproval")).Checked)
+                    {
+                        cnt = cnt + 1;
+                    }
+
+                    SetGridLabelValue();
+                }
+                if (cnt == 0)
+                {
+                    Failure.Visible = true;
+                    lblmsg0.Text = "Please Select Atleast one Department for Approval";
+                    lblmsg0.Visible = true;
+                    return;
+                }
+                CFEQuestionnaireDet objCFEQsnaire = new CFEQuestionnaireDet();
+                int count = 0;
+                foreach (GridViewRow row in grdApprovals.Rows)
+                {
+                    //if (((CheckBox)row.FindControl("ChkApproval")).Checked)
+                    //{
+                    Label ApprovalID = (Label)row.FindControl("lblApprID");
+                    Label DeptID = (Label)row.FindControl("lblDeptID") as Label;
+                    Label lblFEE = (Label)row.FindControl("lblAmounts") as Label;
+                    RadioButtonList rbloffline = (RadioButtonList)row.FindControl("rblAlrdyObtained");
+
+                    objCFEQsnaire.UNITID = Convert.ToString(Session["CFEUNITID"]);
+                    objCFEQsnaire.CFEQDID = Convert.ToString(Session["CFEQID"]);
+                    objCFEQsnaire.DeptID = DeptID.Text;
+                    objCFEQsnaire.ApprovalID = ApprovalID.Text;
+                    objCFEQsnaire.ApprovalFee = row.Cells[3].Text;
+                    objCFEQsnaire.IsOffline = rbloffline.SelectedValue;
+                    objCFEQsnaire.CreatedBy = hdnUserID.Value;
+                    objCFEQsnaire.IPAddress = getclientIP();
+
+                    string A = objcfebal.InsertCFEDepartmentApprovals(objCFEQsnaire);
+                    if (A != "")
+                    { count = count + 1; }
+                    //}
+                }
+                if (grdApprovals.Rows.Count == count)
+                {
+                    //Getofflineapprovals();
+                    success.Visible = true;
+                    lblmsg.Text = "Details Submitted Successfully";
+                    string message = "alert('" + lblmsg.Text + "')";
+
+                    ScriptManager.RegisterClientScriptBlock((sender as Control), this.GetType(), "alert", message, true);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+
+        }
+
+        public void SetGridLabelValue()
+        {
+            try
+            {
+                int rowsIndex = grdApprovals.Rows.Count;
+
+                if (rowsIndex > 0)
+                {
+                    for (int i = 0; i < rowsIndex; i++)
+                    {
+                        CheckBox chkCheck = (CheckBox)grdApprovals.Rows[i].FindControl("ChkApproval");
+                        GridViewRow grdRwos = (GridViewRow)chkCheck.NamingContainer;
+                        if (chkCheck.Checked == true)
+                            grdRwos.Cells[6].Text = grdRwos.Cells[3].Text;
+                        else
+                            grdRwos.Cells[6].Text = "0";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
+
+        public static string getclientIP()
+        {
+            string result = string.Empty;
+            string ip = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            if (!string.IsNullOrEmpty(ip))
+            {
+                string[] ipRange = ip.Split(',');
+                int le = ipRange.Length - 1;
+                result = ipRange[0];
+            }
+            else
+            {
+                result = HttpContext.Current.Request.ServerVariables["REMOTE_ADDR"];
+            }
+
+            return result;
+        }
+
+
+
     }
 }

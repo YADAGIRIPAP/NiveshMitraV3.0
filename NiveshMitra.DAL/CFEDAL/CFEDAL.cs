@@ -409,5 +409,53 @@ namespace NiveshMitra.DAL.CFEDAL
             }
         }
 
+        public string InsertCFEDepartmentApprovals(CFEQuestionnaireDet objCFEQsnaire)
+        {
+            string Result = "";
+
+            SqlConnection connection = new SqlConnection(connstr);
+            SqlTransaction transaction = null;
+            //connection.Open();
+            //transaction = connection.BeginTransaction();
+            try
+            {
+
+                connection.Open();
+                transaction = connection.BeginTransaction();
+
+                SqlCommand com = new SqlCommand();
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = CFEConstants.InsertCFEDepartmentapprovals;
+
+                com.Transaction = transaction;
+                com.Connection = connection;
+
+                com.Parameters.AddWithValue("@CFEDA_UNITID", Convert.ToInt32(objCFEQsnaire.UNITID));
+                com.Parameters.AddWithValue("@CFEDA_CFEQDID", Convert.ToInt32(objCFEQsnaire.CFEQDID));
+                com.Parameters.AddWithValue("@CFEDA_DEPTID", Convert.ToInt32(objCFEQsnaire.DeptID));
+                com.Parameters.AddWithValue("@CFEDA_APPROVALID", Convert.ToInt32(objCFEQsnaire.ApprovalID));
+                com.Parameters.AddWithValue("@CFEDA_APPROVALFEE", Convert.ToDecimal(objCFEQsnaire.ApprovalFee));
+                com.Parameters.AddWithValue("@CFEDA_ISOFFLINE", objCFEQsnaire.IsOffline);
+                com.Parameters.AddWithValue("@CFDA_CREATEDBY", Convert.ToInt32(objCFEQsnaire.CreatedBy));
+                com.Parameters.AddWithValue("@CFDA_CREATEDBYIP", objCFEQsnaire.IPAddress);
+
+                int DAID = Convert.ToInt32(com.ExecuteScalar());
+                transaction.Commit();
+                connection.Close();
+                Result = Convert.ToString(DAID);
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+            return Result;
+        }
+
     }
 }
