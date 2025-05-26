@@ -7,7 +7,7 @@
 <head runat="server">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <title>Invest Meghalaya - Dashboard</title>
+    <title>Nivesh Mitra - Dashboard</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <link rel="shortcut icon" type="image/x-icon" href="..assets/admin/images/favicon.png">
@@ -160,7 +160,7 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <a href="#" class="logo">
-                        <img src="/assets/imgs/logo1.png"   width="250px" />
+                        <img src="/assets/imgs/logo1.png"   style="max-height: 50px;width: 260px;" />
                         <%--<asp:ImageButton runat="server" ID="imgLogo" ImageUrl="~/assets/assetsnew/images/Logo.png" />--%>
                     </a>
 

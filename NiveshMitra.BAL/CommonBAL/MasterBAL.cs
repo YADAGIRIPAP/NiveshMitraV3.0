@@ -67,5 +67,9 @@ namespace NiveshMitra.BAL.CommonBAL
         {
             return objMasterDAL.GetVillages(TehsilCode);
         }
+        public List<MasterState> GetState()
+        {
+            return objMasterDAL.GetState();
+        }
     }
 }

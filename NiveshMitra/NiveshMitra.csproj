@@ -330,9 +330,16 @@
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="User\CFE\CFEfire.aspx" />
+    <Content Include="User\CFE\CFEForestDetails.aspx" />
+    <Content Include="User\CFE\CFEIndustryDetails.aspx" />
+    <Content Include="User\CFE\CFElabourAct1948.aspx" />
+    <Content Include="User\CFE\CFElabourAct1996.aspx" />
+    <Content Include="User\CFE\CFEPowerDetails.aspx" />
     <Content Include="User\CFE\CFEQuestionnaire.aspx" />
     <Content Include="User\CFE\CFEUserDashboard.aspx" />
     <Content Include="User\CFE\frmDepartmentApprovalDetails.aspx" />
+    <Content Include="User\CFE\LineofActivity.aspx" />
     <Content Include="User\MainDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -377,6 +384,48 @@
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\CFE\CFEfire.aspx.cs">
+      <DependentUpon>CFEfire.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\CFEfire.aspx.designer.cs">
+      <DependentUpon>CFEfire.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\CFEForestDetails.aspx.cs">
+      <DependentUpon>CFEForestDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\CFEForestDetails.aspx.designer.cs">
+      <DependentUpon>CFEForestDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\CFEIndustryDetails.aspx.cs">
+      <DependentUpon>CFEIndustryDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\CFEIndustryDetails.aspx.designer.cs">
+      <DependentUpon>CFEIndustryDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\CFElabourAct1948.aspx.cs">
+      <DependentUpon>CFElabourAct1948.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\CFElabourAct1948.aspx.designer.cs">
+      <DependentUpon>CFElabourAct1948.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\CFElabourAct1996.aspx.cs">
+      <DependentUpon>CFElabourAct1996.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\CFElabourAct1996.aspx.designer.cs">
+      <DependentUpon>CFElabourAct1996.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\CFEPowerDetails.aspx.cs">
+      <DependentUpon>CFEPowerDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\CFEPowerDetails.aspx.designer.cs">
+      <DependentUpon>CFEPowerDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\CFE\CFEQuestionnaire.aspx.cs">
       <DependentUpon>CFEQuestionnaire.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -397,6 +446,13 @@
     </Compile>
     <Compile Include="User\CFE\frmDepartmentApprovalDetails.aspx.designer.cs">
       <DependentUpon>frmDepartmentApprovalDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\LineofActivity.aspx.cs">
+      <DependentUpon>LineofActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\LineofActivity.aspx.designer.cs">
+      <DependentUpon>LineofActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\MainDashboard.aspx.cs">
       <DependentUpon>MainDashboard.aspx</DependentUpon>

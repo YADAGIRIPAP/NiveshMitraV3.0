@@ -26,6 +26,8 @@ namespace NiveshMitra.Common
         public static string GetVillagesmaster = "USP_GET_VILLAGE";
         public static string GetVillagesmaster1 = "USP_GET_VILLAGE_V1";
 
+        public static string GetState = "USP_GET_STATE";
+
     }
     public class MasterConstType
     {
@@ -111,6 +113,13 @@ namespace NiveshMitra.Common
     {
         public string VillageId { get; set; }
         public string VillageName { get; set; }
+
+    }
+
+    public class MasterState
+    {
+        public string MS_ID { get; set; }
+        public string MS_NAME { get; set; }
 
     }
 }
