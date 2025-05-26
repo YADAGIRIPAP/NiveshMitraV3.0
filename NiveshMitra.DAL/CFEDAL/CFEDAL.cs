@@ -69,6 +69,7 @@ namespace NiveshMitra.DAL.CFEDAL
                 com.Transaction = transaction;
                 com.Connection = connection;
 
+                objCFEQsnaire.UNITID=DateTime.Now.ToString("yyyyMMddHHmmssfff");
 
                 com.Parameters.AddWithValue("@CFEQDID", objCFEQsnaire.CFEQDID);
                 //com.Parameters.AddWithValue("@CFEQD_UNITID", Convert.ToInt32(objCFEQsnaire.UNITID));

@@ -23,6 +23,8 @@ namespace NiveshMitra.User.CFE
 
             try
             {
+                Session.Remove("CFEUNITID");
+                Session["CFEUNITID"] = null;
                 if (Session["UserInfo"] != null)
                 {
                     var ObjUserInfo = new UserInfo();
@@ -840,6 +842,9 @@ namespace NiveshMitra.User.CFE
                     {
                         CFEQuestionnaireDet objrm = new CFEQuestionnaireDet();
                         Session["CFEQID"] = result;
+
+                        Session["CFEUNITID"] =Convert.ToInt64(result)+10000;//temp code
+
                         for (int i = 0; i < grdApprovals.Rows.Count; i++)
                         {
                             Label ApprovalID = grdApprovals.Rows[i].FindControl("lblApprID") as Label;
