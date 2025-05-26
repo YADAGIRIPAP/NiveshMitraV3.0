@@ -843,7 +843,7 @@ namespace NiveshMitra.User.CFE
                         CFEQuestionnaireDet objrm = new CFEQuestionnaireDet();
                         Session["CFEQID"] = result;
 
-                        Session["CFEUNITID"] =Convert.ToInt64(result)+10000;//temp code
+                        Session["CFEUNITID"] =Convert.ToInt32(result)+1;//temp code
 
                         for (int i = 0; i < grdApprovals.Rows.Count; i++)
                         {
@@ -864,7 +864,7 @@ namespace NiveshMitra.User.CFE
                         }
                         if (grdApprovals.Rows.Count == count)
                         {
-                            objcfebal.DeleteDepartmentApprovals(objCFEQsnaire);
+                            //objcfebal.DeleteDepartmentApprovals(objCFEQsnaire);
 
                             success.Visible = true;
                             lblmsg.Text = "Consent For Establishment - Questionnaire Details Submitted Successfully";

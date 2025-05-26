@@ -69,8 +69,6 @@ namespace NiveshMitra.DAL.CFEDAL
                 com.Transaction = transaction;
                 com.Connection = connection;
 
-                objCFEQsnaire.UNITID=DateTime.Now.ToString("yyyyMMddHHmmssfff");
-
                 com.Parameters.AddWithValue("@CFEQDID", objCFEQsnaire.CFEQDID);
                 //com.Parameters.AddWithValue("@CFEQD_UNITID", Convert.ToInt32(objCFEQsnaire.UNITID));
                 com.Parameters.Add("@CFEQD_UNITID", SqlDbType.Int).Value = string.IsNullOrWhiteSpace(objCFEQsnaire.UNITID) ? (object)DBNull.Value : int.Parse(objCFEQsnaire.UNITID);
