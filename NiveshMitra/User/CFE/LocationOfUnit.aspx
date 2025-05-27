@@ -397,7 +397,13 @@
                                                             <input type="button" class="btn btn-warning" value="Clear All" style="width: 100px" />
                                                             <input type="button" class="btn btn-success" value="Save" style="width: 100px" />
                                                             <input type="button" class="btn btn-danger" value="Previous" style="width: 100px" />
-                                                            <input type="button" class="btn btn-danger" value="Next" style="width: 100px" />
+                                                               <asp:Button 
+ID="btnNext" 
+runat="server" 
+Text="Next" 
+CssClass="btn btn-rounded btn-info btn-lg mx-2" 
+Width="150px" 
+OnClick="btnNext_Click" />
                                                         </div>
                                                     </div>
                                                 </div>

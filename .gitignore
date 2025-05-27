@@ -378,3 +378,7 @@ FodyWeavers.xsd
 /NiveshMitra/bin/NiveshMitra.dll
 /NiveshMitra/bin/NiveshMitra.pdb
 /NiveshMitra/NiveshMitra.csproj.user
+/.vs/NiveshMitra/v17/.suo
+/.vs/NiveshMitra/v17/DocumentLayout.backup.json
+/.vs/NiveshMitra/v17/DocumentLayout.json
+/NiveshMitra/obj/Debug/NiveshMitra.csproj.AssemblyReference.cache
