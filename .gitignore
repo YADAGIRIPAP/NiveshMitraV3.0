@@ -361,3 +361,20 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/NiveshMitra.DAL/bin/Debug/NiveshMitra.DAL.dll
+/NiveshMitra.DAL/bin/Debug/NiveshMitra.DAL.pdb
+/NiveshMitra.Common/obj/Debug/NiveshMitra.Common.csproj.AssemblyReference.cache
+/NiveshMitra.Common/obj/Debug/NiveshMitra.Common.csproj.CoreCompileInputs.cache
+/NiveshMitra.Common/obj/Debug/NiveshMitra.Common.csproj.FileListAbsolute.txt
+/NiveshMitra.Common/obj/Debug/NiveshMitra.Common.dll
+/NiveshMitra.Common/obj/Debug/NiveshMitra.Common.pdb
+/NiveshMitra.Common/bin/Debug/NiveshMitra.Common.dll
+/NiveshMitra.Common/bin/Debug/NiveshMitra.Common.pdb
+/NiveshMitra.BAL/bin/Debug/NiveshMitra.BAL.dll
+/NiveshMitra.BAL/bin/Debug/NiveshMitra.BAL.pdb
+/.vs/NiveshMitra/v17/.suo
+/.vs/NiveshMitra/v17/DocumentLayout.backup.json
+/.vs/NiveshMitra/v17/DocumentLayout.json
+/NiveshMitra/bin/NiveshMitra.dll
+/NiveshMitra/bin/NiveshMitra.pdb
+/NiveshMitra/NiveshMitra.csproj.user
