@@ -159,11 +159,40 @@
                                                                     </div>
                                                                 </div>
                                                                 <h6 class="fs-20">Unit Location</h6>
+
+
+
+
+
                                                                 <div class="col-md-12 d-flex">
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                1.District
+                                                                                1. Whether land
+                                                                               <br />
+                                                                                purchased from Authority<span class="star">*</span></label>
+                                                                            <div class="col-lg-6 d-flex">
+                                                                                <div class="form-check form-check-inline ">
+                                                                                    <asp:RadioButtonList ID="rblMIDCL" runat="server" RepeatDirection="Horizontal" TabIndex="1" onchange="validateRadioButtonList(this)" OnSelectedIndexChanged="rblMIDCL_SelectedIndexChanged" AutoPostBack="true">
+                                                                                        <asp:ListItem Text="Yes" Value="1" />
+                                                                                        <asp:ListItem Text="No" Value="2" />
+                                                                                    </asp:RadioButtonList>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+
+
+
+
+                                                                <div class="col-md-12 d-flex">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-lg-6 col-form-label">
+                                                                                2.District
                                                                             <span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:DropDownList ID="ddlDistrict" runat="server" class="form-control" AutoPostBack="true" TabIndex="1" onchange="validateDropdown(this)" OnSelectedIndexChanged="ddlDistrict_SelectedIndexChanged">
@@ -174,7 +203,7 @@
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">2. Tehsil<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">3. Tehsil<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:DropDownList ID="ddlTehsil" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" onchange="validateDropdown(this)" OnSelectedIndexChanged="ddlTehsil_SelectedIndexChanged">
                                                                                     <asp:ListItem Text="Select Tehsil" Value="0" />
@@ -195,7 +224,7 @@
                                                                     </div>--%>
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">3. Village/Town/City<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">4. Village/Town/City<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:DropDownList ID="ddlVillage" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Select Village" Value="0" />
@@ -205,11 +234,33 @@
                                                                     </div>
                                                                 </div>
 
+
+
+
+                                                                <div class="col-md-12 d-flex" id="ddlIndustrialParkRow" runat="server" visible="false">
+                                                                    <div class="col-md-4">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-lg-6 col-form-label">Name of the Industrial Park<span class="star">*</span></label>
+                                                                            <div class="col-lg-6 d-flex">
+                                                                                <asp:DropDownList ID="ddlIndustrialPark" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" onchange="validateDropdown(this)" OnSelectedIndexChanged="ddlTehsil_SelectedIndexChanged">
+                                                                                    <asp:ListItem Text="Select Industrial Park" Value="0" />
+                                                                                    <asp:ListItem Text="Sector‐1" Value="1" />
+                                                                                    <asp:ListItem Text="Sector‐2" Value="2" />
+                                                                                    <asp:ListItem Text="Sector‐3" Value="3" />
+                                                                                    <asp:ListItem Text="Sector‐4" Value="4" />
+                                                                                </asp:DropDownList>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+
                                                                 <div class="col-md-12 d-flex">
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                4. House Number/Survey Number
+                                                                                5. House Number/Survey Number
                                                                                <span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:TextBox ID="txtHouseNumber" runat="server" class="form-control" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
@@ -219,7 +270,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                5. Street/Area
+                                                                                6. Street/Area
                                                                               <span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:TextBox ID="txtStreet" runat="server" class="form-control" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
@@ -228,7 +279,7 @@
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">6. Pin Code<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">7. Pin Code<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:TextBox ID="txtPinCode" runat="server" class="form-control" onkeypress="return validateNumberAndDot(event)" MaxLength="6" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
@@ -265,7 +316,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                7. Total
+                                                                                8. Total
 																		Extent of Land<br />
                                                                                 (in sq.m)<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -276,7 +327,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                8. Built up Area
+                                                                                9. Built up Area
                                                                                 <br />
                                                                                 (In Sq.m)<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
@@ -286,7 +337,7 @@
                                                                     </div>
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">9. Sector<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">10. Sector<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:DropDownList ID="ddlSector" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" OnSelectedIndexChanged="ddlSector_SelectedIndexChanged" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Select" Value="0" />
@@ -300,7 +351,7 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                10. Line of
+                                                                                11. Line of
 																		Activity<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
                                                                                 <asp:DropDownList ID="ddlLine_Activity" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" OnSelectedIndexChanged="ddlLine_Activity_SelectedIndexChanged" onchange="validateDropdown(this)">
@@ -312,14 +363,14 @@
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                11. Pollution
+                                                                                12. Pollution
 																		Category of Enterprise<span class="star">*</span></label>
                                                                             <div class="col-lg-6">
                                                                                 <asp:Label ID="lblPCBCategory" Font-Bold="true" runat="server" class="form-control" TabIndex="1"></asp:Label>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-4">
+                                                                    <%--<div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 12. Whether land
@@ -334,7 +385,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div>--%>
                                                                 </div>
 
                                                                 <div class="col-md-12 d-flex">
@@ -426,7 +477,7 @@
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">5. Expected Annual Turnover(In INR)<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
-                                                                                <asp:TextBox ID="txtAnnualTurnOver" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="11" AutoPostBack="true" OnTextChanged="txtAnnualTurnOver_TextChanged" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtAnnualTurnOver" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="15" AutoPostBack="true" OnTextChanged="txtAnnualTurnOver_TextChanged" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -690,10 +741,10 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>--%>
-                                                               <%-- </div>
+                                                                    <%-- </div>
 
                                                                 <div class="col-md-12 d-flex">--%>
-                                                                   <%-- <div class="col-md-6">
+                                                                    <%-- <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 9. Do you require approval from
@@ -710,7 +761,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                10. Do you Use (High Tension)
+                                                                                8. Do you Use (High Tension)
                                                                                 <br />
                                                                                 HT meter Above 70KVA<span class="text-danger">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -801,7 +852,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                13. Do you require Permission to Fell Isolated Trees/Lopping of Branches 
+                                                                                9. Do you require Permission to Fell Isolated Trees/Lopping of Branches 
                                                                                 <br />
                                                                                 From Homesteads, Farms, etc
                                                                                 <span class="star">*</span></label>
@@ -827,7 +878,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-12 d-flex">
-                                                                   <%-- <div class="col-md-6">
+                                                                    <%-- <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 14. Does the unit Location fall within 
@@ -844,7 +895,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                15. Do you have Existing borewell in 
+                                                                                10. Do you have Existing borewell in 
                                                                                 <br />
                                                                                 proposed factory Location<span class="star">*</span></label>
                                                                             <div class="col-lg-6 ">
@@ -855,9 +906,9 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                               <%-- </div>--%>
+                                                                    <%-- </div>--%>
 
-                                                                <%--<div class="col-md-12 d-flex">
+                                                                    <%--<div class="col-md-12 d-flex">
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
@@ -891,11 +942,11 @@
                                                                     </div>
                                                                 </div>--%>
 
-                                                                <%--<div class="col-md-12 d-flex">--%>
+                                                                    <%--<div class="col-md-12 d-flex">--%>
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                18. Do You Require Permission to 
+                                                                                11. Do You Require Permission to 
                                                                                 <br />
                                                                                 Draw Water from River/Public Tanks <span class="text-danger">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -956,7 +1007,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                21. Do You Required Drawing Plan Approval<span class="text-danger">*</span></label>
+                                                                                12. Do You Required Drawing Plan Approval<span class="text-danger">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:RadioButtonList ID="rblDrawing" runat="server" RepeatDirection="Horizontal" TabIndex="1" onchange="validateRadioButtonList(this)">
                                                                                     <asp:ListItem Text="Yes" Value="Y" />
@@ -973,11 +1024,11 @@
                                                                     <table class="table">
                                                                         <thead>
                                                                             <tr>
-                                                                                <th colspan="3" style="margin: 0px !important; padding: 3px 14px !important;">21. Labour Application Type</th>
+                                                                                <th colspan="3" style="margin: 0px !important; padding: 3px 14px !important;">13. Labour Application Type</th>
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
-                                                                       <%--     <tr>
+                                                                            <%--     <tr>
                                                                                 <td>21 a.</td>
                                                                                 <td>Does your Establishment employ 05 or more contract Labour as defined in the
                                                                        
@@ -1017,7 +1068,7 @@
                                                                             </tr>--%>
 
                                                                             <tr>
-                                                                                <td>21 c.</td>
+                                                                                <td>13 a.</td>
                                                                                 <td>Does your Establishment fall under the definition of establishment as per Building
                                                                     and Other Constrution Worker(RE&COS) Act, 1996? <span class="text-danger">*</span></td>
                                                                                 <td>
@@ -1047,7 +1098,7 @@
                                                                                 </td>
                                                                             </tr>
 
-                                                                         <%--   <tr>
+                                                                            <%--   <tr>
                                                                                 <td>21 d.</td>
                                                                                 <td>License under Contract Labour Act (For Contractor) <span class="text-danger">*</span>
                                                                                     <br />

@@ -83,7 +83,7 @@ namespace NiveshMitra.User.CFE
             try
             {
                 DataSet ds = new DataSet();
-                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]??string.Empty));
+                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"] ?? string.Empty));
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     hdnPreRegUID.Value = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PREREGUIDNO"]);
@@ -147,7 +147,7 @@ namespace NiveshMitra.User.CFE
                     //rblNocGroundWater.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOCGROUNDWATER"]);
                     //rblwatersupply.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NONAVAILABILITYCERT"]);
                     rblRiverTanks.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PERRIVERPUBLICTANKERS"]);
-                   // rblMunicipal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MUNICIPALAREAWATERCON"]);
+                    // rblMunicipal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MUNICIPALAREAWATERCON"]);
                     //if (rblMunicipal.SelectedValue == "Y")
                     //{
                     //    MunicipalArea.Visible = true;
@@ -822,7 +822,7 @@ namespace NiveshMitra.User.CFE
                     objCFEQsnaire.LabourAct1996_Workers = txt1996Workers.Text.Trim();
                     //objCFEQsnaire.ContractLabourAct = rblLabourAct.SelectedValue;
                     //objCFEQsnaire.ContractLabourAct_Workers = txtContractWorkers.Text.Trim();
-                   // objCFEQsnaire.ContractLabourAct1970 = rblForContr1970.SelectedValue;
+                    // objCFEQsnaire.ContractLabourAct1970 = rblForContr1970.SelectedValue;
                     //objCFEQsnaire.ContractLabourAct1970_Workers = txtContr1970wrkrs.Text.Trim();
                     objCFEQsnaire.CreatedBy = hdnUserID.Value;
 
@@ -830,7 +830,7 @@ namespace NiveshMitra.User.CFE
                     //objCFEQsnaire.WaterSupplyAgency = rblwatersupply.SelectedValue;
                     objCFEQsnaire.RiverPublicTanker = rblRiverTanks.SelectedValue;
                     //objCFEQsnaire.MuncipalAreawater = rblMunicipal.SelectedValue;
-                   // objCFEQsnaire.NonMuncipalAreaUrban = rblGrantwater.SelectedValue;
+                    // objCFEQsnaire.NonMuncipalAreaUrban = rblGrantwater.SelectedValue;
                     objCFEQsnaire.MunicipalArea = ddlMunicipal.SelectedValue;
                     objCFEQsnaire.DrawingPlan = rblDrawing.SelectedValue;
 
@@ -843,7 +843,7 @@ namespace NiveshMitra.User.CFE
                         CFEQuestionnaireDet objrm = new CFEQuestionnaireDet();
                         Session["CFEQID"] = result;
 
-                        Session["CFEUNITID"] =Convert.ToInt32(result)+1;//temp code
+                        Session["CFEUNITID"] = Convert.ToInt32(result) + 1;//temp code
 
                         for (int i = 0; i < grdApprovals.Rows.Count; i++)
                         {
@@ -1204,6 +1204,11 @@ namespace NiveshMitra.User.CFE
                         string Result = objcfebal.CFEENTERPRISETYPE(txtAnnualTurnOver.Text.ToString());
                         if (Result != "")
                         {
+                            var numOfEmp = Convert.ToInt32(txtPropEmp.Text);
+                            if ((Result == "Mega" && numOfEmp < 300) || (Result == "Super Mega" && numOfEmp < 600) || (Result == "Ultra Mega" && numOfEmp < 1500))
+                            {
+                                Result = "Large";
+                            }
                             lblEntCategory.Text = Result;
                             lblTotProjCost.Text = Convert.ToString(Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text));
                         }
@@ -1893,6 +1898,10 @@ namespace NiveshMitra.User.CFE
                 AddSelect(ddlVillage);
                 if (ddlDistrict.SelectedItem.Text != "--Select--")
                 {
+                    if (ddlDistrict.SelectedValue == "144" && rblMIDCL.SelectedValue == "1")
+                    {
+                        ddlIndustrialParkRow.Visible = true;
+                    }
                     BindTehsil(ddlTehsil, ddlDistrict.SelectedValue);
                 }
                 else return;
@@ -1901,7 +1910,7 @@ namespace NiveshMitra.User.CFE
             {
                 lblmsg0.Text = ex.Message;
                 Failure.Visible = true;
-               // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+                // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
         }
 
@@ -2047,6 +2056,14 @@ namespace NiveshMitra.User.CFE
                 lblmsg0.Text = ex.Message;
                 Failure.Visible = true;
                 // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
+
+        protected void rblMIDCL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rblMIDCL.SelectedValue == "2")
+            {
+                ddlIndustrialParkRow.Visible = false;
             }
         }
     }
