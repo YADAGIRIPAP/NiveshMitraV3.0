@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/NiveshMitra/config/applicationhost.config
+/NiveshMitra/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/NiveshMitra/obj/Debug/NiveshMitra.csproj.AssemblyReference.cache
