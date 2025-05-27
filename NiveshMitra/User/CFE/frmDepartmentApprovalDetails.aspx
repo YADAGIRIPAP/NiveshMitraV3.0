@@ -115,7 +115,7 @@
             <input type="button" class="btn btn-info" value="Previous" style="width:100px" />
            <%-- <input type="button" class="btn btn-success" value="Save" style="width:100px"/>--%>
             <asp:Button ID="btnSubmit" runat="server" Text="Save" OnClick="btnSubmit_Click" class="btn btn-rounded btn-success btn-lg" Width="150px" />
-            <input type="button" class="btn btn-warning" value="Next" style="width:100px"/>
+            <input type="button" class="btn btn-warning" onclick="location.href='CFEIndustryDetails.aspx'" value="Next" style="width:100px"/>
         </div>
     </div>
 </asp:Content>
