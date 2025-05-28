@@ -341,10 +341,7 @@
     <Content Include="User\CFE\frmDepartmentApprovalDetails.aspx" />
     <Content Include="User\CFE\LineofActivity.aspx" />
     <Content Include="User\CFE\LocationOfUnit.aspx" />
-<<<<<<< HEAD
     <Content Include="User\CFE\PrintApplicationForm.aspx" />
-=======
->>>>>>> 2e8da844f018206771a05ce8e179df23f2edd433
     <Content Include="User\MainDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -391,42 +388,36 @@
     </Compile>
     <Compile Include="User\CFE\CFEfire.aspx.cs">
       <DependentUpon>CFEfire.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\CFEfire.aspx.designer.cs">
       <DependentUpon>CFEfire.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\CFEForestDetails.aspx.cs">
       <DependentUpon>CFEForestDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\CFEForestDetails.aspx.designer.cs">
       <DependentUpon>CFEForestDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\CFEIndustryDetails.aspx.cs">
       <DependentUpon>CFEIndustryDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\CFEIndustryDetails.aspx.designer.cs">
       <DependentUpon>CFEIndustryDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\CFElabourAct1948.aspx.cs">
       <DependentUpon>CFElabourAct1948.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\CFElabourAct1948.aspx.designer.cs">
       <DependentUpon>CFElabourAct1948.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\CFElabourAct1996.aspx.cs">
       <DependentUpon>CFElabourAct1996.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\CFElabourAct1996.aspx.designer.cs">
       <DependentUpon>CFElabourAct1996.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\CFEPowerDetails.aspx.cs">
       <DependentUpon>CFEPowerDetails.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\CFEPowerDetails.aspx.designer.cs">
       <DependentUpon>CFEPowerDetails.aspx</DependentUpon>
@@ -454,28 +445,22 @@
     </Compile>
     <Compile Include="User\CFE\LineofActivity.aspx.cs">
       <DependentUpon>LineofActivity.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\LineofActivity.aspx.designer.cs">
       <DependentUpon>LineofActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\LocationOfUnit.aspx.cs">
       <DependentUpon>LocationOfUnit.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\LocationOfUnit.aspx.designer.cs">
       <DependentUpon>LocationOfUnit.aspx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="User\CFE\PrintApplicationForm.aspx.cs">
       <DependentUpon>PrintApplicationForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="User\CFE\PrintApplicationForm.aspx.designer.cs">
       <DependentUpon>PrintApplicationForm.aspx</DependentUpon>
     </Compile>
-=======
->>>>>>> 2e8da844f018206771a05ce8e179df23f2edd433
     <Compile Include="User\MainDashboard.aspx.cs">
       <DependentUpon>MainDashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
