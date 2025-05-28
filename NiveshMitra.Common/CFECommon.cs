@@ -19,6 +19,8 @@ namespace NiveshMitra.Common
         public static string GetApprovalsReqFromTable = "USP_GETCFEQUESTIONNAIREAPPROVALS";
         public static string InsertCFEDepartmentapprovals = "USP_INSCFEDEPARTMENTAPPROVALS";
 
+        public static string GetAppliedApprovalIDs = "USP_GETCFEAPPROVALIDS";
+
     }
     public class CFEQuestionnaireDet
     {

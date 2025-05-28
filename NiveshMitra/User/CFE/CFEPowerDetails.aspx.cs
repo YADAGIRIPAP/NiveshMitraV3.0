@@ -50,7 +50,7 @@ namespace NiveshMitra.User.CFE
                     Page.MaintainScrollPositionOnPostBack = true;
                     if (!IsPostBack)
                     {
-                        
+                        GetAppliedorNot();
                     }
                 }
 
@@ -64,10 +64,40 @@ namespace NiveshMitra.User.CFE
             }
 
         }
+        protected void GetAppliedorNot()
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                ds = objcfebal.GetAppliedApprovalIDs(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]), "25", "53");
+
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+                }
+                else
+                {
+                    if (Request.QueryString.Count > 0)
+                    {
+                        if (Convert.ToString(Request.QueryString[0]) == "N")
+                            Response.Redirect("~/User/CFE/CFEForestDetails.aspx?Next=" + "N");
+                        else if (Convert.ToString(Request.QueryString[0]) == "P")
+                            Response.Redirect("~/User/CFE/lineofActivity.aspx?Previous=" + "P");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Failure.Visible = true;
+                lblmsg0.Text = ex.Message;
+                MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
 
         protected void btnNext_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CFEfire.aspx");
+            Response.Redirect("CFEForestDetails.aspx");
         }
 
     }

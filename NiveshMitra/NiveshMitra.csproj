@@ -441,6 +441,7 @@
     <Compile Include="User\CFE\CFEUserDashboard.aspx.designer.cs">
       <DependentUpon>CFEUserDashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="User\CFE\CFOBAL.cs" />
     <Compile Include="User\CFE\frmDepartmentApprovalDetails.aspx.cs">
       <DependentUpon>frmDepartmentApprovalDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
