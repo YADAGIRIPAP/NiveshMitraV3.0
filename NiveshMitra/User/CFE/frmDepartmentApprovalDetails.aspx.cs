@@ -37,7 +37,9 @@ namespace NiveshMitra.User.CFE
                         hdnUserID.Value = ObjUserInfo.Userid;
                     }
                     if (Convert.ToString(Session["CFEUNITID"]) != "")
-                    { UnitID = Convert.ToString(Session["CFEUNITID"]); }
+                    { 
+                        UnitID = Convert.ToString(Session["CFEUNITID"]); 
+                    }
                     else
                     {
                         //string newurl = "~/User/CFE/CFEUserDashboard.aspx";
@@ -64,6 +66,9 @@ namespace NiveshMitra.User.CFE
             try
             {
                 DataSet dsApprovals = new DataSet();
+                cfeqs.UNITID = UnitID;
+                cfeqs.CreatedBy = hdnUserID.Value;
+
                 dsApprovals = objcfebal.GetApprovalsReqFromTable(cfeqs);
                 if (dsApprovals.Tables.Count > 0)
                 {
