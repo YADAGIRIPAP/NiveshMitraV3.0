@@ -708,6 +708,24 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.FileUpload FileUpload3;
 
         /// <summary>
+        /// btnClearAll control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnClearAll;
+
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
+
+        /// <summary>
         /// btnPrevious control.
         /// </summary>
         /// <remarks>
