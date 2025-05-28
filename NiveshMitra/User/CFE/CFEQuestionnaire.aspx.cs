@@ -955,32 +955,41 @@ namespace NiveshMitra.User.CFE
                 objCFEQ.EnterpriseCategory = lblEntCategory.Text;
                 if (lblPCBCategory.Text.Trim() != "White")
                 {
-                    // decimal PMCost  = Convert.ToDecimal();
+                    //// decimal PMCost  = Convert.ToDecimal();
+                    //objCFEQ.Investment = txtPMCost.Text;
+                    //objCFEQ.PCBCategory = lblPCBCategory.Text;
+                    //objCFEQ.ApprovalID = "1";
+                    //dtPCB = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtPCB);
+
                     objCFEQ.Investment = txtPMCost.Text;
                     objCFEQ.PCBCategory = lblPCBCategory.Text;
-                    objCFEQ.ApprovalID = "1";
+                    objCFEQ.ApprovalID = "42";
                     dtPCB = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtPCB);
-
                 }
                 if (ddlPowerReq.SelectedValue != "")
                 {
+                    //objCFEQ.PowerReqKW = ddlPowerReq.SelectedValue;
+                    //objCFEQ.PropEmployment = txtPropEmp.Text;
+                    //objCFEQ.ApprovalID = "3";
+                    //dtpower = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtpower);
+
+                    //objCFEQ.ApprovalID = "4";
+                    //dtElectric = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtElectric);
+
+                    ////dtApprReq.Merge(dtpower);
+                    //objCFEQ.ApprovalID = "5";
+                    //dtFctry = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtFctry);
+
                     objCFEQ.PowerReqKW = ddlPowerReq.SelectedValue;
                     objCFEQ.PropEmployment = txtPropEmp.Text;
-                    objCFEQ.ApprovalID = "3";
+                    objCFEQ.ApprovalID = "54";
                     dtpower = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtpower);
-
-                    objCFEQ.ApprovalID = "4";
-                    dtElectric = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                    dtApprReq.Merge(dtElectric);
-
-                    //dtApprReq.Merge(dtpower);
-                    objCFEQ.ApprovalID = "5";
-                    dtFctry = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                    dtApprReq.Merge(dtFctry);
-
-
                 }
                 if (rblGenerator.SelectedValue == "Y")
                 {
@@ -990,8 +999,13 @@ namespace NiveshMitra.User.CFE
                 }
                 if (Convert.ToDecimal(txtBuildingHeight.Text) != 0)
                 {
+                    //objCFEQ.BuildingHeight = txtBuildingHeight.Text;
+                    //objCFEQ.ApprovalID = "7";
+                    //dtfire = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtfire);
+
                     objCFEQ.BuildingHeight = txtBuildingHeight.Text;
-                    objCFEQ.ApprovalID = "7";
+                    objCFEQ.ApprovalID = "53";
                     dtfire = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtfire);
                 }
@@ -1015,7 +1029,11 @@ namespace NiveshMitra.User.CFE
                 }
                 if (rblRoadCutting.SelectedValue == "Y")
                 {
-                    objCFEQ.ApprovalID = "11";
+                    //objCFEQ.ApprovalID = "11";
+                    //dtRdctng = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtRdctng);
+
+                    objCFEQ.ApprovalID = "45";
                     dtRdctng = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtRdctng);
                 }
@@ -1033,7 +1051,11 @@ namespace NiveshMitra.User.CFE
                 //}
                 if (rblHighTension.SelectedValue == "Y")
                 {
-                    objCFEQ.ApprovalID = "14";
+                    //objCFEQ.ApprovalID = "14";
+                    //dtHitens = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtHitens);
+
+                    objCFEQ.ApprovalID = "8";
                     dtHitens = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtHitens);
                 }
@@ -1051,7 +1073,11 @@ namespace NiveshMitra.User.CFE
                 //}
                 if (rblFelltrees.SelectedValue == "Y")
                 {
-                    objCFEQ.ApprovalID = "24";
+                    //objCFEQ.ApprovalID = "24";
+                    //dtTreeFelling = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtTreeFelling);
+
+                    objCFEQ.ApprovalID = "11";
                     dtTreeFelling = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtTreeFelling);
                 }
@@ -1081,7 +1107,12 @@ namespace NiveshMitra.User.CFE
                 //}
                 if (rblLbrAct1996.SelectedValue == "Y")
                 {
-                    objCFEQ.ApprovalID = "27";
+                    //objCFEQ.ApprovalID = "27";
+                    //objCFEQ.PropEmployment = txt1996Workers.Text;
+                    //dtAct1996 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtAct1996);
+
+                    objCFEQ.ApprovalID = "4";
                     objCFEQ.PropEmployment = txt1996Workers.Text;
                     dtAct1996 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtAct1996);
@@ -1113,7 +1144,11 @@ namespace NiveshMitra.User.CFE
                 //}
                 if (rblRiverTanks.SelectedValue == "Y")
                 {
-                    objCFEQ.ApprovalID = "21";
+                    //objCFEQ.ApprovalID = "21";
+                    //rivertanker = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(rivertanker);
+
+                    objCFEQ.ApprovalID = "37";
                     rivertanker = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(rivertanker);
                 }
@@ -1132,7 +1167,11 @@ namespace NiveshMitra.User.CFE
                 //}
                 if (rblDrawing.SelectedValue == "Y")
                 {
-                    objCFEQ.ApprovalID = "107";
+                    //objCFEQ.ApprovalID = "107";
+                    //NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(NonMunicipal);
+
+                    objCFEQ.ApprovalID = "8";
                     NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(NonMunicipal);
                 }
