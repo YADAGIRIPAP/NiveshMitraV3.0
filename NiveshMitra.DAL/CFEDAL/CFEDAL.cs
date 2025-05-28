@@ -455,6 +455,28 @@ namespace NiveshMitra.DAL.CFEDAL
             }
             return Result;
         }
+        public DataTable GetApprovalsReqWithFee(CFEQuestionnaireDet objCFEQ)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection connection = new SqlConnection(connstr);
+            SqlTransaction transaction = null;
+            connection.Open();
+            transaction = connection.BeginTransaction();
+            try
+            {
+                SqlDataAdapter da;
+                da = new SqlDataAdapter(CFEConstants.GetCFEApprovalsReq, connection);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.CommandText = CFEConstants.GetCFEApprovalsReq;
+
+                da.SelectCommand.Transaction = transaction;
+                da.SelectCommand.Connection = connection;
+
+                da.SelectCommand.Parameters.AddWithValue("@ENTPRISETYPE", objCFEQ.EnterpriseCategory);
+                da.SelectCommand.Parameters.AddWithValue("@APPROVALID", objCFEQ.ApprovalID);
+                da.SelectCommand.Parameters.AddWithValue("@POWERKW_ID", objCFEQ.PowerReqKW);
+                da.SelectCommand.Parameters.AddWithValue("@EMPLOYEE", Convert.ToInt32(objCFEQ.PropEmployment));
+                da.SelectCommand.Parameters.AddWithValue("@BUILDINGHEIGHT", objCFEQ.BuildingHeight);
 
         public DataSet GetAppliedApprovalIDs(string userid, string UNITID, string QusestionnaireID, string DeptID, string ApprovalID)
         {
@@ -499,5 +521,30 @@ namespace NiveshMitra.DAL.CFEDAL
             }
         }
 
+                if (objCFEQ.Investment != null && objCFEQ.Investment != "")
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@INVESTMENT", objCFEQ.Investment);
+                }
+
+                if (objCFEQ.MunicipalArea != null && objCFEQ.MunicipalArea != "")
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@CONNECTION_TYPE", objCFEQ.MunicipalArea);
+                }
+
+                da.Fill(ds);
+                transaction.Commit();
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+        }
     }
 }

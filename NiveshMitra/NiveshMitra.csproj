@@ -341,6 +341,7 @@
     <Content Include="User\CFE\frmDepartmentApprovalDetails.aspx" />
     <Content Include="User\CFE\LineofActivity.aspx" />
     <Content Include="User\CFE\LocationOfUnit.aspx" />
+    <Content Include="User\CFE\PrintApplicationForm.aspx" />
     <Content Include="User\MainDashboard.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -462,6 +463,13 @@
     </Compile>
     <Compile Include="User\CFE\LocationOfUnit.aspx.designer.cs">
       <DependentUpon>LocationOfUnit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\PrintApplicationForm.aspx.cs">
+      <DependentUpon>PrintApplicationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\PrintApplicationForm.aspx.designer.cs">
+      <DependentUpon>PrintApplicationForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\MainDashboard.aspx.cs">
       <DependentUpon>MainDashboard.aspx</DependentUpon>

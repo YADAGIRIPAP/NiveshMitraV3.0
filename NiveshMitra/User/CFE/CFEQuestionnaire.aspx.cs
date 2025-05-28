@@ -83,7 +83,7 @@ namespace NiveshMitra.User.CFE
             try
             {
                 DataSet ds = new DataSet();
-                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]??string.Empty));
+                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"] ?? string.Empty));
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     hdnPreRegUID.Value = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PREREGUIDNO"]);
@@ -147,7 +147,7 @@ namespace NiveshMitra.User.CFE
                     //rblNocGroundWater.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOCGROUNDWATER"]);
                     //rblwatersupply.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NONAVAILABILITYCERT"]);
                     rblRiverTanks.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PERRIVERPUBLICTANKERS"]);
-                   // rblMunicipal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MUNICIPALAREAWATERCON"]);
+                    // rblMunicipal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MUNICIPALAREAWATERCON"]);
                     //if (rblMunicipal.SelectedValue == "Y")
                     //{
                     //    MunicipalArea.Visible = true;
@@ -177,7 +177,7 @@ namespace NiveshMitra.User.CFE
                     rblForContr1970_SelectedIndexChanged(null, EventArgs.Empty);
                     //txtContr1970wrkrs.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERSCONTR1970"]);
 
-                    GetApprovals();
+                    //GetApprovals();
                 }
                 /* else
                  {
@@ -822,7 +822,7 @@ namespace NiveshMitra.User.CFE
                     objCFEQsnaire.LabourAct1996_Workers = txt1996Workers.Text.Trim();
                     //objCFEQsnaire.ContractLabourAct = rblLabourAct.SelectedValue;
                     //objCFEQsnaire.ContractLabourAct_Workers = txtContractWorkers.Text.Trim();
-                   // objCFEQsnaire.ContractLabourAct1970 = rblForContr1970.SelectedValue;
+                    // objCFEQsnaire.ContractLabourAct1970 = rblForContr1970.SelectedValue;
                     //objCFEQsnaire.ContractLabourAct1970_Workers = txtContr1970wrkrs.Text.Trim();
                     objCFEQsnaire.CreatedBy = hdnUserID.Value;
 
@@ -830,7 +830,7 @@ namespace NiveshMitra.User.CFE
                     //objCFEQsnaire.WaterSupplyAgency = rblwatersupply.SelectedValue;
                     objCFEQsnaire.RiverPublicTanker = rblRiverTanks.SelectedValue;
                     //objCFEQsnaire.MuncipalAreawater = rblMunicipal.SelectedValue;
-                   // objCFEQsnaire.NonMuncipalAreaUrban = rblGrantwater.SelectedValue;
+                    // objCFEQsnaire.NonMuncipalAreaUrban = rblGrantwater.SelectedValue;
                     objCFEQsnaire.MunicipalArea = ddlMunicipal.SelectedValue;
                     objCFEQsnaire.DrawingPlan = rblDrawing.SelectedValue;
 
@@ -843,7 +843,7 @@ namespace NiveshMitra.User.CFE
                         CFEQuestionnaireDet objrm = new CFEQuestionnaireDet();
                         Session["CFEQID"] = result;
 
-                        Session["CFEUNITID"] =Convert.ToInt32(result)+1;//temp code
+                        Session["CFEUNITID"] = Convert.ToInt32(result) + 1;//temp code
 
                         for (int i = 0; i < grdApprovals.Rows.Count; i++)
                         {
@@ -932,231 +932,270 @@ namespace NiveshMitra.User.CFE
         }
         protected void GetApprovals()
         {
-            /*  try
-              {
-                  CFEQuestionnaireDet objCFEQ = new CFEQuestionnaireDet();
+            try
+            {
+                CFEQuestionnaireDet objCFEQ = new CFEQuestionnaireDet();
 
-                  DataTable dtApprReq = new DataTable();
-                  DataTable dtPCB = new DataTable(); DataTable dtpower = new DataTable(); DataTable dtGenReq = new DataTable();
-                  DataTable dtfire = new DataTable(); DataTable dtFctry = new DataTable(); DataTable dtRSDS = new DataTable();
+                DataTable dtApprReq = new DataTable();
+                DataTable dtPCB = new DataTable(); DataTable dtpower = new DataTable(); DataTable dtGenReq = new DataTable();
+                DataTable dtfire = new DataTable(); DataTable dtFctry = new DataTable(); DataTable dtRSDS = new DataTable();
 
-                  DataTable dtExplosivs = new DataTable(); DataTable dtPtrlsale = new DataTable(); DataTable dtElectric = new DataTable();
-                  DataTable dtRdctng = new DataTable(); DataTable dtNonEncCert = new DataTable();
+                DataTable dtExplosivs = new DataTable(); DataTable dtPtrlsale = new DataTable(); DataTable dtElectric = new DataTable();
+                DataTable dtRdctng = new DataTable(); DataTable dtNonEncCert = new DataTable();
 
-                  DataTable dtCommTax = new DataTable(); DataTable dtfrstDist = new DataTable(); DataTable dtNonFrstLand = new DataTable(); DataTable dtTreeFelling = new DataTable();
-                  DataTable dtHitens = new DataTable(); DataTable dttreefellng = new DataTable(); DataTable dtWtrbody = new DataTable();
+                DataTable dtCommTax = new DataTable(); DataTable dtfrstDist = new DataTable(); DataTable dtNonFrstLand = new DataTable(); DataTable dtTreeFelling = new DataTable();
+                DataTable dtHitens = new DataTable(); DataTable dttreefellng = new DataTable(); DataTable dtWtrbody = new DataTable();
 
-                  DataTable dtAct1970 = new DataTable(); DataTable dtAct1979 = new DataTable(); DataTable dtAct1996 = new DataTable();
-                  DataTable dtContrLbrAct = new DataTable(); DataTable dtContAct1970 = new DataTable();
+                DataTable dtAct1970 = new DataTable(); DataTable dtAct1979 = new DataTable(); DataTable dtAct1996 = new DataTable();
+                DataTable dtContrLbrAct = new DataTable(); DataTable dtContAct1970 = new DataTable();
 
-                  DataTable dtGroundwater = new DataTable(); DataTable watersupply = new DataTable(); DataTable rivertanker = new DataTable();
-                  DataTable Municipal = new DataTable(); DataTable NonMunicipal = new DataTable();
+                DataTable dtGroundwater = new DataTable(); DataTable watersupply = new DataTable(); DataTable rivertanker = new DataTable();
+                DataTable Municipal = new DataTable(); DataTable NonMunicipal = new DataTable();
 
-                  objCFEQ.EnterpriseCategory = lblEntCategory.Text;
-                  if (lblPCBCategory.Text.Trim() != "White")
-                  {
-                      // decimal PMCost  = Convert.ToDecimal();
-                      objCFEQ.Investment = txtPMCost.Text;
-                      objCFEQ.PCBCategory = lblPCBCategory.Text;
-                      objCFEQ.ApprovalID = "1";
-                      dtPCB = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtPCB);
+                objCFEQ.EnterpriseCategory = lblEntCategory.Text;
+                if (lblPCBCategory.Text.Trim() != "White")
+                {
+                    //// decimal PMCost  = Convert.ToDecimal();
+                    //objCFEQ.Investment = txtPMCost.Text;
+                    //objCFEQ.PCBCategory = lblPCBCategory.Text;
+                    //objCFEQ.ApprovalID = "1";
+                    //dtPCB = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtPCB);
 
-                  }
-                  if (ddlPowerReq.SelectedValue != "")
-                  {
-                      objCFEQ.PowerReqKW = ddlPowerReq.SelectedValue;
-                      objCFEQ.PropEmployment = txtPropEmp.Text;
-                      objCFEQ.ApprovalID = "3";
-                      dtpower = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtpower);
+                    objCFEQ.Investment = txtPMCost.Text;
+                    objCFEQ.PCBCategory = lblPCBCategory.Text;
+                    objCFEQ.ApprovalID = "42";
+                    dtPCB = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtPCB);
+                }
+                if (ddlPowerReq.SelectedValue != "")
+                {
+                    //objCFEQ.PowerReqKW = ddlPowerReq.SelectedValue;
+                    //objCFEQ.PropEmployment = txtPropEmp.Text;
+                    //objCFEQ.ApprovalID = "3";
+                    //dtpower = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtpower);
 
-                      objCFEQ.ApprovalID = "4";
-                      dtElectric = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtElectric);
+                    //objCFEQ.ApprovalID = "4";
+                    //dtElectric = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtElectric);
 
-                      //dtApprReq.Merge(dtpower);
-                      objCFEQ.ApprovalID = "5";
-                      dtFctry = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtFctry);
+                    ////dtApprReq.Merge(dtpower);
+                    //objCFEQ.ApprovalID = "5";
+                    //dtFctry = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtFctry);
+
+                    objCFEQ.PowerReqKW = ddlPowerReq.SelectedValue;
+                    objCFEQ.PropEmployment = txtPropEmp.Text;
+                    objCFEQ.ApprovalID = "54";
+                    dtpower = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtpower);
+                }
+                if (rblGenerator.SelectedValue == "Y")
+                {
+                    objCFEQ.ApprovalID = "6";
+                    dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtGenReq);
+                }
+                if (Convert.ToDecimal(txtBuildingHeight.Text) != 0)
+                {
+                    //objCFEQ.BuildingHeight = txtBuildingHeight.Text;
+                    //objCFEQ.ApprovalID = "7";
+                    //dtfire = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtfire);
+
+                    objCFEQ.BuildingHeight = txtBuildingHeight.Text;
+                    objCFEQ.ApprovalID = "53";
+                    dtfire = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtfire);
+                }
+                if (rblRSDSstore.SelectedValue == "Y")
+                {
+                    objCFEQ.ApprovalID = "8";
+                    dtRSDS = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtRSDS);
+                }
+                if (rblexplosives.SelectedValue == "Y")
+                {
+                    objCFEQ.ApprovalID = "9";
+                    dtExplosivs = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtExplosivs);
+                }
+                if (rblPetrlManf.SelectedValue == "Y")
+                {
+                    objCFEQ.ApprovalID = "10";
+                    dtPtrlsale = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtPtrlsale);
+                }
+                if (rblRoadCutting.SelectedValue == "Y")
+                {
+                    //objCFEQ.ApprovalID = "11";
+                    //dtRdctng = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtRdctng);
+
+                    objCFEQ.ApprovalID = "45";
+                    dtRdctng = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtRdctng);
+                }
+                //if (rblNonEncCert.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "12";
+                //    dtNonEncCert = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtNonEncCert);
+                //}
+                //if (rblCommericalTax.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "13";
+                //    dtCommTax = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtCommTax);
+                //}
+                if (rblHighTension.SelectedValue == "Y")
+                {
+                    //objCFEQ.ApprovalID = "14";
+                    //dtHitens = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtHitens);
+
+                    objCFEQ.ApprovalID = "8";
+                    dtHitens = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtHitens);
+                }
+                //if (rblfrstDistncLtr.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "15";
+                //    dtfrstDist = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtfrstDist);
+                //}
+                //if (rblNonForstLandCert.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "16";
+                //    dtNonFrstLand = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtNonFrstLand);
+                //}
+                if (rblFelltrees.SelectedValue == "Y")
+                {
+                    //objCFEQ.ApprovalID = "24";
+                    //dtTreeFelling = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtTreeFelling);
+
+                    objCFEQ.ApprovalID = "11";
+                    dtTreeFelling = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtTreeFelling);
+                }
+                //if (rblwaterbody.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "17";
+                //    dtWtrbody = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtWtrbody);
+                //    dtWtrbody.Clear();
+                //    objCFEQ.ApprovalID = "18";
+                //    dtWtrbody = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtWtrbody);
+                //}
+                //if (rblLbrAct1970.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "25";
+                //    objCFEQ.PropEmployment = txt1970Workers.Text;
+                //    dtAct1970 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtAct1970);
+                //}
+                //if (rblLbrAct1979.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "26";
+                //    objCFEQ.PropEmployment = txt1979Workers.Text;
+                //    dtAct1979 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtAct1979);
+                //}
+                if (rblLbrAct1996.SelectedValue == "Y")
+                {
+                    //objCFEQ.ApprovalID = "27";
+                    //objCFEQ.PropEmployment = txt1996Workers.Text;
+                    //dtAct1996 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtAct1996);
+
+                    objCFEQ.ApprovalID = "4";
+                    objCFEQ.PropEmployment = txt1996Workers.Text;
+                    dtAct1996 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtAct1996);
+                }
+                //if (rblLabourAct.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "28";
+                //    objCFEQ.PropEmployment = txtContractWorkers.Text;
+                //    dtContrLbrAct = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtContrLbrAct);
+                //}
+                //if (rblForContr1970.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "29";
+                //    dtContAct1970 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtContAct1970);
+                //}
+                //if (rblNocGroundWater.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "19";
+                //    dtGroundwater = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtGroundwater);
+                //}
+                //if (rblwatersupply.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "20";
+                //    watersupply = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(watersupply);
+                //}
+                if (rblRiverTanks.SelectedValue == "Y")
+                {
+                    //objCFEQ.ApprovalID = "21";
+                    //rivertanker = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(rivertanker);
+
+                    objCFEQ.ApprovalID = "37";
+                    rivertanker = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(rivertanker);
+                }
+                //if (rblMunicipal.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "22";
+                //    objCFEQ.MunicipalArea = ddlMunicipal.SelectedValue;
+                //    Municipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(Municipal);
+                //}
+                //if (rblGrantwater.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "23";
+                //    NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(NonMunicipal);
+                //}
+                if (rblDrawing.SelectedValue == "Y")
+                {
+                    //objCFEQ.ApprovalID = "107";
+                    //NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(NonMunicipal);
+
+                    objCFEQ.ApprovalID = "8";
+                    NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(NonMunicipal);
+                }
 
 
-                  }
-                  if (rblGenerator.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "6";
-                      dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtGenReq);
-                  }
-                  if (Convert.ToDecimal(txtBuildingHeight.Text) != 0)
-                  {
-                      objCFEQ.BuildingHeight = txtBuildingHeight.Text;
-                      objCFEQ.ApprovalID = "7";
-                      dtfire = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtfire);
-                  }
-                  if (rblRSDSstore.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "8";
-                      dtRSDS = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtRSDS);
-                  }
-                  if (rblexplosives.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "9";
-                      dtExplosivs = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtExplosivs);
-                  }
-                  if (rblPetrlManf.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "10";
-                      dtPtrlsale = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtPtrlsale);
-                  }
-                  if (rblRoadCutting.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "11";
-                      dtRdctng = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtRdctng);
-                  }
-                  if (rblNonEncCert.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "12";
-                      dtNonEncCert = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtNonEncCert);
-                  }
-                  if (rblCommericalTax.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "13";
-                      dtCommTax = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtCommTax);
-                  }
-                  if (rblHighTension.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "14";
-                      dtHitens = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtHitens);
-                  }
-                  if (rblfrstDistncLtr.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "15";
-                      dtfrstDist = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtfrstDist);
-                  }
-                  if (rblNonForstLandCert.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "16";
-                      dtNonFrstLand = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtNonFrstLand);
-                  }
-                  if (rblFelltrees.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "24";
-                      dtTreeFelling = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtTreeFelling);
-                  }
-                  if (rblwaterbody.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "17";
-                      dtWtrbody = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtWtrbody);
-                      dtWtrbody.Clear();
-                      objCFEQ.ApprovalID = "18";
-                      dtWtrbody = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtWtrbody);
-                  }
-                  if (rblLbrAct1970.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "25";
-                      objCFEQ.PropEmployment = txt1970Workers.Text;
-                      dtAct1970 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtAct1970);
-                  }
-                  if (rblLbrAct1979.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "26";
-                      objCFEQ.PropEmployment = txt1979Workers.Text;
-                      dtAct1979 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtAct1979);
-                  }
-                  if (rblLbrAct1996.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "27";
-                      objCFEQ.PropEmployment = txt1996Workers.Text;
-                      dtAct1996 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtAct1996);
-                  }
-                  if (rblLabourAct.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "28";
-                      objCFEQ.PropEmployment = txtContractWorkers.Text;
-                      dtContrLbrAct = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtContrLbrAct);
-                  }
-                  if (rblForContr1970.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "29";
-                      dtContAct1970 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtContAct1970);
-                  }
-                  if (rblNocGroundWater.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "19";
-                      dtGroundwater = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(dtGroundwater);
-                  }
-                  if (rblwatersupply.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "20";
-                      watersupply = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(watersupply);
-                  }
-                  if (rblRiverTanks.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "21";
-                      rivertanker = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(rivertanker);
-                  }
-                  if (rblMunicipal.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "22";
-                      objCFEQ.MunicipalArea = ddlMunicipal.SelectedValue;
-                      Municipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(Municipal);
-                  }
-                  if (rblGrantwater.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "23";
-                      NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(NonMunicipal);
-                  }
-                  if (rblDrawing.SelectedValue == "Y")
-                  {
-                      objCFEQ.ApprovalID = "107";
-                      NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                      dtApprReq.Merge(NonMunicipal);
-                  }
+                if (dtApprReq.Rows.Count > 0)
+                {
+                    divApprovals.Visible = true;
+                    grdApprovals.DataSource = dtApprReq;
+                    grdApprovals.DataBind();
+                }
+                else
+                {
+                    grdApprovals.DataSource = null;
+                    grdApprovals.DataBind();
+                }
 
-
-                  if (dtApprReq.Rows.Count > 0)
-                  {
-                      divApprovals.Visible = true;
-                      grdApprovals.DataSource = dtApprReq;
-                      grdApprovals.DataBind();
-                  }
-                  else
-                  {
-                      grdApprovals.DataSource = null;
-                      grdApprovals.DataBind();
-                  }
-
-              }
-              catch (Exception ex)
-              {
-                  lblmsg0.Text = ex.Message;
-                  Failure.Visible = true;
-                  //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
-              } */
+            }
+            catch (Exception ex)
+            {
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
         }
         public static string getclientIP()
         {
@@ -1204,6 +1243,11 @@ namespace NiveshMitra.User.CFE
                         string Result = objcfebal.CFEENTERPRISETYPE(txtAnnualTurnOver.Text.ToString());
                         if (Result != "")
                         {
+                            var numOfEmp = Convert.ToInt32(txtPropEmp.Text);
+                            if ((Result == "Mega" && numOfEmp < 300) || (Result == "Super Mega" && numOfEmp < 600) || (Result == "Ultra Mega" && numOfEmp < 1500))
+                            {
+                                Result = "Large";
+                            }
                             lblEntCategory.Text = Result;
                             lblTotProjCost.Text = Convert.ToString(Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text));
                         }
@@ -1893,6 +1937,10 @@ namespace NiveshMitra.User.CFE
                 AddSelect(ddlVillage);
                 if (ddlDistrict.SelectedItem.Text != "--Select--")
                 {
+                    if (ddlDistrict.SelectedValue == "144" && rblMIDCL.SelectedValue == "1")
+                    {
+                        ddlIndustrialParkRow.Visible = true;
+                    }
                     BindTehsil(ddlTehsil, ddlDistrict.SelectedValue);
                 }
                 else return;
@@ -1901,7 +1949,7 @@ namespace NiveshMitra.User.CFE
             {
                 lblmsg0.Text = ex.Message;
                 Failure.Visible = true;
-               // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+                // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
         }
 
@@ -2047,6 +2095,14 @@ namespace NiveshMitra.User.CFE
                 lblmsg0.Text = ex.Message;
                 Failure.Visible = true;
                 // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
+
+        protected void rblMIDCL_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (rblMIDCL.SelectedValue == "2")
+            {
+                ddlIndustrialParkRow.Visible = false;
             }
         }
     }
