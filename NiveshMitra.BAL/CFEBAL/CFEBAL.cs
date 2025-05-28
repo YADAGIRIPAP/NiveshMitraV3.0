@@ -44,5 +44,12 @@ namespace NiveshMitra.BAL.CFEBAL
         {
             return objCFEDAL.GetApprovalsReqFromTable(objCFEQsnaire);
         }
+
+        public string InsertCFEDepartmentApprovals(CFEQuestionnaireDet objCFEQsnaire)
+        {
+            return objCFEDAL.InsertCFEDepartmentApprovals(objCFEQsnaire);
+        }
+        public DataTable GetApprovalsReqWithFee(CFEQuestionnaireDet objCFEQ)
+        { return objCFEDAL.GetApprovalsReqWithFee(objCFEQ); }
     }
 }
