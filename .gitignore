@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/NiveshMitra/v17/.suo
+/.vs/NiveshMitra/v17/DocumentLayout.json
