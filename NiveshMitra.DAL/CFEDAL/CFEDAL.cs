@@ -477,6 +477,31 @@ namespace NiveshMitra.DAL.CFEDAL
                 da.SelectCommand.Parameters.AddWithValue("@POWERKW_ID", objCFEQ.PowerReqKW);
                 da.SelectCommand.Parameters.AddWithValue("@EMPLOYEE", Convert.ToInt32(objCFEQ.PropEmployment));
                 da.SelectCommand.Parameters.AddWithValue("@BUILDINGHEIGHT", objCFEQ.BuildingHeight);
+                if (objCFEQ.Investment != null && objCFEQ.Investment != "")
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@INVESTMENT", objCFEQ.Investment);
+                }
+
+                if (objCFEQ.MunicipalArea != null && objCFEQ.MunicipalArea != "")
+                {
+                    da.SelectCommand.Parameters.AddWithValue("@CONNECTION_TYPE", objCFEQ.MunicipalArea);
+                }
+
+                da.Fill(ds);
+                transaction.Commit();
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+        }
 
         public DataSet GetAppliedApprovalIDs(string userid, string UNITID, string QusestionnaireID, string DeptID, string ApprovalID)
         {
@@ -521,30 +546,6 @@ namespace NiveshMitra.DAL.CFEDAL
             }
         }
 
-                if (objCFEQ.Investment != null && objCFEQ.Investment != "")
-                {
-                    da.SelectCommand.Parameters.AddWithValue("@INVESTMENT", objCFEQ.Investment);
-                }
-
-                if (objCFEQ.MunicipalArea != null && objCFEQ.MunicipalArea != "")
-                {
-                    da.SelectCommand.Parameters.AddWithValue("@CONNECTION_TYPE", objCFEQ.MunicipalArea);
-                }
-
-                da.Fill(ds);
-                transaction.Commit();
-                return ds.Tables[0];
-            }
-            catch (Exception ex)
-            {
-                transaction.Rollback();
-                throw ex;
-            }
-            finally
-            {
-                connection.Close();
-                connection.Dispose();
-            }
-        }
+                
     }
 }
