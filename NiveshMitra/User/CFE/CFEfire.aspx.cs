@@ -105,9 +105,10 @@ namespace NiveshMitra.User.CFE
             
             try
             {
-                btnSave_Click(sender, e);
-                if (ErrorMsg == "")
-                    Response.Redirect("~/User/CFE/CFEForestDetails.aspx?Next=" + "N");
+                //btnSave_Click(sender, e);
+                //if (ErrorMsg == "")
+                //Response.Redirect("~/User/CFE/CFEForestDetails.aspx?Next=" + "N");
+                GetAppliedorNot();
             }
             catch (Exception ex)
             {
