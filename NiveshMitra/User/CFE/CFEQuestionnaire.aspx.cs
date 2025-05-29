@@ -1240,16 +1240,19 @@ namespace NiveshMitra.User.CFE
                     }
                     else
                     {
-                        string Result = objcfebal.CFEENTERPRISETYPE(txtAnnualTurnOver.Text.ToString());
-                        if (Result != "")
+                        if (!string.IsNullOrEmpty(txtAnnualTurnOver.Text))
                         {
-                            var numOfEmp = Convert.ToInt32(txtPropEmp.Text);
-                            if ((Result == "Mega" && numOfEmp < 300) || (Result == "Super Mega" && numOfEmp < 600) || (Result == "Ultra Mega" && numOfEmp < 1500))
+                            string Result = objcfebal.CFEENTERPRISETYPE(txtAnnualTurnOver.Text.ToString());
+                            if (Result != "")
                             {
-                                Result = "Large";
+                                var numOfEmp = Convert.ToInt32(txtPropEmp.Text);
+                                if ((Result == "Mega" && numOfEmp < 300) || (Result == "Super Mega" && numOfEmp < 600) || (Result == "Ultra Mega" && numOfEmp < 1500))
+                                {
+                                    Result = "Large";
+                                }
+                                lblEntCategory.Text = Result;
+                                lblTotProjCost.Text = Convert.ToString(Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text));
                             }
-                            lblEntCategory.Text = Result;
-                            lblTotProjCost.Text = Convert.ToString(Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text));
                         }
                     }
                 }
@@ -2104,6 +2107,20 @@ namespace NiveshMitra.User.CFE
             {
                 ddlIndustrialParkRow.Visible = false;
             }
+        }
+        protected void txtPropEmp_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtAnnualTurnOver_TextChanged(sender, e);
+            }
+            catch (Exception ex)
+            {
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+
         }
     }
 }
