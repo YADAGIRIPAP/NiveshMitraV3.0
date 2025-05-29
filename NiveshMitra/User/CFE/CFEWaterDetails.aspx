@@ -23,14 +23,14 @@
      <ol class="breadcrumb mb-0">
          <li class="breadcrumb-item"><a href="../Dashboard/Dashboarddrill.aspx">Dashboard</a></li>
          <li class="breadcrumb-item"><a href="CFEUserDashboard.aspx">Pre Establishment</a></li>
-         <li class="breadcrumb-item active" aria-current="page">CFE Water Details</li>
+         <li class="breadcrumb-item active" aria-current="page">Water Details</li>
      </ol>
  </nav>
             <div class="page-wrapper cfequestionnaire">
                 <div class="container-fluid mt-3">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h4 class="card-title"><b>Combined Application Form - For Pre Establishment</b></h4>
+                            <h4 class="card-title"><b>Water</b></h4>
                             <span class="text-danger">*All Fields Are Mandatory</span>
                         </div>
 

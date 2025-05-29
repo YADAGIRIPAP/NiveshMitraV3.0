@@ -88,7 +88,7 @@
                 <ol class="breadcrumb mb-0">
                     <li class="breadcrumb-item"><a href="../Dashboard/Dashboarddrill.aspx">Dashboard</a></li>
                     <li class="breadcrumb-item"><a href="CFEUserDashboard.aspx">Pre Establishment</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">CFEPowerDetails</li>
+                    <li class="breadcrumb-item active" aria-current="page">Power Details</li>
                 </ol>
             </nav>
 
@@ -96,7 +96,7 @@
             <div class="content container-fluid mt-3">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"><b>Combined Application Form - For Pre Establishment</b></h4>
+                        <h4 class="card-title"><b>Power Details</b></h4>
                         <p class="text-danger" style="position: absolute; right: 10px; top: 6px;">*All Fields Are Mandatory</p>
                     </div>
                     <div class="card-body">
