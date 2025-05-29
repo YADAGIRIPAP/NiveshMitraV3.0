@@ -16,9 +16,6 @@ namespace NiveshMitra.User.CFE
     {
         string UnitID, ErrorMsg = "", ErrorMsg1 = "", ErrorMsg2 = "";
         int index; Decimal TotalFee = 0;
-
-        
-
         CFEBAL objcfebal = new CFEBAL();
         MasterBAL mstrBAL = new MasterBAL();
         protected void Page_Load(object sender, EventArgs e)
@@ -84,7 +81,7 @@ namespace NiveshMitra.User.CFE
                         if (Convert.ToString(Request.QueryString[0]) == "N")
                             Response.Redirect("~/User/CFE/CFEWaterDetails.aspx?Next=" + "N");
                         else if (Convert.ToString(Request.QueryString[0]) == "P")
-                            Response.Redirect("~/User/CFE/CFEforestDetails.aspx?Previous=" + "P");
+                            Response.Redirect("~/User/CFE/CFEfire.aspx?Previous=" + "P");
                     }
                 }
             }
@@ -100,7 +97,7 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                Response.Redirect("~/User/CFE/CFEforestDetails.aspx?Previous=" + "P");
+                Response.Redirect("~/User/CFE/CFEfire.aspx?Previous=" + "P");
             }
             catch (Exception ex)
             {

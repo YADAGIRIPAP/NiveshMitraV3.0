@@ -64,7 +64,8 @@ namespace NiveshMitra.User.CFE
             }
 
         }
-        protected void GetAppliedorNot()
+
+          protected void GetAppliedorNot()
         {
             try
             {
@@ -96,13 +97,11 @@ namespace NiveshMitra.User.CFE
         }
         protected void btnNext_Click(object sender, EventArgs e)
         {
-            if (ErrorMsg == "")
-                Response.Redirect("~/User/CFE/CFEForestDetails.aspx?Next=" + "N");
-            
+
         }
         protected void btnPrevious_Click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("~/User/CFE/CFEForestDetails.aspx?Previous=" + "P");
         }
 
 

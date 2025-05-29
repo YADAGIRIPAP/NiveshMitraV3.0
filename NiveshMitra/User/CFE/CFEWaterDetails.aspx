@@ -23,14 +23,14 @@
      <ol class="breadcrumb mb-0">
          <li class="breadcrumb-item"><a href="../Dashboard/Dashboarddrill.aspx">Dashboard</a></li>
          <li class="breadcrumb-item"><a href="CFEUserDashboard.aspx">Pre Establishment</a></li>
-         <li class="breadcrumb-item active" aria-current="page">CFE Water Details</li>
+         <li class="breadcrumb-item active" aria-current="page">Water Details</li>
      </ol>
  </nav>
             <div class="page-wrapper cfequestionnaire">
                 <div class="container-fluid mt-3">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h4 class="card-title"><b>Combined Application Form - For Pre Establishment</b></h4>
+                            <h4 class="card-title"><b>Water</b></h4>
                             <span class="text-danger">*All Fields Are Mandatory</span>
                         </div>
 
@@ -215,8 +215,8 @@
     <div class="col-md-12 d-flex justify-content-center mt-3">
         <asp:Button ID="btnClearAll" runat="server" Text="Clear All" CssClass="btn btn-warning mx-2" Width="150px" />
         <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success mx-2" Width="150px" />
-        <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-info mx-2" Width="150px" />
-        <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-info mx-2" Width="150px" />
+        <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-info mx-2" Width="150px" OnClick="btnPrevious_Click" />
+        <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-info mx-2" Width="150px" OnClick="btnNext_Click" />
     </div>
 </div>
 
