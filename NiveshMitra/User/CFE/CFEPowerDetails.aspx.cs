@@ -16,17 +16,8 @@ namespace NiveshMitra.User.CFE
     {
         string UnitID, ErrorMsg = "", ErrorMsg1 = "", ErrorMsg2 = "";
         int index; Decimal TotalFee = 0;
-
-        
-
         CFEBAL objcfebal = new CFEBAL();
-
-        
-
         MasterBAL mstrBAL = new MasterBAL();
-
-        
-
         protected void Page_Load(object sender, EventArgs e)
         {
 
