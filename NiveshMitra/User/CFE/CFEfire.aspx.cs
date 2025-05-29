@@ -50,7 +50,7 @@ namespace NiveshMitra.User.CFE
                     Page.MaintainScrollPositionOnPostBack = true;
                     if (!IsPostBack)
                     {
-                        GetAppliedorNot();
+                        //GetAppliedorNot();
                     }
                 }
 
