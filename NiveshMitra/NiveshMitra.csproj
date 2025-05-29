@@ -338,6 +338,7 @@
     <Content Include="User\CFE\CFEPowerDetails.aspx" />
     <Content Include="User\CFE\CFEQuestionnaire.aspx" />
     <Content Include="User\CFE\CFEUserDashboard.aspx" />
+    <Content Include="User\CFE\CFEWaterDetails.aspx" />
     <Content Include="User\CFE\frmDepartmentApprovalDetails.aspx" />
     <Content Include="User\CFE\LineofActivity.aspx" />
     <Content Include="User\CFE\LocationOfUnit.aspx" />
@@ -441,6 +442,13 @@
     </Compile>
     <Compile Include="User\CFE\CFEUserDashboard.aspx.designer.cs">
       <DependentUpon>CFEUserDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\CFEWaterDetails.aspx.cs">
+      <DependentUpon>CFEWaterDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\CFEWaterDetails.aspx.designer.cs">
+      <DependentUpon>CFEWaterDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\CFOBAL.cs" />
     <Compile Include="User\CFE\frmDepartmentApprovalDetails.aspx.cs">
