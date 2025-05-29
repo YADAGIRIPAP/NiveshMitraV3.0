@@ -110,8 +110,8 @@ namespace NiveshMitra.User.CFE
             {
                 //btnSave_Click(sender, e);
                 //if (ErrorMsg == "")
-                //Response.Redirect("~/User/CFE/CFEFire.aspx?Next=" + "N");
-                GetAppliedorNot();
+                Response.Redirect("~/User/CFE/CFEFire.aspx?Next=" + "N");
+                //GetAppliedorNot();
             }
             catch (Exception ex)
             {
