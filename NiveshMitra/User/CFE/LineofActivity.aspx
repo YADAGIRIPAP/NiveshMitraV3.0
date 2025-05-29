@@ -64,7 +64,7 @@
                                 <div class="card-header">
                                     <h2 class="card-title"><b>Line of Activity</b></h2>
                                     <p style="position: absolute; right: 10px; top: 6px; color: red;">
-                                        *All Fields Are	Mandatory
+                                        <span class="text-danger">*</span>All Fields Are	Mandatory
                                     </p>
                                 </div>
 
@@ -103,7 +103,7 @@
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                    <label class="col-form-label" style="font-weight: bold; text-align: right">Line of Activity*</label>
+                                                    <label class="col-form-label" style=" text-align: right">Line of Activity<span class="text-danger">*</span></label>
                                                 </div>
                                                 <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
                                                     <asp:DropDownList ID="ddlLineOfActivity" runat="server" class="form-control" onchange="validateDropdown(this)">
@@ -118,26 +118,26 @@
                                                         <div class="card-header">
                                                             <div class="row">
                                                                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: large; font-weight: bold">Line of Manufacture</label>
+                                                                    <label class="col-form-label" style="font-size: large; ">Line of Manufacture</label>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="card-body" style="padding: 20px">
                                                             <div class="row">
                                                                 <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: small; font-weight: bold">Item *</label>
+                                                                    <label class="col-form-label" style="font-size: small; ">Item <span class="text-danger">*</span></label>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                     <asp:TextBox ID="txtItem_LOM" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                 </div>
                                                                 <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: small; font-weight: bold">Quantity *</label>
+                                                                    <label class="col-form-label" style="font-size: small;">Quantity <span class="text-danger">*</span></label>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                     <asp:TextBox ID="txtQuantity_LOM" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                 </div>
                                                                 <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: small; font-weight: bold">Quantity Per*</label>
+                                                                    <label class="col-form-label" style="font-size: small; ">Quantity Per<span class="text-danger">*</span></label>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                     <asp:DropDownList ID="ddlQuantityPer_LOM" runat="server" class="form-control" onchange="validateDropdown(this)">
@@ -146,7 +146,7 @@
                                                                     </asp:DropDownList>
                                                                 </div>
                                                                 <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: small; font-weight: bold">Quantity In*</label>
+                                                                    <label class="col-form-label" style="font-size: small;">Quantity In<span class="text-danger">*</span></label>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                     <asp:DropDownList ID="ddlQuantityIn_LOM" runat="server" class="form-control" onchange="validateDropdown(this)">
@@ -201,26 +201,26 @@
                                                         <div class="card-header">
                                                             <div class="row">
                                                                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: large; font-weight: bold">Raw Material Used in Process*</label>
+                                                                    <label class="col-form-label" style="font-size: large; ">Raw Material Used in Process<span class="text-danger">*</span></label>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="card-body" style="padding: 20px">
                                                             <div class="row">
                                                                 <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: small; font-weight: bold">Item *</label>
+                                                                    <label class="col-form-label" style="font-size: small;">Item <span class="text-danger">*</span></label>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                     <asp:TextBox ID="txtItem_RM" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                 </div>
                                                                 <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: small; font-weight: bold">Quantity *</label>
+                                                                    <label class="col-form-label" style="font-size: small;">Quantity <span class="text-danger">*</span></label>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                     <asp:TextBox ID="txtQuantity_RM" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                 </div>
                                                                 <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: small; font-weight: bold">Quantity Per*</label>
+                                                                    <label class="col-form-label" style="font-size: small;">Quantity Per<span class="text-danger">*</span></label>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                     <asp:DropDownList ID="ddlQuantity_RM" runat="server" class="form-control" onchange="validateDropdown(this)">
@@ -229,7 +229,7 @@
                                                                     </asp:DropDownList>
                                                                 </div>
                                                                 <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12">
-                                                                    <label class="col-form-label" style="font-size: small; font-weight: bold">Quantity In *</label>
+                                                                    <label class="col-form-label" style="font-size: small;">Quantity In <span class="text-danger">*</span></label>
                                                                 </div>
                                                                 <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                     <asp:DropDownList ID="ddlQuantityIn_Per" runat="server" class="form-control" onchange="validateDropdown(this)">
@@ -279,17 +279,12 @@
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-lg-12 col-sm-12 col-xs-12 col-sm-12" style="text-align:center">
+                                                   <div class="col-lg-12 col-sm-12 col-xs-12 col-sm-12" style="text-align:center">
                                                     <input type="button" class="btn btn-info" value="Clear All" style="width:100px" />
                                                     <input type="button" class="btn btn-success" value="Save" style="width:100px" />
                                                     <input type="button" class="btn btn-warning" value="Previous" style="width:100px" />
                                                    <%-- <input type="button" class="btn btn-danger" value="Next" style="width:100px" />--%>
-                                                       <asp:Button 
-ID="btnNext" 
-runat="server" 
-Text="Next" 
-CssClass="btn btn-danger" 
-Width="150px" OnClick="btnNext_Click" 
+                                                       <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-danger" Width="150px" OnClick="btnNext_Click" 
   />
                                                 </div>
                                             </div>
