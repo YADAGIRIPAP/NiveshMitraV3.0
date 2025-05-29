@@ -75,7 +75,7 @@ namespace NiveshMitra.User.CFE
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-
+                    Response.Redirect("~/User/CFE/CFEWaterDetails.aspx?Next=" + "N");
                 }
                 else
                 {
