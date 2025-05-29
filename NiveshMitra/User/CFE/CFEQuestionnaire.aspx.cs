@@ -893,7 +893,7 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                btnSave3_Click(sender, e);
+                //btnSave3_Click(sender, e);
                 if (ErrorMsg == "")
                     //Response.Redirect("~/User/CFE/CFECommonApplication.aspx");
                     Response.Redirect("~/User/CFE/frmDepartmentApprovalDetails.aspx");
@@ -994,7 +994,11 @@ namespace NiveshMitra.User.CFE
                 }
                 if (rblGenerator.SelectedValue == "Y")
                 {
-                    objCFEQ.ApprovalID = "6";
+                    //objCFEQ.ApprovalID = "6";
+                    //dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtGenReq);
+
+                    objCFEQ.ApprovalID = "5";
                     dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtGenReq);
                 }
