@@ -330,6 +330,7 @@
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="User\CFE\CFEWaterDetails.aspx" />
     <Content Include="User\CFE\CFEfire.aspx" />
     <Content Include="User\CFE\CFEForestDetails.aspx" />
     <Content Include="User\CFE\CFEIndustryDetails.aspx" />
@@ -385,6 +386,13 @@
     </Compile>
     <Compile Include="Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CFE\CFEWaterDetails.aspx.cs">
+      <DependentUpon>CFEWaterDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\CFEWaterDetails.aspx.designer.cs">
+      <DependentUpon>CFEWaterDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\CFEfire.aspx.cs">
       <DependentUpon>CFEfire.aspx</DependentUpon>
