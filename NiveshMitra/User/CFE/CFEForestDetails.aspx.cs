@@ -81,7 +81,7 @@ namespace NiveshMitra.User.CFE
                         if (Convert.ToString(Request.QueryString[0]) == "N")
                             Response.Redirect("~/User/CFE/CFEWaterDetails.aspx?Next=" + "N");
                         else if (Convert.ToString(Request.QueryString[0]) == "P")
-                            Response.Redirect("~/User/CFE/CFEforestDetails.aspx?Previous=" + "P");
+                            Response.Redirect("~/User/CFE/CFEfire.aspx?Previous=" + "P");
                     }
                 }
             }
@@ -97,7 +97,7 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                Response.Redirect("~/User/CFE/CFEforestDetails.aspx?Previous=" + "P");
+                Response.Redirect("~/User/CFE/CFEfire.aspx?Previous=" + "P");
             }
             catch (Exception ex)
             {

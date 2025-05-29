@@ -215,8 +215,8 @@
     <div class="col-md-12 d-flex justify-content-center mt-3">
         <asp:Button ID="btnClearAll" runat="server" Text="Clear All" CssClass="btn btn-warning mx-2" Width="150px" />
         <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success mx-2" Width="150px" />
-        <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-info mx-2" Width="150px" />
-        <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-info mx-2" Width="150px" />
+        <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-info mx-2" Width="150px" OnClick="btnPrevious_Click" />
+        <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-info mx-2" Width="150px" OnClick="btnNext_Click" />
     </div>
 </div>
 
