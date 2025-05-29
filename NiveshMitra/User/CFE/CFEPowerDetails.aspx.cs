@@ -24,6 +24,9 @@ namespace NiveshMitra.User.CFE
         
 
         MasterBAL mstrBAL = new MasterBAL();
+
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -50,7 +53,7 @@ namespace NiveshMitra.User.CFE
                     Page.MaintainScrollPositionOnPostBack = true;
                     if (!IsPostBack)
                     {
-                        GetAppliedorNot();
+                        //GetAppliedorNot();
                     }
                 }
 
@@ -64,6 +67,8 @@ namespace NiveshMitra.User.CFE
             }
 
         }
+
+        
         protected void GetAppliedorNot()
         {
             try
@@ -74,14 +79,14 @@ namespace NiveshMitra.User.CFE
 
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-
+                    Response.Redirect("~/User/CFE/CFEFire.aspx?Next=" + "N");
                 }
                 else
                 {
                     if (Request.QueryString.Count > 0)
                     {
                         if (Convert.ToString(Request.QueryString[0]) == "N")
-                            Response.Redirect("~/User/CFE/CFEForestDetails.aspx?Next=" + "N");
+                            Response.Redirect("~/User/CFE/CFEFire.aspx?Next=" + "N");
                         else if (Convert.ToString(Request.QueryString[0]) == "P")
                             Response.Redirect("~/User/CFE/lineofActivity.aspx?Previous=" + "P");
                     }
@@ -94,11 +99,49 @@ namespace NiveshMitra.User.CFE
                 MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
         }
+        protected void btnPrevious_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response.Redirect("~/User/CFE/lineofActivity.aspx?Previous=" + "P");
+            }
+            catch (Exception ex)
+            {
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
 
         protected void btnNext_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CFEForestDetails.aspx");
+            try
+            {
+                //btnSave_Click(sender, e);
+                //if (ErrorMsg == "")
+                //Response.Redirect("~/User/CFE/CFEFire.aspx?Next=" + "N");
+                GetAppliedorNot();
+            }
+            catch (Exception ex)
+            {
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                if (ex.Message != "Thread was being aborted.")
+                {
+                    MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+                }
+            }
+             
+             
+             
         }
+
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 
