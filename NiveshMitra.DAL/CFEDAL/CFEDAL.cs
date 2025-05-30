@@ -528,7 +528,7 @@ namespace NiveshMitra.DAL.CFEDAL
                 if (ApprovalID == "")
                     da.SelectCommand.Parameters.AddWithValue("@APPROVALID", null);
                 else
-                    da.SelectCommand.Parameters.AddWithValue("@APPROVALID", ApprovalID);
+                    da.SelectCommand.Parameters.AddWithValue("@APPROVALID", null);
 
                 da.Fill(ds);
                 transaction.Commit();

@@ -16,8 +16,8 @@ namespace NiveshMitra.User.CFE
     {
         string UnitID, ErrorMsg = "", ErrorMsg1 = "", ErrorMsg2 = "";
         int index; Decimal TotalFee = 0;
-       CFEBAL objcfebal = new CFEBAL();
-       MasterBAL mstrBAL = new MasterBAL();
+        CFEBAL objcfebal = new CFEBAL();
+        MasterBAL mstrBAL = new MasterBAL();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -96,14 +96,25 @@ namespace NiveshMitra.User.CFE
         }
         protected void btnNext_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                //btnSave_Click(sender, e);
-                //if (ErrorMsg == "")
-                //Response.Redirect("~/User/CFE/CFEForestDetails.aspx?Next=" + "N");
-                GetAppliedorNot();
+
+                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]));
+                Session["PageDt"] = dt;
+                string nextPageUrl = "";
+
+
+                nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "25", "53");
+                if (!string.IsNullOrEmpty(nextPageUrl))
+                    Response.Redirect("~/User/CFE/" + nextPageUrl + ".aspx");
+                else
+                    lblmsg0.Text = "No Dept. found.";
+                    Failure.Visible = true;
             }
+
+
+
             catch (Exception ex)
             {
                 lblmsg0.Text = ex.Message;
@@ -119,13 +130,26 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                Response.Redirect("~/User/CFE/CFEPowerDetails.aspx?Previous=" + "P");
+                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Session["CFEUNITID"].ToString(), Session["CFEQID"].ToString());
+                Session["PageDt"] = dt;
+
+                string currentDeptId = "25";      // fire ka DeptId
+                string currentApprovalId = "53";  // fire ka ApprovalId
+
+                string prevPageUrl = MGCommonClass.GetPreviousPageUrl(dt, currentDeptId, currentApprovalId);
+
+                if (!string.IsNullOrEmpty(prevPageUrl))
+                    Response.Redirect("~/User/CFE/" + prevPageUrl + ".aspx");
+                else
+                    lblmsg0.Text = "No previous Dept. found.";
+                    Failure.Visible = true;
             }
             catch (Exception ex)
             {
                 lblmsg0.Text = ex.Message;
                 Failure.Visible = true;
-                MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+                if (ex.Message != "Thread was being aborted.")
+                    MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
         }
 

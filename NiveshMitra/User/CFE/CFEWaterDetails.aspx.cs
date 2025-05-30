@@ -59,7 +59,7 @@ namespace NiveshMitra.User.CFE
             catch (Exception ex)
             {
                 Failure.Visible = true;
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
 
@@ -91,17 +91,59 @@ namespace NiveshMitra.User.CFE
             catch (Exception ex)
             {
                 Failure.Visible = true;
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
         }
         protected void btnNext_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]));
+                Session["PageDt"] = dt;
+                string nextPageUrl = "";
 
+
+                nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "16", "36");
+                if (nextPageUrl != null)
+                    Response.Redirect("~/User/CFE/" + nextPageUrl + ".aspx");
+
+
+            }
+            catch (Exception ex)
+            {
+                lblmsg.Text = ex.Message;
+                Failure.Visible = true;
+                if (ex.Message != "Thread was being aborted.")
+                {
+                    MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+                }
+            }
         }
         protected void btnPrevious_Click(object sender, EventArgs e)
         {
-            Response.Redirect("~/User/CFE/CFEForestDetails.aspx?Previous=" + "P");
+            try
+            {
+                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Session["CFEUNITID"].ToString(), Session["CFEQID"].ToString());
+                Session["PageDt"] = dt;
+
+                string currentDeptId = "16";      // water ka DeptId
+                string currentApprovalId = "36";  // water ka ApprovalId
+
+                string prevPageUrl = MGCommonClass.GetPreviousPageUrl(dt, currentDeptId, currentApprovalId);
+
+                if (!string.IsNullOrEmpty(prevPageUrl))
+                    Response.Redirect("~/User/CFE/" + prevPageUrl + ".aspx");
+                else
+                    lblmsg.Text = "No previous page found.";
+            }
+            catch (Exception ex)
+            {
+                lblmsg.Text = ex.Message;
+                Failure.Visible = true;
+                if (ex.Message != "Thread was being aborted.")
+                    MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
         }
 
 

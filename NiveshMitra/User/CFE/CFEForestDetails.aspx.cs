@@ -88,7 +88,7 @@ namespace NiveshMitra.User.CFE
             catch (Exception ex)
             {
                 Failure.Visible = true;
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
         }
@@ -97,13 +97,42 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                Response.Redirect("~/User/CFE/CFEfire.aspx?Previous=" + "P");
+                // Step 1: Get DataTable
+                DataTable dt = MGCommonClass.GetAppliedorNot(
+                    hdnUserID.Value,
+                    Convert.ToString(Session["CFEUNITID"]),
+                    Convert.ToString(Session["CFEQID"])
+                );
+
+                Session["PageDt"] = dt;
+
+                // Step 2: Set current page identifiers
+                string currentDeptId = " ";
+                string currentApprovalId = " ";
+
+                // Step 3: Get previous page URL
+                string prevPageUrl = MGCommonClass.GetPageUrl(dt, "Previous", currentDeptId, currentApprovalId);
+
+                // Step 4: Redirect if URL is valid
+                if (!string.IsNullOrEmpty(prevPageUrl))
+                {
+                    Response.Redirect("~/User/CFE/" + prevPageUrl + ".aspx");
+                }
+                else
+                {
+                    lblmsg0.Text = "Previous page not found.";
+                    Failure.Visible = true;
+                }
             }
             catch (Exception ex)
             {
                 lblmsg0.Text = ex.Message;
                 Failure.Visible = true;
-                MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+
+                if (ex.Message != "Thread was being aborted.")
+                {
+                    MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+                }
             }
         }
         protected void btnNext_Click(object sender, EventArgs e)

@@ -53,43 +53,59 @@ namespace NiveshMitra.User.CFE
             catch (Exception ex)
             {
                 Failure.Visible = true;
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
 
         }
 
-        
-        protected void GetAppliedorNot()
-        {
-            try
-            {
-                DataSet ds = new DataSet();
-                ds = objcfebal.GetAppliedApprovalIDs(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]), "25", "53");
+
+        //protected void GetAppliedorNot()
+        //{
+        //    try
+        //    {
+        //        DataSet ds = new DataSet();
+        //        //ds = objcfebal.GetAppliedApprovalIDs(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]), "25", "53");
+        //        ds = objcfebal.GetAppliedApprovalIDs(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]), "0", "0");
+
+        //        DataTable dt = new DataTable();
+        //        dt = ds.Tables[0];
+        //        Session["PageDt"] = dt;
 
 
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    Response.Redirect("~/User/CFE/CFEFire.aspx?Next=" + "N");
-                }
-                else
-                {
-                    if (Request.QueryString.Count > 0)
-                    {
-                        if (Convert.ToString(Request.QueryString[0]) == "N")
-                            Response.Redirect("~/User/CFE/CFEFire.aspx?Next=" + "N");
-                        else if (Convert.ToString(Request.QueryString[0]) == "P")
-                            Response.Redirect("~/User/CFE/lineofActivity.aspx?Previous=" + "P");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                Failure.Visible = true;
-                lblmsg0.Text = ex.Message;
-                MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
-            }
-        }
+        //        string nextPageUrl = "";
+
+
+        //        nextPageUrl=MGCommonClass.GetPageUrl(dt, "Next", "26", "");
+
+
+
+
+
+
+
+        //        if (ds.Tables[0].Rows.Count > 0)
+        //        {
+        //            Response.Redirect("~/User/CFE/CFEfire.aspx?Next=" + "N");
+        //        }
+        //        else
+        //        {
+        //            if (Request.QueryString.Count > 0)
+        //            {
+        //                if (Convert.ToString(Request.QueryString[0]) == "N")
+        //                    Response.Redirect("~/User/CFE/CFEfire.aspx?Next=" + "N");
+        //                else if (Convert.ToString(Request.QueryString[0]) == "P")
+        //                    Response.Redirect("~/User/CFE/lineofActivity.aspx?Previous=" + "P");
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Failure.Visible = true;
+        //        lblmsg0.Text = ex.Message;
+        //        MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+        //    }
+        //}
         protected void btnPrevious_Click(object sender, EventArgs e)
         {
             try
@@ -98,7 +114,7 @@ namespace NiveshMitra.User.CFE
             }
             catch (Exception ex)
             {
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 Failure.Visible = true;
                 MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
@@ -108,23 +124,33 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                //btnSave_Click(sender, e);
-                //if (ErrorMsg == "")
-                Response.Redirect("~/User/CFE/CFEFire.aspx?Next=" + "N");
-                //GetAppliedorNot();
+                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]));
+                Session["PageDt"] = dt;
+                string nextPageUrl = "";
+
+
+                nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "26", "");
+                if (!string.IsNullOrEmpty(nextPageUrl))
+                    Response.Redirect("~/User/CFE/" + nextPageUrl + ".aspx");
+                else
+                    lblmsg0.Text = "No Dept. found.";
             }
+                 
+
+
+            
             catch (Exception ex)
             {
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 Failure.Visible = true;
                 if (ex.Message != "Thread was being aborted.")
                 {
                     MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
                 }
             }
-             
-             
-             
+
+
+
         }
 
 

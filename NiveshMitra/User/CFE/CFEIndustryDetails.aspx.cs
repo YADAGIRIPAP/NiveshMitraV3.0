@@ -57,7 +57,7 @@ namespace NiveshMitra.User.CFE
             catch (Exception ex)
             {
                 Failure.Visible = true;
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
 
@@ -136,7 +136,7 @@ namespace NiveshMitra.User.CFE
             }
             catch (Exception ex)
             {
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 Failure.Visible = true;
                 // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }

@@ -29,6 +29,9 @@ namespace NiveshMitra.User.CFE
        
 
         MasterBAL mstrBAL = new MasterBAL();
+
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -64,7 +67,7 @@ namespace NiveshMitra.User.CFE
             catch (Exception ex)
             {
                 Failure.Visible = true;
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
 
@@ -90,10 +93,66 @@ namespace NiveshMitra.User.CFE
             gvContractors.DataBind();
         }
 
+         
+
         protected void btnNext_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CFEfire.aspx");
+            try
+            {
+                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]));
+                Session["PageDt"] = dt;
+                string nextPageUrl = "";
+
+
+                nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "3", "55");
+                if (!string.IsNullOrEmpty(nextPageUrl))
+                    Response.Redirect("~/User/CFE/" + nextPageUrl + ".aspx");
+                else
+                    lblmsg0.Text = "No Dept. found.";
+                    Failure.Visible = true;
+            }
+
+
+            catch (Exception ex)
+            {
+                lblmsg.Text = ex.Message;
+                Failure.Visible = true;
+                if (ex.Message != "Thread was being aborted.")
+                {
+                    MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+                }
+            }
         }
+
+        protected void btnPrevious_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Session["CFEUNITID"].ToString(), Session["CFEQID"].ToString());
+                Session["PageDt"] = dt;
+
+                // Current page DeptId and ApprovalId
+                string currentDeptId = "3";       // Power page DeptId
+                string currentApprovalId = "55";   // Power page ApprovalId
+
+                string prevPageUrl = MGCommonClass.GetPreviousPageUrl(dt, currentDeptId, currentApprovalId);
+
+                if (!string.IsNullOrEmpty(prevPageUrl))
+                    Response.Redirect("~/User/CFE/" + prevPageUrl + ".aspx");
+                else
+                    lblmsg0.Text = "No previous Dept. found.";
+            }
+            catch (Exception ex)
+            {
+                lblmsg.Text = ex.Message;
+                Failure.Visible = true;
+                if (ex.Message != "Thread was being aborted.")
+                    MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
+
+
+
 
     }
 
