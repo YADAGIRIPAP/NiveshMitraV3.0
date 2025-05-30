@@ -69,7 +69,7 @@
                                 <HeaderStyle HorizontalAlign="Right" />
                                 <ItemStyle CssClass="GRDITEM2" Width="150px" HorizontalAlign="Center" />
                             </asp:BoundField>
-                            <asp:TemplateField HeaderText="Whether Approval Already Obtained">
+                            <asp:TemplateField HeaderText="Whether Approval Already Obtained"  Visible="false">
                                 <ItemStyle Width="250px" />
                                 <ItemTemplate>
                                     <asp:RadioButtonList ID="rblAlrdyObtained" runat="server" SelectedValue='<%# Eval("CFEQA_ISOFFLINE") %>' AutoPostBack="True" RepeatDirection="Horizontal" OnSelectedIndexChanged="rblAlrdyObtained_SelectedIndexChanged">
@@ -81,7 +81,7 @@
                                 </ItemTemplate>
                                 <ItemStyle HorizontalAlign="Center" Width="140px" />
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="Apply for Approval">
+                            <asp:TemplateField HeaderText="Apply for Approval"  Visible="false">
                                 <ItemTemplate>
                                     <asp:CheckBox ID="ChkApproval" runat="server" AutoPostBack="True" OnCheckedChanged="ChkApproval_CheckedChanged" />
                                 </ItemTemplate>

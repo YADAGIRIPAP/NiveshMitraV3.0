@@ -327,9 +327,11 @@ namespace NiveshMitra.User.CFE
                     //Getofflineapprovals();
                     success.Visible = true;
                     lblmsg.Text = "Details Submitted Successfully";
+                    //string message = "alert('" + lblmsg.Text + "')";
                     string message = "alert('" + lblmsg.Text + "')";
-
                     ScriptManager.RegisterClientScriptBlock((sender as Control), this.GetType(), "alert", message, true);
+
+                    
 
                 }
             }
