@@ -378,3 +378,6 @@ FodyWeavers.xsd
 /NiveshMitra/bin/NiveshMitra.dll
 /NiveshMitra/bin/NiveshMitra.pdb
 /NiveshMitra/NiveshMitra.csproj.user
+/NiveshMitra/.vs/NiveshMitra.csproj.dtbcache.json
+/NiveshMitra.Common/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/NiveshMitra.DAL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
