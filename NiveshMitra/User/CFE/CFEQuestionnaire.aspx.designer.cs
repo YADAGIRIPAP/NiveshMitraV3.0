@@ -195,6 +195,15 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.DropDownList rblProposal;
 
         /// <summary>
+        /// rblMIDCL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblMIDCL;
+
+        /// <summary>
         /// ddlDistrict control.
         /// </summary>
         /// <remarks>
@@ -220,6 +229,24 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlVillage;
+
+        /// <summary>
+        /// ddlIndustrialParkRow control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ddlIndustrialParkRow;
+
+        /// <summary>
+        /// ddlIndustrialPark control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlIndustrialPark;
 
         /// <summary>
         /// txtHouseNumber control.
@@ -292,15 +319,6 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPCBCategory;
-
-        /// <summary>
-        /// rblMIDCL control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblMIDCL;
 
         /// <summary>
         /// txtUnitLocation control.
