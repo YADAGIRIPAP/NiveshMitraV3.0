@@ -336,7 +336,7 @@ namespace NiveshMitra.User.CFE
         protected void btnNext_Click(object sender, EventArgs e)
         {
 
-           Response.Redirect("LineofActivity.aspx");
+           Response.Redirect("LocationOfUnit.aspx");
         }
     }
 

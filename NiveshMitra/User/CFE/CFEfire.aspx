@@ -23,14 +23,14 @@
      <ol class="breadcrumb mb-0">
          <li class="breadcrumb-item"><a href="../Dashboard/Dashboarddrill.aspx">Dashboard</a></li>
          <li class="breadcrumb-item"><a href="CFEUserDashboard.aspx">Pre Establishment</a></li>
-         <li class="breadcrumb-item active" aria-current="page">CFEFire</li>
+         <li class="breadcrumb-item active" aria-current="page">CFE Fire Details</li>
      </ol>
  </nav>
             <div class="page-wrapper cfequestionnaire">
                 <div class="container-fluid mt-3">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h4 class="card-title"><b>Combined Application Form - For Pre Establishment</b></h4>
+                            <h4 class="card-title"><b>Fire Details</b></h4>
                             <span class="text-danger">*All Fields Are Mandatory</span>
                         </div>
 
@@ -537,10 +537,17 @@ Documents<span class="text-danger">*</span></label>
 
 
 <!-- Navigation Buttons -->
-<div class="col-md-12 d-flex justify-content-center mt-2">
+<%--<div class="col-md-12 d-flex justify-content-center mt-2">
  <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-rounded btn-info btn-lg mx-2" Width="150px" OnClick="btnPrevious_Click" />
  <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-rounded btn-info btn-lg mx-2" Width="150px" OnClick="btnNext_Click" />
-  </div>
+  </div>--%>
+     <div class="col-lg-12 col-sm-12 col-xs-12 col-sm-12" style="text-align:center">
+    <asp:Button ID="btnClearAll" runat="server" Text="Clear All" CssClass="btn btn-info" Width="150px" />
+    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success" Width="150px" OnClick="btnSave_Click" />
+    <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-warning" Width="150px" OnClick="btnPrevious_Click" />
+    <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-danger" Width="150px" OnClick="btnNext_Click" />
+</div>
+
 </div>
 </div>
 </div>

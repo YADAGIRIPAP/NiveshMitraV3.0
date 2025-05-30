@@ -272,15 +272,9 @@
                                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
                                                         <input type="text" class="btn btn-info" value="ClearAll" style="width: 100px" TabIndex="16" />
                                                         <input type="text" class="btn btn-success" value="Save" style="width: 100px" TabIndex="13" />
-                                                        <input type="text" class="btn btn-danger" value="Previous" style="width: 100px" TabIndex="15" />
+                                                         <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-warning" Width="150px" OnClick="btnPrevious_Click"   />
                                                         <%--<input type="text" class="btn btn-danger" value="Next" style="width: 100px" TabIndex="14" />--%>
-                                                                                                               <asp:Button 
-ID="btnNext" 
-runat="server" 
-Text="Next" 
-CssClass="btn btn-danger" 
-Width="150px" OnClick="btnNext_Click"   
-  />
+                                                          <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-danger" Width="150px" OnClick="btnNext_Click"/>
                                                     </div>
                                                 </div>
                                             </div>

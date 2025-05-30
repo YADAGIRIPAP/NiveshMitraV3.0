@@ -477,7 +477,6 @@ namespace NiveshMitra.DAL.CFEDAL
                 da.SelectCommand.Parameters.AddWithValue("@POWERKW_ID", objCFEQ.PowerReqKW);
                 da.SelectCommand.Parameters.AddWithValue("@EMPLOYEE", Convert.ToInt32(objCFEQ.PropEmployment));
                 da.SelectCommand.Parameters.AddWithValue("@BUILDINGHEIGHT", objCFEQ.BuildingHeight);
-
                 if (objCFEQ.Investment != null && objCFEQ.Investment != "")
                 {
                     da.SelectCommand.Parameters.AddWithValue("@INVESTMENT", objCFEQ.Investment);
@@ -503,5 +502,50 @@ namespace NiveshMitra.DAL.CFEDAL
                 connection.Dispose();
             }
         }
+
+        public DataSet GetAppliedApprovalIDs(string userid, string UNITID, string QusestionnaireID, string DeptID, string ApprovalID)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection connection = new SqlConnection(connstr);
+            SqlTransaction transaction = null;
+            connection.Open();
+            transaction = connection.BeginTransaction();
+
+            try
+            {
+                SqlDataAdapter da;
+                da = new SqlDataAdapter(CFEConstants.GetAppliedApprovalIDs, connection);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.CommandText = CFEConstants.GetAppliedApprovalIDs;
+
+                da.SelectCommand.Transaction = transaction;
+                da.SelectCommand.Connection = connection;
+
+                da.SelectCommand.Parameters.AddWithValue("@UNITID", UNITID);
+                da.SelectCommand.Parameters.AddWithValue("@USERID", userid);
+                da.SelectCommand.Parameters.AddWithValue("@CFEQID", QusestionnaireID);
+                da.SelectCommand.Parameters.AddWithValue("@DEPTID", DeptID);
+                if (ApprovalID == "")
+                    da.SelectCommand.Parameters.AddWithValue("@APPROVALID", null);
+                else
+                    da.SelectCommand.Parameters.AddWithValue("@APPROVALID", ApprovalID);
+
+                da.Fill(ds);
+                transaction.Commit();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+        }
+
+                
     }
 }

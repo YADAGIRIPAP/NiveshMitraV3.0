@@ -11,7 +11,7 @@ namespace NiveshMitra.User.CFE
 {
 
 
-    public partial class CFEPowerDetails
+    public partial class CFEWaterDetails
     {
 
         /// <summary>
@@ -105,166 +105,121 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.Label lblmsg0;
 
         /// <summary>
-        /// txtConnectedLoadHP control.
+        /// chkBorewell control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtConnectedLoadHP;
+        protected global::System.Web.UI.WebControls.CheckBox chkBorewell;
 
         /// <summary>
-        /// txtmaxdmdkva control.
+        /// txtBorewellKLD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtmaxdmdkva;
+        protected global::System.Web.UI.WebControls.TextBox txtBorewellKLD;
 
         /// <summary>
-        /// ddlReqVoltagelevel control.
+        /// chkCanals control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlReqVoltagelevel;
+        protected global::System.Web.UI.WebControls.CheckBox chkCanals;
 
         /// <summary>
-        /// rbtnotherserviceYes control.
+        /// txtCanalsKLD control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbtnotherserviceYes;
+        protected global::System.Web.UI.WebControls.TextBox txtCanalsKLD;
 
         /// <summary>
-        /// rbtnotherserviceNo control.
+        /// txtWaterRequiredPerDay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButton rbtnotherserviceNo;
+        protected global::System.Web.UI.WebControls.TextBox txtWaterRequiredPerDay;
 
         /// <summary>
-        /// txtifserviceno control.
+        /// txtDrinkingWater control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtifserviceno;
+        protected global::System.Web.UI.WebControls.TextBox txtDrinkingWater;
 
         /// <summary>
-        /// txtperday control.
+        /// txtIndustrialUse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtperday;
+        protected global::System.Web.UI.WebControls.TextBox txtIndustrialUse;
 
         /// <summary>
-        /// txtpermonth control.
+        /// txtConsumptiveUse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpermonth;
+        protected global::System.Web.UI.WebControls.TextBox txtConsumptiveUse;
 
         /// <summary>
-        /// txtExpectedmonth control.
+        /// txtNonConsumptiveUse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtExpectedmonth;
+        protected global::System.Web.UI.WebControls.TextBox txtNonConsumptiveUse;
 
         /// <summary>
-        /// txtProbableDatereq control.
+        /// txtGeoIntake control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProbableDatereq;
+        protected global::System.Web.UI.WebControls.TextBox txtGeoIntake;
 
         /// <summary>
-        /// txtpropertyid control.
+        /// txtGeoStorage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtpropertyid;
+        protected global::System.Web.UI.WebControls.TextBox txtGeoStorage;
 
         /// <summary>
-        /// txttotalConnectedloadkva control.
+        /// txtMinWaterReq control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txttotalConnectedloadkva;
+        protected global::System.Web.UI.WebControls.TextBox txtMinWaterReq;
 
         /// <summary>
-        /// evidencefileupload control.
+        /// txtMaxWaterReq control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload evidencefileupload;
-
-        /// <summary>
-        /// idprooffileupload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload idprooffileupload;
-
-        /// <summary>
-        /// agreementleeterfileupload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload agreementleeterfileupload;
-
-        /// <summary>
-        /// Licensecopyfileupload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload Licensecopyfileupload;
-
-        /// <summary>
-        /// Permitcopyfileupload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload Permitcopyfileupload;
-
-        /// <summary>
-        /// feasibilityreportfileupload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload feasibilityreportfileupload;
+        protected global::System.Web.UI.WebControls.TextBox txtMaxWaterReq;
 
         /// <summary>
         /// btnClearAll control.
@@ -301,5 +256,14 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnNext;
+
+        /// <summary>
+        /// UpdateProgress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdateProgress UpdateProgress;
     }
 }

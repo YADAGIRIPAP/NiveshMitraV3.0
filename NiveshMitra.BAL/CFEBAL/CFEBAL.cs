@@ -49,6 +49,8 @@ namespace NiveshMitra.BAL.CFEBAL
         {
             return objCFEDAL.InsertCFEDepartmentApprovals(objCFEQsnaire);
         }
+        public DataSet GetAppliedApprovalIDs(string userid, string UNITID, string QusestionnaireID, string DeptID, string ApprovalID)
+        { return objCFEDAL.GetAppliedApprovalIDs(userid, UNITID, QusestionnaireID, DeptID, ApprovalID); }
         public DataTable GetApprovalsReqWithFee(CFEQuestionnaireDet objCFEQ)
         { return objCFEDAL.GetApprovalsReqWithFee(objCFEQ); }
     }

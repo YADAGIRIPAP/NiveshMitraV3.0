@@ -83,17 +83,18 @@ namespace NiveshMitra.User.CFE
             try
             {
                 DataSet ds = new DataSet();
-                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"] ?? string.Empty));
+                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString("212"));
                 if (ds.Tables[0].Rows.Count > 0)
                 {
+                    Session["CFEQID"]= Convert.ToString(ds.Tables[0].Rows[0]["CFEQDID"]);
                     hdnPreRegUID.Value = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PREREGUIDNO"]);
                     txtUnitName.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYNAME"]);
                     rblProposal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPOSALFOR"]);
                     ddlCompanyType.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYTYPE"]);
                     ddlDistrict.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPDISTRICTID"]);
-                    //  ddlDistrict_SelectedIndexChanged(null, EventArgs.Empty);
+                     ddlDistrict_SelectedIndexChanged(null, EventArgs.Empty);
                     ddlTehsil.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPMANDALID"]);
-                    //  ddlMandal_SelectedIndexChanged(null, EventArgs.Empty);
+                    ddlTehsil_SelectedIndexChanged(null, EventArgs.Empty);
                     ddlVillage.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPVILLAGEID"]);
                     txtLandArea.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_TOTALEXTENTLAND"]);
 
@@ -177,7 +178,7 @@ namespace NiveshMitra.User.CFE
                     rblForContr1970_SelectedIndexChanged(null, EventArgs.Empty);
                     //txtContr1970wrkrs.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERSCONTR1970"]);
 
-                    //GetApprovals();
+                    GetApprovals();
                 }
                 /* else
                  {
@@ -337,21 +338,21 @@ namespace NiveshMitra.User.CFE
                     errormsg = errormsg + slno + ". Please Select Proposed Location Village \\n";
                     slno = slno + 1;
                 }
-                if (string.IsNullOrEmpty(txtHouseNumber.Text) || txtHouseNumber.Text == "" || txtHouseNumber.Text == null)
-                {
-                    errormsg = errormsg + slno + ". Please Enter House Number/Survey Number \\n";
-                    slno = slno + 1;
-                }
-                if (string.IsNullOrEmpty(txtStreet.Text) || txtStreet.Text == "" || txtStreet.Text == null)
-                {
-                    errormsg = errormsg + slno + ". Please Enter Street/Area \\n";
-                    slno = slno + 1;
-                }
-                if (string.IsNullOrEmpty(txtPinCode.Text) || txtPinCode.Text == "" || txtPinCode.Text == null)
-                {
-                    errormsg = errormsg + slno + ". Please Enter Pin Code \\n";
-                    slno = slno + 1;
-                }
+                //if (string.IsNullOrEmpty(txtHouseNumber.Text) || txtHouseNumber.Text == "" || txtHouseNumber.Text == null)
+                //{
+                //    errormsg = errormsg + slno + ". Please Enter House Number/Survey Number \\n";
+                //    slno = slno + 1;
+                //}
+                //if (string.IsNullOrEmpty(txtStreet.Text) || txtStreet.Text == "" || txtStreet.Text == null)
+                //{
+                //    errormsg = errormsg + slno + ". Please Enter Street/Area \\n";
+                //    slno = slno + 1;
+                //}
+                //if (string.IsNullOrEmpty(txtPinCode.Text) || txtPinCode.Text == "" || txtPinCode.Text == null)
+                //{
+                //    errormsg = errormsg + slno + ". Please Enter Pin Code \\n";
+                //    slno = slno + 1;
+                //}
                 if (string.IsNullOrEmpty(txtLandArea.Text) || txtLandArea.Text == "" || txtLandArea.Text == null || txtLandArea.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txtLandArea.Text, @"^0+(\.0+)?$"))
                 {
                     errormsg = errormsg + slno + ". Please Enter Total Extend Land  \\n";
@@ -768,7 +769,7 @@ namespace NiveshMitra.User.CFE
                     else
                         objCFEQsnaire.CFEQDID = Convert.ToString(Session["CFEQID"]);
 
-                    objCFEQsnaire.UNITID = Convert.ToString(Session["CFEUNITID"]);
+                    objCFEQsnaire.UNITID = Convert.ToString("212");
                     objCFEQsnaire.PREREGUIDNO = hdnPreRegUID.Value;
                     objCFEQsnaire.IPAddress = getclientIP();
                     objCFEQsnaire.CompanyName = txtUnitName.Text.Trim();
@@ -807,7 +808,7 @@ namespace NiveshMitra.User.CFE
                     objCFEQsnaire.PowerPlantID = ddlPowerPlant.SelectedValue;
                     objCFEQsnaire.AggCapacity = txtAggrCapacity.Text.Trim();
                     objCFEQsnaire.VoltageRating = ddlVoltage.SelectedValue;
-                    //objCFEQsnaire.TreesFelling = rblfrstDistncLtr.SelectedValue;
+                    objCFEQsnaire.TreesFelling = rblFelltrees.SelectedValue;
                     objCFEQsnaire.NoofTrees = txtNoofTrees.Text.Trim();
                     //objCFEQsnaire.NonForstLandCert = rblNonForstLandCert.SelectedValue;
                     objCFEQsnaire.ForstDistLetr = rblFelltrees.SelectedValue;
@@ -842,8 +843,8 @@ namespace NiveshMitra.User.CFE
                     {
                         CFEQuestionnaireDet objrm = new CFEQuestionnaireDet();
                         Session["CFEQID"] = result;
-
-                        Session["CFEUNITID"] = Convert.ToInt32(result) + 1;//temp code
+                        Session["CFEUNITID"] = "212";
+                        //Session["CFEUNITID"] = Convert.ToInt32(result) + 1;//temp code
 
                         for (int i = 0; i < grdApprovals.Rows.Count; i++)
                         {
@@ -864,7 +865,7 @@ namespace NiveshMitra.User.CFE
                         }
                         if (grdApprovals.Rows.Count == count)
                         {
-                            //objcfebal.DeleteDepartmentApprovals(objCFEQsnaire);
+                            objcfebal.DeleteDepartmentApprovals(objCFEQsnaire);
 
                             success.Visible = true;
                             lblmsg.Text = "Consent For Establishment - Questionnaire Details Submitted Successfully";
@@ -892,7 +893,7 @@ namespace NiveshMitra.User.CFE
         {
             try
             {
-                btnSave3_Click(sender, e);
+                //btnSave3_Click(sender, e);
                 if (ErrorMsg == "")
                     //Response.Redirect("~/User/CFE/CFECommonApplication.aspx");
                     Response.Redirect("~/User/CFE/frmDepartmentApprovalDetails.aspx");
@@ -993,11 +994,15 @@ namespace NiveshMitra.User.CFE
                 }
                 if (rblGenerator.SelectedValue == "Y")
                 {
-                    objCFEQ.ApprovalID = "6";
+                    //objCFEQ.ApprovalID = "6";
+                    //dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    //dtApprReq.Merge(dtGenReq);
+
+                    objCFEQ.ApprovalID = "5";
                     dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtGenReq);
                 }
-                if (Convert.ToDecimal(txtBuildingHeight.Text) != 0)
+                if (Convert.ToDecimal(txtBuildingHeight.Text) >14)
                 {
                     //objCFEQ.BuildingHeight = txtBuildingHeight.Text;
                     //objCFEQ.ApprovalID = "7";
@@ -1009,12 +1014,12 @@ namespace NiveshMitra.User.CFE
                     dtfire = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtfire);
                 }
-                if (rblRSDSstore.SelectedValue == "Y")
-                {
-                    objCFEQ.ApprovalID = "8";
-                    dtRSDS = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                    dtApprReq.Merge(dtRSDS);
-                }
+                //if (rblRSDSstore.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "8";
+                //    dtRSDS = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtRSDS);
+                //}
                 if (rblexplosives.SelectedValue == "Y")
                 {
                     objCFEQ.ApprovalID = "9";
@@ -1049,7 +1054,7 @@ namespace NiveshMitra.User.CFE
                 //    dtCommTax = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                 //    dtApprReq.Merge(dtCommTax);
                 //}
-                if (rblHighTension.SelectedValue == "Y")
+                if (rblHighTension.SelectedValue == "Y" || rblDrawing.SelectedValue == "Y")
                 {
                     //objCFEQ.ApprovalID = "14";
                     //dtHitens = objcfebal.GetApprovalsReqWithFee(objCFEQ);
@@ -1112,7 +1117,7 @@ namespace NiveshMitra.User.CFE
                     //dtAct1996 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     //dtApprReq.Merge(dtAct1996);
 
-                    objCFEQ.ApprovalID = "4";
+                    objCFEQ.ApprovalID = "55";
                     objCFEQ.PropEmployment = txt1996Workers.Text;
                     dtAct1996 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtAct1996);
@@ -1165,16 +1170,16 @@ namespace NiveshMitra.User.CFE
                 //    NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                 //    dtApprReq.Merge(NonMunicipal);
                 //}
-                if (rblDrawing.SelectedValue == "Y")
-                {
-                    //objCFEQ.ApprovalID = "107";
-                    //NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                    //dtApprReq.Merge(NonMunicipal);
+                //if (rblDrawing.SelectedValue == "Y")
+                //{
+                //    //objCFEQ.ApprovalID = "107";
+                //    //NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    //dtApprReq.Merge(NonMunicipal);
 
-                    objCFEQ.ApprovalID = "8";
-                    NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                    dtApprReq.Merge(NonMunicipal);
-                }
+                //    objCFEQ.ApprovalID = "8";
+                //    NonMunicipal = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(NonMunicipal);
+                //}
 
 
                 if (dtApprReq.Rows.Count > 0)
@@ -1240,16 +1245,19 @@ namespace NiveshMitra.User.CFE
                     }
                     else
                     {
-                        string Result = objcfebal.CFEENTERPRISETYPE(txtAnnualTurnOver.Text.ToString());
-                        if (Result != "")
+                        if (!string.IsNullOrEmpty(txtAnnualTurnOver.Text))
                         {
-                            var numOfEmp = Convert.ToInt32(txtPropEmp.Text);
-                            if ((Result == "Mega" && numOfEmp < 300) || (Result == "Super Mega" && numOfEmp < 600) || (Result == "Ultra Mega" && numOfEmp < 1500))
+                            string Result = objcfebal.CFEENTERPRISETYPE(txtAnnualTurnOver.Text.ToString());
+                            if (Result != "")
                             {
-                                Result = "Large";
+                                var numOfEmp = Convert.ToInt32(txtPropEmp.Text);
+                                if ((Result == "Mega" && numOfEmp < 300) || (Result == "Super Mega" && numOfEmp < 600) || (Result == "Ultra Mega" && numOfEmp < 1500))
+                                {
+                                    Result = "Large";
+                                }
+                                lblEntCategory.Text = Result;
+                                lblTotProjCost.Text = Convert.ToString(Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text));
                             }
-                            lblEntCategory.Text = Result;
-                            lblTotProjCost.Text = Convert.ToString(Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text));
                         }
                     }
                 }
@@ -2104,6 +2112,20 @@ namespace NiveshMitra.User.CFE
             {
                 ddlIndustrialParkRow.Visible = false;
             }
+        }
+        protected void txtPropEmp_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtAnnualTurnOver_TextChanged(sender, e);
+            }
+            catch (Exception ex)
+            {
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+
         }
     }
 }

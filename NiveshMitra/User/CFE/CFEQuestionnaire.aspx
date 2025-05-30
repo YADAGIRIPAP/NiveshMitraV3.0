@@ -436,7 +436,7 @@
                                                                                 1. Proposed
 																		Employment<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
-                                                                                <asp:TextBox ID="txtPropEmp" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="7" TabIndex="1" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtPropEmp" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="7" TabIndex="1" onkeyup="handleKeyUp(this)" AutoPostBack="true" OnTextChanged="txtPropEmp_TextChanged"></asp:TextBox>
                                                                             </div>
                                                                         </div>
                                                                     </div>

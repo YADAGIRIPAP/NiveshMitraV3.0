@@ -22,6 +22,8 @@ namespace NiveshMitra.Common
 
         public static string GetCFEApprovalsReq = "USP_GETCFEAPPROVALSWITHFEE_V1";
 
+        public static string GetAppliedApprovalIDs = "USP_GETCFEAPPROVALIDS";
+
     }
     public class CFEQuestionnaireDet
     {

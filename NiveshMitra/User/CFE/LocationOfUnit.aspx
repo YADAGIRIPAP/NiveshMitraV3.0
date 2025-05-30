@@ -50,7 +50,7 @@
                                 <div class="card-header">
                                     <h4 class="card-title"><b>Entreprise Location Details</b></h4>
                                     <p style="position: absolute; right: 10px; top: 6px; color: red;">
-                                        *All Fields Are	Mandatory
+                                        <span class="text-danger">*</span>All Fields Are	Mandatory
                                     </p>
                                 </div>
 
@@ -86,19 +86,19 @@
                                         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                                             <div class="panel">
                                                 <div class="panel-heading">
-                                                    <h6 style="font-weight: bold">Location of Unit</h6>
+                                                    <h6 style="">Location of Unit</h6>
                                                 </div>
                                                 <div class="panel-body">
                                                     <div class="row" style="margin-top: 10px">
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">1. Survey No/Plot Number(s)*</label>
+                                                            <label class="col-form-label" style=" font-size: 14px">1. Survey No/Plot Number(s)<span class="text-danger"><span class="text-danger">*</span></span></label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                                             <asp:TextBox ID="txtSuryvey" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">2.  District*</label>
+                                                            <label class="col-form-label" style="font-size: 14px">2.  District<span class="text-danger">*</span></label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -108,7 +108,7 @@
                                                             </asp:DropDownList>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">3.   Mandal*</label>
+                                                            <label class="col-form-label" style="font-size: 14px">3.Tehsil<span class="text-danger">*</span></label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -120,7 +120,7 @@
                                                     </div>
                                                     <div class="row" style="margin-top: 10px">
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">4.  Village/Town*</label>
+                                                            <label class="col-form-label" style=" font-size: 14px">4.  Village/Town<span class="text-danger">*</span></label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -130,14 +130,14 @@
                                                             </asp:DropDownList>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">5.  Name of Grampanchayat*</label>
+                                                            <label class="col-form-label" style=" font-size: 14px">5.  Name of Grampanchayat<span class="text-danger">*</span></label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                                             <asp:TextBox ID="TextBox1" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">6.   PinCode*</label>
+                                                            <label class="col-form-label" style= font-size: 14px">6.   PinCode<span class="text-danger">*</span></label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -146,21 +146,21 @@
                                                     </div>
                                                     <div class="row" style="margin-top: 10px">
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">7.  Tel No(Landline)(If available)</label>
+                                                            <label class="col-form-label" style=" font-size: 14px">7.  Tel No(Landline)(If available)</label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                                             <asp:TextBox ID="TextBox2" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">8.  Total Extent of Site Area as Per Documents(in Sq. mts)</label>
+                                                            <label class="col-form-label" style=" font-size: 14px">8.  Total Extent of Site Area as Per Documents(in Sq. mts)</label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                                             <asp:TextBox ID="TextBox3" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">9. Type of Building</label>
+                                                            <label class="col-form-label" style=" font-size: 14px">9. Type of Building</label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -172,7 +172,7 @@
                                                     </div>
                                                     <div class="row" style="margin-top: 10px">
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">11. Land Use as per Master Plan* </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">11. Land Use as per Master Plan<span class="text-danger">*</span> </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -183,14 +183,14 @@
                                                         </div>
 
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">12. Proposed Area for Development(in Sq. mts)* </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">12. Proposed Area for Development(in Sq. mts)<span class="text-danger">*</span> </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                                             <asp:TextBox ID="TextBox4" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">13. Total Built up Area(in Sq.mts)*</label>
+                                                            <label class="col-form-label" style=" font-size: 14px">13. Total Built up Area(in Sq.mts)<span class="text-danger">*</span></label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -199,7 +199,7 @@
                                                     </div>
                                                     <div class="row" style="margin-top: 10px">
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">14. Height of the Building(In mtrs)*  </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">14. Height of the Building(In mtrs)<span class="text-danger">*</span>  </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -207,14 +207,14 @@
                                                         </div>
 
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">15. Existing Width of Approach Road(in feet)* </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">15. Existing Width of Approach Road(in feet)<span class="text-danger">*</span> </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                                             <asp:TextBox ID="TextBox7" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">16. Type of Approach Road* </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">16. Type of Approach Road<span class="text-danger">*</span> </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -226,7 +226,7 @@
                                                     </div>
                                                     <div class="row" style="margin-top: 10px">
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">17. Land Location falls under* </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">17. Land Location falls under<span class="text-danger">*</span> </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -237,7 +237,7 @@
                                                         </div>
 
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">18. Building Approval* </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">18. Building Approval<span class="text-danger">*</span> </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -247,7 +247,7 @@
                                                             </asp:DropDownList>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">19. Please Enter Industry/Product/Activity </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">19. Please Enter Industry/Product/Activity </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -259,7 +259,7 @@
                                                     </div>
                                                     <div class="row" style="margin-top: 10px">
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">20. Category of Industry </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">20. Category of Industry </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -270,14 +270,14 @@
                                                         </div>
 
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">21. Location Name of IE/IDA/SEZ </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">21. Location Name of IE/IDA/SEZ </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
                                                             <asp:TextBox ID="TextBox18" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">22. Affected in Road Widening* </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">22. Affected in Road Widening<span class="text-danger">*</span> </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -287,14 +287,14 @@
                                                     </div>
                                                     <div class="row" style="margin-top: 10px;">
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="display:none" id="div1">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">22 a. Extend of affected area in sq.mts </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">22 a. Extend of affected area in sq.mts </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12" style="display:none" id="div2">
                                                             <asp:TextBox ID="TextBox33" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
-                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">23. Is land part of* </label>
+                                                            <label class="col-form-label" style=" font-size: 14px">23. Is land part of<span class="text-danger">*</span> </label>
 
                                                         </div>
                                                         <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
@@ -311,20 +311,20 @@
                                                                 <div class="panel-body" style="padding: 20px">
                                                                     <div class="row">
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">1. Architect License No.* </label>
+                                                                            <label class="col-form-label" style=" font-size: 14px">1. Architect License No.<span class="text-danger">*</span> </label>
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                             <asp:TextBox ID="TextBox8" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">2. Architect Name* </label>
+                                                                            <label class="col-form-label" style=" font-size: 14px">2. Architect Name<span class="text-danger">*</span> </label>
 
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                             <asp:TextBox ID="TextBox9" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">3.	Architect Mobile No.* </label>
+                                                                            <label class="col-form-label" style=" font-size: 14px">3.	Architect Mobile No.<span class="text-danger">*</span> </label>
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                             <asp:TextBox ID="TextBox10" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
@@ -342,20 +342,20 @@
                                                                 <div class="panel-body" style="padding: 20px">
                                                                     <div class="row">
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">1. Structural Engineer Name.* </label>
+                                                                            <label class="col-form-label" style=" font-size: 14px">1. Structural Engineer Name.<span class="text-danger">*</span> </label>
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                             <asp:TextBox ID="TextBox11" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">2 Structural Mobile No </label>
+                                                                            <label class="col-form-label" style=" font-size: 14px">2 Structural Mobile No </label>
 
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                             <asp:TextBox ID="TextBox12" runat="server" class="form-control" onkeypress="return Names()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">3. Structural License No. </label>
+                                                                            <label class="col-form-label" style=" font-size: 14px">3. Structural License No. </label>
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
                                                                             <asp:TextBox ID="TextBox13" runat="server" class="form-control" onkeypress="return NumberOnly()" MaxLength="50" TabIndex="4" onkeyup="handleKeyUp(this)"></asp:TextBox>
@@ -373,13 +373,13 @@
                                                                 <div class="panel-body" style="padding: 20px">
                                                                     <div class="row">
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">1. Architectural dwg. in Pre-DCR</label>
+                                                                            <label class="col-form-label" style=" font-size: 14px">1. Architectural dwg. in Pre-DCR</label>
                                                                         </div>
                                                                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
                                                                             <input type="file" class="form-control" />
                                                                         </div>
                                                                         <div class="col-lg-2 col-md-2 col-xs-12 col-sm-12">
-                                                                            <label class="col-form-label" style="font-weight: bold; font-size: 14px">2 Common Affidavit Common Affidavit Form </label>
+                                                                            <label class="col-form-label" style=" font-size: 14px">2 Common Affidavit Common Affidavit Form </label>
 
                                                                         </div>
                                                                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
@@ -398,7 +398,7 @@
                                                             <input type="button" class="btn btn-warning" value="Clear All" style="width: 100px" />
                                                             <input type="button" class="btn btn-success" value="Save" style="width: 100px" />
                                                             <input type="button" class="btn btn-danger" value="Previous" style="width: 100px" />
-                                                            <input type="button" class="btn btn-danger" value="Next" style="width: 100px" />
+                                                               <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-info mx-2" Width="150px" OnClick="btnNext_Click" />
                                                         </div>
                                                     </div>
                                                 </div>
