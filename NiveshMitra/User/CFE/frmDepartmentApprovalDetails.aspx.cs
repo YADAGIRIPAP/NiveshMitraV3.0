@@ -66,9 +66,10 @@ namespace NiveshMitra.User.CFE
             try
             {
                 DataSet dsApprovals = new DataSet();
-                cfeqs.UNITID = UnitID;
+                //cfeqs.UNITID = UnitID;
                 cfeqs.CreatedBy = hdnUserID.Value;
-
+                cfeqs.UNITID = "212";
+                Session["CFEUNITID"] = "212";
                 dsApprovals = objcfebal.GetApprovalsReqFromTable(cfeqs);
                 if (dsApprovals.Tables.Count > 0)
                 {
@@ -326,6 +327,7 @@ namespace NiveshMitra.User.CFE
                 {
                     //Getofflineapprovals();
                     success.Visible = true;
+                   
                     lblmsg.Text = "Details Submitted Successfully";
                     string message = "alert('" + lblmsg.Text + "')";
 
