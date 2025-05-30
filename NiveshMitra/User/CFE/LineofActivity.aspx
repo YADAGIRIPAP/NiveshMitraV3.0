@@ -62,10 +62,8 @@
                         <div class="col-md-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h2 class="card-title"><b>Line of Activity</b></h2>
-                                    <p style="position: absolute; right: 10px; top: 6px; color: red;">
-                                        <span class="text-danger">*</span>All Fields Are	Mandatory
-                                    </p>
+                                    <h4 class="card-title"><b>Line of Activity</b></h4>
+                                    <p class="text-danger" style="position: absolute; right: 10px; top: 6px;">*All Fields Are Mandatory</p>
                                 </div>
 
                                 <div class="card-body">
@@ -282,7 +280,7 @@
                                                    <div class="col-lg-12 col-sm-12 col-xs-12 col-sm-12" style="text-align:center">
                                                     <input type="button" class="btn btn-info" value="Clear All" style="width:100px" />
                                                     <input type="button" class="btn btn-success" value="Save" style="width:100px" />
-                                                    <input type="button" class="btn btn-warning" value="Previous" style="width:100px" />
+                                                    <input type="button" class="btn btn-warning" value="Previous" onclick="location.href='LocationOfUnit.aspx'" style="width:100px" />
                                                    <%-- <input type="button" class="btn btn-danger" value="Next" style="width:100px" />--%>
                                                        <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-danger" Width="150px" OnClick="btnNext_Click" 
   />

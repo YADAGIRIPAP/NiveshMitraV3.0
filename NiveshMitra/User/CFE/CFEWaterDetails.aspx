@@ -30,7 +30,7 @@
                 <div class="container-fluid mt-3">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center">
-                            <h4 class="card-title"><b>Water</b></h4>
+                            <h4 class="card-title"><b>Water Details</b></h4>
                             <span class="text-danger">*All Fields Are Mandatory</span>
                         </div>
 
