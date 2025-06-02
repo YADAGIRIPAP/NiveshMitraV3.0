@@ -675,7 +675,7 @@
 
       <div class="col-md-12 d-flex justify-content-center mt-3">
     <asp:Button ID="btnClearAll" runat="server" Text="Clear All" CssClass="btn btn-info" Width="150px" />
-    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success mx-2" Width="150px" />
+    <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success mx-2" Width="150px" OnClientClick="return validateFormFields();" />
     <input type="button" class="btn btn-danger" value="Previous" style="width: 100px" onclick="location.href='frmDepartmentApprovalDetails.aspx'" />
     <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-info mx-2" Width="150px" OnClick="btnNext_Click" />
 </div>
