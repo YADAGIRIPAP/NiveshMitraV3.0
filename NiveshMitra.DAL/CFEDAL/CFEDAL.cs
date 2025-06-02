@@ -336,6 +336,7 @@ namespace NiveshMitra.DAL.CFEDAL
             }
             return Result;
         }
+        
         public DataSet RetrieveQuestionnaireDetails(string userid, string UnitID)
         {
             DataSet ds = new DataSet();
@@ -354,6 +355,42 @@ namespace NiveshMitra.DAL.CFEDAL
                 da.SelectCommand.Connection = connection;
 
                 da.SelectCommand.Parameters.AddWithValue("@CREATEDBY", Convert.ToInt32(userid));
+                //da.SelectCommand.Parameters.AddWithValue("@UNITID", Convert.ToInt32(UnitID));
+                da.SelectCommand.Parameters.Add("@UNITID", SqlDbType.Int).Value = string.IsNullOrWhiteSpace(UnitID) ? (object)DBNull.Value : int.Parse(UnitID);
+                da.Fill(ds);
+                transaction.Commit();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+        }
+
+        public DataSet RetrieveQuestionnairebuildingheightDetails(string CFEQDID, string UnitID)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection connection = new SqlConnection(connstr);
+            SqlTransaction transaction = null;
+            connection.Open();
+            transaction = connection.BeginTransaction();
+            try
+            {
+                SqlDataAdapter da;
+                da = new SqlDataAdapter(CFEConstants.RetrieveQuestionnairebuildingheight, connection);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.CommandText = CFEConstants.RetrieveQuestionnairebuildingheight;
+
+                da.SelectCommand.Transaction = transaction;
+                da.SelectCommand.Connection = connection;
+
+                da.SelectCommand.Parameters.AddWithValue("@CFEQDID", Convert.ToInt32(CFEQDID));
                 //da.SelectCommand.Parameters.AddWithValue("@UNITID", Convert.ToInt32(UnitID));
                 da.SelectCommand.Parameters.Add("@UNITID", SqlDbType.Int).Value = string.IsNullOrWhiteSpace(UnitID) ? (object)DBNull.Value : int.Parse(UnitID);
                 da.Fill(ds);

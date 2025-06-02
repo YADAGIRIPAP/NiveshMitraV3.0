@@ -24,6 +24,8 @@ namespace NiveshMitra.Common
 
         public static string GetAppliedApprovalIDs = "USP_GETCFEAPPROVALIDS";
 
+        public static string RetrieveQuestionnairebuildingheight = "USP_GETRETRIEVECFEQUESTIONZAIRBUILDINGHTDATA";
+
     }
     public class CFEQuestionnaireDet
     {

@@ -99,7 +99,7 @@ namespace NiveshMitra.User.CFE
 
             try
             {
-
+                DataSet ds = new DataSet();
                 DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]));
                 Session["PageDt"] = dt;
                 string nextPageUrl = "";
@@ -108,9 +108,18 @@ namespace NiveshMitra.User.CFE
                 nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "25", "53");
                 if (!string.IsNullOrEmpty(nextPageUrl))
                     Response.Redirect("~/User/CFE/" + nextPageUrl + ".aspx");
+
+
+                
                 else
+                {
                     lblmsg0.Text = "No Dept. found.";
                     Failure.Visible = true;
+                }
+
+
+                 
+                    
             }
 
 
