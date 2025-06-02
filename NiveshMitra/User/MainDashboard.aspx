@@ -27,14 +27,32 @@
                 <div class="card-body">
 
                     <div class="d-flex justify-content-between" style="background: #e0e4fd; padding: 10px 8px 2px; border-radius: 4px; margin-bottom: 10px;">
-
                         <h4 style="display: flex; align-items: center;">
                             <asp:Label ID="lblunitname" runat="server"></asp:Label>
                             &nbsp;&nbsp;
                             <asp:Label ID="lblinterest" runat="server">Do you require any Pre-Establishment approvals??</asp:Label></h4>
-                        <h4><a href="CFE/CFEQuestionnaire.aspx"><span class="badge rounded-pill bg-dark text-sm p-2" style="font-size: 16px; color: #fff; background: #033260 !important; display: flex; align-items: center;"><i class="fi fi-tr-bullseye-arrow"></i>&nbsp; Click Here</span></a></h4>
+                        <h4 style="display: none" id="submitBtn"><a href="CFE/CFEQuestionnaire.aspx"><span class="badge rounded-pill bg-dark text-sm p-2" style="font-size: 16px; color: #fff; background: #033260 !important; display: flex; align-items: center;"><i class="fi fi-tr-bullseye-arrow"></i>&nbsp; Click Here</span></a></h4>
 
                     </div>
+
+                    <div class="card item1" id="div1">
+                        <div class="card-body item">
+                            <h6><label>Please select Industry Type</label></h6>
+                            <label>
+                                <input type="radio" name="rbIndustryType" value="Industry" onclick="showButton()">
+                                Industry</label>
+                            <label>
+                                <input type="radio" name="rbIndustryType" value="Hotel" onclick="showButton()">
+                                Hotel</label>
+                            <label>
+                                <input type="radio" name="rbIndustryType" value="Hospital" onclick="showButton()">
+                                Hospital</label>
+                            <label>
+                                <input type="radio" name="rbIndustryType" value="Shops" onclick="showButton()">
+                                Shops</label>
+                        </div>
+                    </div>
+
                     <div class="card item1" style="width: 13rem;" id="divfuture" runat="server" visible="false">
                         <div class="card-body item">
                             <h5 class="card-title text-black"><a href="#" style="color: #000;">Future</a></h5>
@@ -120,5 +138,11 @@
 
         </div>
     </div>
+
+    <script type="text/javascript">
+        function showButton() {
+            document.getElementById('submitBtn').style.display = 'block';
+        }
+    </script>
 
 </asp:Content>
