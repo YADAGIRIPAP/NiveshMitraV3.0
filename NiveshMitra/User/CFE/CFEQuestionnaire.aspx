@@ -671,7 +671,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6">
+                                                                    <div class="col-md-6" style="visibility:hidden">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">4. Do you store RS, DS<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -687,7 +687,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                5. Do you manufacture, store, sale,
+                                                                                4. Do you manufacture, store, sale,
                                                                                 <br />
                                                                                 transport explosives<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex radio">
@@ -701,7 +701,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                6. Do you Manufacture, store, sale,<br />
+                                                                                5. Do you Manufacture, store, sale,<br />
                                                                                 Petroleum, Diesel, Kerosene<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:RadioButtonList ID="rblPetrlManf" runat="server" RepeatDirection="Horizontal" TabIndex="1" onchange="validateRadioButtonList(this)">
@@ -716,7 +716,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                7. Do you require Road Cutting
+                                                                                6. Do you require Road Cutting
                                                                                 <br />
                                                                                 Permission<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -761,7 +761,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                8. Do you Use (High Tension)
+                                                                                7. Do you Use (High Tension)
                                                                                 <br />
                                                                                 HT meter Above 70KVA<span class="text-danger">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -852,7 +852,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                9. Do you require Permission to Fell Isolated Trees/Lopping of Branches 
+                                                                                8. Do you require Permission to Fell Isolated Trees/Lopping of Branches 
                                                                                 <br />
                                                                                 From Homesteads, Farms, etc
                                                                                 <span class="star">*</span></label>
@@ -895,7 +895,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                10. Do you have Existing borewell in 
+                                                                                9. Do you have Existing borewell in 
                                                                                 <br />
                                                                                 proposed factory Location<span class="star">*</span></label>
                                                                             <div class="col-lg-6 ">
@@ -946,7 +946,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                11. Do You Require Permission to 
+                                                                                10. Do You Require Permission to 
                                                                                 <br />
                                                                                 Draw Water from River/Public Tanks <span class="text-danger">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -1007,7 +1007,7 @@
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                12. Do You Required Drawing Plan Approval<span class="text-danger">*</span></label>
+                                                                                11. Do You Required Drawing Plan Approval<span class="text-danger">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <asp:RadioButtonList ID="rblDrawing" runat="server" RepeatDirection="Horizontal" TabIndex="1" onchange="validateRadioButtonList(this)">
                                                                                     <asp:ListItem Text="Yes" Value="Y" />
@@ -1024,7 +1024,7 @@
                                                                     <table class="table">
                                                                         <thead>
                                                                             <tr>
-                                                                                <th colspan="3" style="margin: 0px !important; padding: 3px 14px !important;">13. Labour Application Type</th>
+                                                                                <th colspan="3" style="margin: 0px !important; padding: 3px 14px !important;">12. Labour Application Type</th>
                                                                             </tr>
                                                                         </thead>
                                                                         <tbody>
@@ -1068,7 +1068,7 @@
                                                                             </tr>--%>
 
                                                                             <tr>
-                                                                                <td>13 a.</td>
+                                                                                <td>12 a.</td>
                                                                                 <td>Does your Establishment fall under the definition of establishment as per Building
                                                                     and Other Constrution Worker(RE&COS) Act, 1996? <span class="text-danger">*</span></td>
                                                                                 <td>
