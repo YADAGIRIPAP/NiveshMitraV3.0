@@ -221,6 +221,11 @@ a {
 .contact__input {
     margin-bottom: 12px;
 }
+
+ input::placeholder {
+     font-style: italic;
+     font-size:smaller
+ }
                 </style>
     <script type="text/javascript">       
 
@@ -316,14 +321,14 @@ a {
                     <div class="input-group">
                         <div class="contact__input">
                             <%-- <input type="text" placeholder="Login ID (PAN No)" />--%>
-                            <asp:TextBox ID="txtUsername" runat="server" CssClass="contact__input1" placeholder="Login ID (PAN No)" TabIndex="1"></asp:TextBox>
+                            <asp:TextBox ID="txtUsername" runat="server" CssClass="contact__input1" placeholder="Login Id (PAN No)" TabIndex="1"></asp:TextBox>
                         </div>
 
                     </div>
                     <div class="input-group">
                         <div class="contact__input">
                             <%--<input type="password" placeholder="Your Password" />--%>
-                            <asp:TextBox ID="txtPswrd" runat="server" CssClass="contact__input1" placeholder="Your Password" onblur="return Generate();" TabIndex="1" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="txtPswrd" runat="server" CssClass="contact__input1" placeholder="Enter your password" onblur="return Generate();" TabIndex="1" TextMode="Password"></asp:TextBox>
 
                         </div>
                     </div>
@@ -349,7 +354,7 @@ a {
                             <%--  <asp:Button runat="server" ID="btnLogint" Text="Login" class="rr-btn mt-35" />--%>
                         <%--</div>--%>
                          <div class="col-4"></div>
-                        <div class="col-4">
+                        <div class="col-4" style="text-align:center">
                             <%--<asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="rr-btn mt-35" />--%>
                             <asp:Button runat="server" ID="btnLogin" OnClick="btnLogin_Click" Text="Login" class="rr-btn mt-35" />
                         </div>
