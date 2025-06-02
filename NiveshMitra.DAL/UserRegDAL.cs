@@ -30,13 +30,13 @@ namespace NiveshMitra.DAL
 
                 com.Transaction = transaction;
                 com.Connection = connection;
-              
+
                 com.Parameters.AddWithValue("@Fullname", Userregdtls.Fullname);
-                com.Parameters.AddWithValue("", Userregdtls.Lastname);
+                //com.Parameters.AddWithValue("", Userregdtls.Lastname);
                 com.Parameters.AddWithValue("@EntityName", Userregdtls.CompanyName);
                 com.Parameters.AddWithValue("@emailid", Userregdtls.Email);
                 com.Parameters.AddWithValue("@mobile", Userregdtls.MobileNo);
-               // com.Parameters.AddWithValue("@pwd", Userregdtls.Password);
+                com.Parameters.AddWithValue("@pwd", Userregdtls.Password);
                 com.Parameters.AddWithValue("@PanNo", Userregdtls.PANno);
                 com.Parameters.AddWithValue("@dob", Userregdtls.DateofBirth);
                 com.Parameters.AddWithValue("@Ipaddress", Userregdtls.IPAddress);
