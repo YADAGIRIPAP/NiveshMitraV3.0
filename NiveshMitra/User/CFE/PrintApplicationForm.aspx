@@ -640,7 +640,7 @@
                                                 </tr>
 
                                                 <tr>
-                                                    <td align="center" class="style2" style="text-align: center"><a href="Home.aspx" target="_self" style="color: blue">HOME</a></td>
+                                                    <td align="center" class="style2" style="text-align: center"><a href="frmDepartmentApprovalDetails.aspx" target="_self" style="color: blue">NEXT</a></td>
                                                 </tr>
 
                                             </tbody>
