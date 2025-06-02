@@ -242,7 +242,7 @@
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">Name of the Industrial Park<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
-                                                                                <asp:DropDownList ID="ddlIndustrialPark" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" onchange="validateDropdown(this)" OnSelectedIndexChanged="ddlTehsil_SelectedIndexChanged">
+                                                                                <asp:DropDownList ID="ddlIndustrialPark" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Select Industrial Park" Value="0" />
                                                                                     <asp:ListItem Text="Sector‐1" Value="1" />
                                                                                     <asp:ListItem Text="Sector‐2" Value="2" />
