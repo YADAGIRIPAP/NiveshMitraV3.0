@@ -290,7 +290,7 @@
                         <!-- Hidden Fields -->
                         <asp:HiddenField ID="hdnPreRegUNITID" runat="server" />
                         <asp:HiddenField ID="hdnPreRegUID" runat="server" />
-                        <asp:HiddenField ID="hdnUserID" runat="server" Value="1004" />
+                        <asp:HiddenField ID="hdnUserID" runat="server"/>
                         <div class="col-md-12 ">
                             <div id="success" runat="server" visible="false" class="alert alert-success alert-dismissible fade show" align="Center">
                                 <strong>Success!</strong><asp:Label ID="lblmsg" runat="server"></asp:Label>

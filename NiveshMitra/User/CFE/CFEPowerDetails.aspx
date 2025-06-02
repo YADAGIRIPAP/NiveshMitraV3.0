@@ -103,7 +103,7 @@
                         <!-- Hidden Fields -->
                         <asp:HiddenField ID="hdnPreRegUNITID" runat="server" />
                         <asp:HiddenField ID="hdnPreRegUID" runat="server" />
-                        <asp:HiddenField ID="hdnUserID" runat="server" Value="1004" />
+                        <asp:HiddenField ID="hdnUserID" runat="server" />
                         <div class="col-md-12 ">
                             <div id="success" runat="server" visible="false" class="alert alert-success alert-dismissible fade show" align="Center">
                                 <strong>Success!</strong><asp:Label ID="lblmsg" runat="server"></asp:Label>
@@ -308,7 +308,8 @@
     <div class="col-lg-12 col-sm-12 col-xs-12 col-sm-12" style="text-align:center">
     <asp:Button ID="btnClearAll" runat="server" Text="Clear All" CssClass="btn btn-info" Width="150px" />
     <asp:Button ID="btnSave" runat="server" Text="Save" CssClass="btn btn-success" Width="150px" OnClientClick="return validateFormFields();" OnClick="btnSave_Click" />
-    <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-warning" Width="150px" OnClick="btnPrevious_Click" />
+    <asp:Button ID="btnPrevious" runat="server" Text="Previous" CssClass="btn btn-warning" Width="150px" OnClick="btnPrevious_Click" Visible="false" />
+        <button class="btn btn-warning" style="width:150px" onclick="window.history.back();">Previous</button>
     <asp:Button ID="btnNext" runat="server" Text="Next" CssClass="btn btn-danger" Width="150px" OnClick="btnNext_Click" />
 </div>
 
