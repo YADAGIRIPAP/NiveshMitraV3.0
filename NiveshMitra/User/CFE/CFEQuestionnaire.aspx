@@ -778,7 +778,7 @@
 
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">10a. Select Regulation<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">7a. Select Regulation<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
                                                                                 <asp:DropDownList ID="ddlRegulation" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" OnSelectedIndexChanged="ddlRegulation_SelectedIndexChanged" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Regulation" Value="0" />
@@ -799,7 +799,7 @@
                                                                     </div>
                                                                     <div class="col-md-6" runat="server" visible="false" id="divpowerplants1">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">10b. Select Power Plant<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">7b. Select Power Plant<span class="star">*</span></label>
                                                                             <div class="col-lg-4 d-flex">
                                                                                 <asp:DropDownList ID="ddlPowerPlant" runat="server" class="form-control" TabIndex="1" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Voltage" Value="0" />
@@ -807,7 +807,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">10c. Aggregate Capacity:<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">7c. Aggregate Capacity:<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
                                                                                 <asp:TextBox ID="txtAggrCapacity" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="10" onkeyup="handleKeyUp(this)"></asp:TextBox>
 

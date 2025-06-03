@@ -1028,12 +1028,12 @@ namespace NiveshMitra.User.CFE
                     dtExplosivs = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtExplosivs);
                 }
-                if (rblPetrlManf.SelectedValue == "Y")
-                {
-                    objCFEQ.ApprovalID = "10";
-                    dtPtrlsale = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                    dtApprReq.Merge(dtPtrlsale);
-                }
+                //if (rblPetrlManf.SelectedValue == "Y")
+                //{
+                //    objCFEQ.ApprovalID = "10";
+                //    dtPtrlsale = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                //    dtApprReq.Merge(dtPtrlsale);
+                //}
                 if (rblRoadCutting.SelectedValue == "Y")
                 {
                     //objCFEQ.ApprovalID = "11";
