@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="../../assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script type="text/javascript">
         function handleKeyUp(input) {
             if (input.value.trim() === "") {
@@ -39,6 +40,45 @@
             }
         }
     </script>
+    <%--<script type="text/javascript">
+        //$(document).ready(function () {
+
+        //    $('#ContentPlaceHolder1_lblPCBCategory').on('keypress', function () {
+        //        alert("Hello");
+        //        //$(this).css('background-color', '#ffff99'); // light yellow
+        //        if ($(this).val() == "RED") {
+        //            $(this).css('background-color', '#ffff99');
+        //        }
+        //    });
+        //});
+    </script>--%>
+    <style>
+        .red-css-class {
+            color: red;
+            font-weight: bold;
+        }
+
+        .orange-css-class {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .green-css-class {
+            color: green;
+            font-weight: bold;
+        }
+
+        .blue-css-class {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .white-css-class {
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+
     <script src="../../assets/admin/js/form-validation.js" type="text/javascript"></script>
 
     <asp:ScriptManager ID="ScriptManager1" runat="server" />
@@ -671,7 +711,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6" style="visibility:hidden">
+                                                                    <div class="col-md-6" style="visibility: hidden">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">4. Do you store RS, DS<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
