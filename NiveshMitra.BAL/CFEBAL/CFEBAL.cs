@@ -1,4 +1,5 @@
-﻿using NiveshMitra.Common;
+﻿using NiveshMitra.BAL.CommonBAL;
+using NiveshMitra.Common;
 using NiveshMitra.DAL.CFEDAL;
 using System;
 using System.Collections.Generic;
@@ -6,7 +7,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 
 namespace NiveshMitra.BAL.CFEBAL
 {
@@ -54,8 +54,12 @@ namespace NiveshMitra.BAL.CFEBAL
         { return objCFEDAL.GetAppliedApprovalIDs(userid, UNITID, QusestionnaireID, DeptID, ApprovalID); }
         public DataTable GetApprovalsReqWithFee(CFEQuestionnaireDet objCFEQ)
         { return objCFEDAL.GetApprovalsReqWithFee(objCFEQ); }
-        
-        public DataSet RetrieveQuestionnairebuildingheightDetails(string CFEQDID, string UnitID)
-        { return objCFEDAL.RetrieveQuestionnairebuildingheightDetails(CFEQDID, UnitID); }
+
+        public string InsertCFEAttachments(CFEAttachments objAttach)
+        {
+            return objCFEDAL.InsertCFEAttachments(objAttach);
+        }
+        public DataSet GetCFEAlreadyObtainedApprovals(string userid, string UnitID)
+        { return objCFEDAL.GetCFEAlreadyObtainedApprovals(userid, UnitID); }
     }
 }
