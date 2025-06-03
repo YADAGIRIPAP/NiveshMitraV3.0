@@ -264,7 +264,7 @@ namespace NiveshMitra
                                 }
                                 else
                                 {
-                                    ObjUserInfo = objloginBAL.GetUserInfo(UserID, Password, getclientIP());
+                                    ObjUserInfo = objloginBAL.GetUserInfo(ds1.Tables[0].Rows[0]["Username"].ToString(), Password, getclientIP());
                                     if (ObjUserInfo != null && ObjUserInfo.Userid != null)
                                     {
                                         Session["UserInfo"] = ObjUserInfo;
