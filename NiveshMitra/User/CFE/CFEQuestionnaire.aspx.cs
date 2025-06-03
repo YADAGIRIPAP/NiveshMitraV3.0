@@ -58,7 +58,7 @@ namespace NiveshMitra.User.CFE
                         GetMunicipalAreas();
                         BindData();
 
-                        if(lblPCBCategory.Text == "RED")
+                        if (lblPCBCategory.Text == "RED")
                         {
                             lblPCBCategory.CssClass = "red-css-class";
                         }
@@ -108,13 +108,13 @@ namespace NiveshMitra.User.CFE
                 ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString("212"));
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    Session["CFEQID"]= Convert.ToString(ds.Tables[0].Rows[0]["CFEQDID"]);
+                    Session["CFEQID"] = Convert.ToString(ds.Tables[0].Rows[0]["CFEQDID"]);
                     hdnPreRegUID.Value = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PREREGUIDNO"]);
                     txtUnitName.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYNAME"]);
                     rblProposal.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPOSALFOR"]);
                     ddlCompanyType.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYTYPE"]);
                     ddlDistrict.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPDISTRICTID"]);
-                     ddlDistrict_SelectedIndexChanged(null, EventArgs.Empty);
+                    ddlDistrict_SelectedIndexChanged(null, EventArgs.Empty);
                     ddlTehsil.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPMANDALID"]);
                     ddlTehsil_SelectedIndexChanged(null, EventArgs.Empty);
                     ddlVillage.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPVILLAGEID"]);
@@ -1026,7 +1026,7 @@ namespace NiveshMitra.User.CFE
                     dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtGenReq);
                 }
-                if (Convert.ToDecimal(txtBuildingHeight.Text) >15)
+                if (Convert.ToDecimal(txtBuildingHeight.Text) > 15)
                 {
                     //objCFEQ.BuildingHeight = txtBuildingHeight.Text;
                     //objCFEQ.ApprovalID = "7";
@@ -2160,6 +2160,10 @@ namespace NiveshMitra.User.CFE
             if (rblMIDCL.SelectedValue == "2")
             {
                 ddlIndustrialParkRow.Visible = false;
+            }
+            else
+            {
+                ddlIndustrialParkRow.Visible = true;
             }
         }
         protected void txtPropEmp_TextChanged(object sender, EventArgs e)
