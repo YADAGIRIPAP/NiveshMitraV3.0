@@ -26,6 +26,8 @@ namespace NiveshMitra.Common
         public static string InsertCFEAttachments = "USP_INSCFEATTACHMENTS";
         public static string GetCFEObtainedOffline = "USP_GETCFEALREADYOBTAINEDAPPROVALS";
 
+        public static string RetrieveQuestionnairebuildingheight = "USP_GETRETRIEVECFEQUESTIONZAIRBUILDINGHTDATA";
+
     }
     public class CFEQuestionnaireDet
     {

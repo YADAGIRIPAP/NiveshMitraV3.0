@@ -243,6 +243,7 @@ namespace NiveshMitra
                             {
                                 Password = ds1.Tables[0].Rows[0]["Password"].ToString();
                                 string actPwd1 = Password;
+                              
                                 //string actPwd1 = FormsAuthentication.HashPasswordForStoringInConfigFile(Password + asp_hidden.Value.ToString(), "MD5");
                                 if (actPwd1.ToUpper().ToString() != txtPswrd.Text.ToUpper().ToString())
                                 {
@@ -264,7 +265,9 @@ namespace NiveshMitra
                                 }
                                 else
                                 {
-                                    ObjUserInfo = objloginBAL.GetUserInfo(UserID, Password, getclientIP());
+                                    
+                                    //ObjUserInfo = objloginBAL.GetUserInfo(UserID, Password, getclientIP());
+                                    ObjUserInfo = objloginBAL.GetUserInfo(ds1.Tables[0].Rows[0]["Username"].ToString(), Password, getclientIP());
                                     if (ObjUserInfo != null && ObjUserInfo.Userid != null)
                                     {
                                         Session["UserInfo"] = ObjUserInfo;
