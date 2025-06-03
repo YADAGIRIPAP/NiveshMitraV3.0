@@ -132,7 +132,7 @@ namespace NiveshMitra.User.CFE
                     else
                         ddlIndustryType.SelectedValue = "2";
                     ddlIndustryType.Enabled = false;
-                    txtUnitLocation.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_UNTLOCATION"]);
+                    //txtUnitLocation.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_UNTLOCATION"]);
                     rblMIDCL.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MIDCLLAND"]);
 
                     txtPropEmp.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPEMP"]);
@@ -400,11 +400,11 @@ namespace NiveshMitra.User.CFE
                     errormsg = errormsg + slno + ". Please Select Industry Type \\n";
                     slno = slno + 1;
                 }
-                if (string.IsNullOrEmpty(txtUnitLocation.Text.Trim()) || txtUnitLocation.Text.Trim() == "" || txtUnitLocation.Text.Trim() == null)
-                {
-                    errormsg = errormsg + slno + ". Please Enter Location Of The Unit \\n";
-                    slno = slno + 1;
-                }
+                //if (string.IsNullOrEmpty(txtUnitLocation.Text.Trim()) || txtUnitLocation.Text.Trim() == "" || txtUnitLocation.Text.Trim() == null)
+                //{
+                //    errormsg = errormsg + slno + ". Please Enter Location Of The Unit \\n";
+                //    slno = slno + 1;
+                //}
                 if (rblMIDCL.SelectedIndex == -1)
                 {
                     errormsg = errormsg + slno + ". Please Select Whether land purchased from Authority or not \\n";
@@ -808,7 +808,7 @@ namespace NiveshMitra.User.CFE
                     objCFEQsnaire.Lineofacitivityid = ddlLine_Activity.SelectedValue;
                     objCFEQsnaire.PCBCategory = lblPCBCategory.Text.Trim();
                     objCFEQsnaire.NatureofActivity = ddlIndustryType.SelectedValue;
-                    objCFEQsnaire.UnitLocation = txtUnitLocation.Text.Trim();
+                    //objCFEQsnaire.UnitLocation = txtUnitLocation.Text.Trim();
                     objCFEQsnaire.PropEmployment = txtPropEmp.Text.Trim();
                     objCFEQsnaire.LandValue = txtLandValue.Text.Trim();
                     objCFEQsnaire.BuildingValue = txtBuildingValue.Text.Trim();
