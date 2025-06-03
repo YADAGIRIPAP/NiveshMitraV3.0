@@ -339,6 +339,7 @@
     <Content Include="User\CFE\CFEQuestionnaire.aspx" />
     <Content Include="User\CFE\CFEUserDashboard.aspx" />
     <Content Include="User\CFE\CFEWaterDetails.aspx" />
+    <Content Include="User\CFE\Estimationofroadcutting.aspx" />
     <Content Include="User\CFE\frmDepartmentApprovalDetails.aspx" />
     <Content Include="User\CFE\LineofActivity.aspx" />
     <Content Include="User\CFE\LocationOfUnit.aspx" />
@@ -451,6 +452,13 @@
       <DependentUpon>CFEWaterDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="User\CFE\CFOBAL.cs" />
+    <Compile Include="User\CFE\Estimationofroadcutting.aspx.cs">
+      <DependentUpon>Estimationofroadcutting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CFE\Estimationofroadcutting.aspx.designer.cs">
+      <DependentUpon>Estimationofroadcutting.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User\CFE\frmDepartmentApprovalDetails.aspx.cs">
       <DependentUpon>frmDepartmentApprovalDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
