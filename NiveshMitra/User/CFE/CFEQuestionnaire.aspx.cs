@@ -871,6 +871,8 @@ namespace NiveshMitra.User.CFE
                             lblmsg.Text = "Consent For Establishment - Questionnaire Details Submitted Successfully";
                             string message = "alert('" + lblmsg.Text + "')";
                             ScriptManager.RegisterClientScriptBlock((sender as Control), this.GetType(), "alert", message, true);
+
+                            Response.Redirect("PrintApplicationForm.aspx");
                         }
                     }
 
@@ -1002,7 +1004,7 @@ namespace NiveshMitra.User.CFE
                     dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtGenReq);
                 }
-                if (Convert.ToDecimal(txtBuildingHeight.Text) >14)
+                if (Convert.ToDecimal(txtBuildingHeight.Text) >15)
                 {
                     //objCFEQ.BuildingHeight = txtBuildingHeight.Text;
                     //objCFEQ.ApprovalID = "7";

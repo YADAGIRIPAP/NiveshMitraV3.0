@@ -109,7 +109,7 @@ namespace NiveshMitra.Common
 
                 return dt;
                 //string nextPageUrl = "";
-               //nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "26", "");
+                //nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "26", "");
                 //if (ds.Tables[0].Rows.Count > 0)
                 //{
                 //    Response.Redirect("~/User/CFE/CFEfire.aspx?Next=" + "N");
@@ -139,18 +139,28 @@ namespace NiveshMitra.Common
             string approvalId = "";
             string url = "";
             int getFirstNext = 0;
+            //string _cdept = "";
+            //string _capprovalid = "";
 
             int i = 1;
-           foreach (DataRow row in dt.Rows)
+            foreach (DataRow row in dt.Rows)
             {
 
-               if (getFirstNext == 1)
+                if (getFirstNext == 1)
                 {
                     string _dept = row["CFEDA_DEPTID"].ToString();
                     string _approval = row["CFEDA_APPROVALID"].ToString();
 
-                   url = getUrl(_dept, _approval);
-                    break;
+                    url = getUrl(_dept, _approval);
+
+                    if (_dept != "26" && _approval != "54")
+                    {
+                        if (!string.IsNullOrEmpty(url))
+                        {
+                            getFirstNext = 0;
+                            break;
+                        }
+                    }
                 }
 
 
@@ -161,9 +171,9 @@ namespace NiveshMitra.Common
 
                     url = getUrl(_dept, _approval);
                     break;
-               }
-               else
-               {
+                }
+                else
+                {
                     if (currentDeptId == row["CFEDA_DEPTID"].ToString() && currentApprovalId == row["CFEDA_APPROVALID"].ToString())
                     {
                         if (actionType == "Next")
@@ -171,14 +181,16 @@ namespace NiveshMitra.Common
                             if (i < dt.Rows.Count)  //page is not last
                             {
                                 getFirstNext = 1;
-                           }
-                           else
+                                //_cdept = currentDeptId;
+                                //_capprovalid = currentApprovalId;
+                            }
+                            else
                             {
                                 getFirstNext = 0;
                             }
                         }
                     }
-              }
+                }
                 i++;
             }
 
@@ -188,7 +200,7 @@ namespace NiveshMitra.Common
 
         }
 
-       public static string GetPreviousPageUrl(DataTable dt, string currentDeptId, string currentApprovalId)
+        public static string GetPreviousPageUrl(DataTable dt, string currentDeptId, string currentApprovalId)
         {
             string url = "";
             string powerDeptId = "26";
@@ -221,14 +233,14 @@ namespace NiveshMitra.Common
             return url;
         }
 
-       public static string getUrl(string deptId, string approvalId)
+        public static string getUrl(string deptId, string approvalId)
         {
-            
+
             if (deptId == "3" && approvalId == "55") return "CFElabourAct1996";
             else if (deptId == "3" && approvalId == "5") return "CFElabourAct1948";
             else if (deptId == "25" && approvalId == "53") return "CFEfire";
             else if (deptId == "26" && approvalId == "54") return "CFEPowerDetails";
-            else if (deptId == "16" && approvalId == "36") return "CFEWaterDetails";
+            else if (deptId == "19" && approvalId == "42") return "CFEWaterDetails";
             else return "";
 
         }

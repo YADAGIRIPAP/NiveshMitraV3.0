@@ -104,7 +104,7 @@ namespace NiveshMitra.User.CFE
                 string nextPageUrl = "";
 
 
-                nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "16", "36");
+                nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "19", "42");
                 if (nextPageUrl != null)
                     Response.Redirect("~/User/CFE/" + nextPageUrl + ".aspx");
 

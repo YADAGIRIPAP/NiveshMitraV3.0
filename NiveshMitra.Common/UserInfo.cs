@@ -11,7 +11,7 @@ namespace NiveshMitra.Common
         public static string GetDeptUserPwdInfo = "sp_ValidUser_Password";
         public static string ValidateUser = "USP_VALIDATE_INVESTERUSERS";
         public static string ValidateMasterUser = "USP_VALIDATE_MASTERUSERS";
-        public static string InsertUserRegDetails = "";
+        public static string InsertUserRegDetails = "USP_INS_INVESTER_LOGIN_DETAILS_V1";
 
     }
     public class UserInfo

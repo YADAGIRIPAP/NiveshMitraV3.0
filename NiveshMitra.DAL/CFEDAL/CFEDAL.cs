@@ -583,6 +583,106 @@ namespace NiveshMitra.DAL.CFEDAL
             }
         }
 
-                
+        public string InsertCFEAttachments(CFEAttachments objAttachments)
+        {
+            string Result = "";
+            SqlConnection connection = new SqlConnection(connstr);
+            SqlTransaction transaction = null;
+            try
+            {
+                connection.Open();
+                transaction = connection.BeginTransaction();
+
+                SqlCommand com = new SqlCommand();
+                com.CommandType = CommandType.StoredProcedure;
+                com.CommandText = CFEConstants.InsertCFEAttachments;
+
+                com.Transaction = transaction;
+                com.Connection = connection;
+
+                com.Parameters.AddWithValue("@CFEA_UNITID", Convert.ToInt32(objAttachments.UNITID));
+                com.Parameters.AddWithValue("@CFEA_CFEQDID", Convert.ToInt32(objAttachments.Questionnareid));
+                com.Parameters.AddWithValue("@CFEA_QUERYID", objAttachments.QueryID);
+                com.Parameters.AddWithValue("@CFEA_MASTERAID", objAttachments.MasterID);
+                com.Parameters.AddWithValue("@CFEA_FILEPATH", objAttachments.FilePath);
+                com.Parameters.AddWithValue("@CFEA_FILENAME", objAttachments.FileName);
+                com.Parameters.AddWithValue("@CFEA_FILETYPE", objAttachments.FileType);
+                com.Parameters.AddWithValue("@CFEA_FILEDESCRIPTION", objAttachments.FileDescription);
+                com.Parameters.AddWithValue("@CFEA_DEPTID", objAttachments.DeptID);
+                com.Parameters.AddWithValue("@CFEA_APPROVALID", objAttachments.ApprovalID);
+                com.Parameters.AddWithValue("@CFEA_CREATEDBY", Convert.ToInt32(objAttachments.CreatedBy));
+                com.Parameters.AddWithValue("@CFEA_CREATEDBYIP", objAttachments.IPAddress);
+                if (objAttachments.ReferenceNo != null && objAttachments.ReferenceNo != "")
+                {
+                    com.Parameters.AddWithValue("@CFEA_REFERENCENO", objAttachments.ReferenceNo);
+                }
+                if (objAttachments.UploadBy != null && objAttachments.UploadBy != "")
+                {
+                    com.Parameters.AddWithValue("@CFEA_UPLOADBY", objAttachments.UploadBy);
+                }
+                if (objAttachments.UploadByID != null && objAttachments.UploadByID != "")
+                {
+                    com.Parameters.AddWithValue("@CFEA_UPLOADBYID", objAttachments.UploadByID);
+                }
+
+
+                com.Parameters.Add("@RESULT", SqlDbType.VarChar, 100);
+                com.Parameters["@RESULT"].Direction = ParameterDirection.Output;
+                com.ExecuteNonQuery();
+
+                Result = com.Parameters["@RESULT"].Value.ToString();
+                transaction.Commit();
+                connection.Close();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+            return Result;
+        }
+
+        public DataSet GetCFEAlreadyObtainedApprovals(string userid, string UnitID)
+        {
+            DataSet ds = new DataSet();
+            SqlConnection connection = new SqlConnection(connstr);
+            SqlTransaction transaction = null;
+            connection.Open();
+            transaction = connection.BeginTransaction();
+            try
+            {
+                SqlDataAdapter da;
+                da = new SqlDataAdapter(CFEConstants.GetCFEObtainedOffline, connection);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.CommandText = CFEConstants.GetCFEObtainedOffline;
+
+                da.SelectCommand.Transaction = transaction;
+                da.SelectCommand.Connection = connection;
+
+                da.SelectCommand.Parameters.AddWithValue("@UNITID", Convert.ToInt32(UnitID));
+                da.SelectCommand.Parameters.AddWithValue("@CRETAEDBY", Convert.ToInt32(userid));
+
+                da.Fill(ds);
+                transaction.Commit();
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                throw ex;
+            }
+            finally
+            {
+                connection.Close();
+                connection.Dispose();
+            }
+        }
+
+
     }
 }
