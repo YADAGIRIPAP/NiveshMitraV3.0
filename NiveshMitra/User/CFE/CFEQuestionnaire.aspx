@@ -428,7 +428,7 @@
                                                                     </div>--%>
                                                                 </div>
 
-                                                                <div class="col-md-12 d-flex">
+                                                                <%--<div class="col-md-12 d-flex">
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
@@ -439,7 +439,7 @@
                                                                         </div>
 
                                                                     </div>
-                                                                </div>
+                                                                </div>--%>
                                                             </div>
 
 
@@ -711,7 +711,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6" style="visibility: hidden">
+                                                                    <%--<div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">4. Do you store RS, DS<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -721,7 +721,7 @@
                                                                                 </asp:RadioButtonList>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div>--%>
                                                                 </div>
                                                                 <div class="col-md-12 d-flex">
                                                                     <div class="col-md-6">
@@ -818,7 +818,7 @@
 
                                                                     <div class="col-md-6">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">10a. Select Regulation<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">7a. Select Regulation<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
                                                                                 <asp:DropDownList ID="ddlRegulation" runat="server" class="form-control" TabIndex="1" AutoPostBack="true" OnSelectedIndexChanged="ddlRegulation_SelectedIndexChanged" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Regulation" Value="0" />
@@ -839,7 +839,7 @@
                                                                     </div>
                                                                     <div class="col-md-6" runat="server" visible="false" id="divpowerplants1">
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">10b. Select Power Plant<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">7b. Select Power Plant<span class="star">*</span></label>
                                                                             <div class="col-lg-4 d-flex">
                                                                                 <asp:DropDownList ID="ddlPowerPlant" runat="server" class="form-control" TabIndex="1" onchange="validateDropdown(this)">
                                                                                     <asp:ListItem Text="Voltage" Value="0" />
@@ -847,7 +847,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="form-group row">
-                                                                            <label class="col-lg-6 col-form-label">10c. Aggregate Capacity:<span class="star">*</span></label>
+                                                                            <label class="col-lg-6 col-form-label">7c. Aggregate Capacity:<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
                                                                                 <asp:TextBox ID="txtAggrCapacity" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="10" onkeyup="handleKeyUp(this)"></asp:TextBox>
 
@@ -1137,6 +1137,26 @@
                                                                                     <asp:TextBox ID="txt1996Workers" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="7" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                                 </td>
                                                                             </tr>
+
+
+
+                                                                            <tr>
+                                                                                <td>12 b.</td>
+                                                                                <td>Proposed Building Plan under The Factories Act 1948 <span class="text-danger">*</span>
+                                                                                    <br />
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:RadioButtonList Style="border: none" ID="rblLabourAct" runat="server" TabIndex="1" RepeatDirection="Horizontal" AutoPostBack="true" OnSelectedIndexChanged="rblLabourAct_SelectedIndexChanged">
+                                                                                        <asp:ListItem Text="Yes" Value="Y" />
+                                                                                        <asp:ListItem Text="No" Value="N" />
+                                                                                    </asp:RadioButtonList>
+                                                                                </td>
+                                                                            </tr>
+
+
+
+
+
 
                                                                             <%--   <tr>
                                                                                 <td>21 d.</td>

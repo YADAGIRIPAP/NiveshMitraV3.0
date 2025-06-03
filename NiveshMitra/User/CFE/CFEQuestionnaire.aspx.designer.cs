@@ -321,15 +321,6 @@ namespace NiveshMitra.User.CFE
         protected global::System.Web.UI.WebControls.Label lblPCBCategory;
 
         /// <summary>
-        /// txtUnitLocation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUnitLocation;
-
-        /// <summary>
         /// btnsave1 control.
         /// </summary>
         /// <remarks>
@@ -490,15 +481,6 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBuildingHeight;
-
-        /// <summary>
-        /// rblRSDSstore control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rblRSDSstore;
 
         /// <summary>
         /// rblexplosives control.
@@ -724,6 +706,15 @@ namespace NiveshMitra.User.CFE
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt1996Workers;
+
+        /// <summary>
+        /// rblLabourAct control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblLabourAct;
 
         /// <summary>
         /// btnApprvlsReq control.
