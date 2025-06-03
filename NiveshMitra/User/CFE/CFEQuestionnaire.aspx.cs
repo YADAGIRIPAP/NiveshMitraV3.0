@@ -124,7 +124,7 @@ namespace NiveshMitra.User.CFE
                     ddlPowerReq.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_POWERREQKW"]);
                     rblGenerator.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_GENREQ"]);
                     txtBuildingHeight.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_BUILDINGHT"]);
-                    rblRSDSstore.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_STORINGRSDS"]);
+                    //rblRSDSstore.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_STORINGRSDS"]);
                     rblexplosives.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MANFEXPLOSIVES"]);
                     rblPetrlManf.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MANFPETROL"]);
                     rblRoadCutting.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_RDCTNGREQ"]);
@@ -797,7 +797,7 @@ namespace NiveshMitra.User.CFE
                     objCFEQsnaire.PowerReqKW = ddlPowerReq.SelectedValue;
                     objCFEQsnaire.GeneratorReq = rblGenerator.SelectedValue;
                     objCFEQsnaire.BuildingHeight = txtBuildingHeight.Text.Trim();
-                    objCFEQsnaire.StoringRSDS = rblRSDSstore.SelectedValue;
+                    //objCFEQsnaire.StoringRSDS = rblRSDSstore.SelectedValue;
                     objCFEQsnaire.ManfExplosives = rblexplosives.SelectedValue;
                     objCFEQsnaire.ManfPetroleum = rblPetrlManf.SelectedValue;
                     objCFEQsnaire.RdCtngPermission = rblRoadCutting.SelectedValue;

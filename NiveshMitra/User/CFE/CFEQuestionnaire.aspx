@@ -671,7 +671,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6" style="visibility:hidden">
+                                                                    <%--<div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">4. Do you store RS, DS<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
@@ -681,7 +681,7 @@
                                                                                 </asp:RadioButtonList>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div>--%>
                                                                 </div>
                                                                 <div class="col-md-12 d-flex">
                                                                     <div class="col-md-6">
