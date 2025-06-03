@@ -464,11 +464,11 @@ namespace NiveshMitra.User.CFE
                     errormsg = errormsg + slno + ". Please Enter Height of the building \\n";
                     slno = slno + 1;
                 }
-                if (rblRSDSstore.SelectedIndex == -1)
-                {
-                    errormsg = errormsg + slno + ". Please Select Whether you store RS, DS or not \\n";
-                    slno = slno + 1;
-                }
+                //if (rblRSDSstore.SelectedIndex == -1)
+                //{
+                //    errormsg = errormsg + slno + ". Please Select Whether you store RS, DS or not \\n";
+                //    slno = slno + 1;
+                //}
                 if (rblexplosives.SelectedIndex == -1)
                 {
                     errormsg = errormsg + slno + ". Please Select Whether you manufacture, store, sale, transport explosives \\n";
