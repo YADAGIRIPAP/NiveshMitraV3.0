@@ -171,7 +171,7 @@ namespace NiveshMitra.User.CFE
                     rblbuildingwork.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_BUILDINGWORKS1996"]);
                     rblbuildingwork_SelectedIndexChanged(null, EventArgs.Empty);
                     txt1996Workers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERS1996"]);
-                    //rblLabourAct.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_CONTRLABOURACT"]);
+                    rblLabourAct.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_CONTRLABOURACT"]);
                     rblLabourAct_SelectedIndexChanged(null, EventArgs.Empty);
                     //txtContractWorkers.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERSCONTR"]);
                     //rblForContr1970.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_CONTRLABOURACT1970"]);
@@ -639,11 +639,11 @@ namespace NiveshMitra.User.CFE
                         }
                     }
                 }
-                //if (rblLabourAct.SelectedIndex == -1)
-                //{
-                //    errormsg = errormsg + slno + ". Please Select Whether You require License under Contract Labour Act (For Contractor) or not \\n";
-                //    slno = slno + 1;
-                //}
+                if (rblLabourAct.SelectedIndex == -1)
+                {
+                    errormsg = errormsg + slno + ". Please Select Whether You require Proposed Building Plan under The Factories Act 1948 or not \\n";
+                    slno = slno + 1;
+                }
                 //if (rblLabourAct.SelectedValue == "Y")
                 //{
                 //    if (string.IsNullOrEmpty(txtContractWorkers.Text) || txtContractWorkers.Text == "" || txtContractWorkers.Text == null || txtContractWorkers.Text.All(c => c == '0') || System.Text.RegularExpressions.Regex.IsMatch(txtContractWorkers.Text, @"^0+(\.0+)?$"))
@@ -821,7 +821,7 @@ namespace NiveshMitra.User.CFE
                     objCFEQsnaire.LabourAct1996 = rblLbrAct1996.SelectedValue;
                     objCFEQsnaire.LabourAct1996_10Workers = rblbuildingwork.SelectedValue;
                     objCFEQsnaire.LabourAct1996_Workers = txt1996Workers.Text.Trim();
-                    //objCFEQsnaire.ContractLabourAct = rblLabourAct.SelectedValue;
+                    objCFEQsnaire.ContractLabourAct = rblLabourAct.SelectedValue;
                     //objCFEQsnaire.ContractLabourAct_Workers = txtContractWorkers.Text.Trim();
                     // objCFEQsnaire.ContractLabourAct1970 = rblForContr1970.SelectedValue;
                     //objCFEQsnaire.ContractLabourAct1970_Workers = txtContr1970wrkrs.Text.Trim();
@@ -1000,7 +1000,7 @@ namespace NiveshMitra.User.CFE
                     //dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     //dtApprReq.Merge(dtGenReq);
 
-                    objCFEQ.ApprovalID = "5";
+                    objCFEQ.ApprovalID = "8";
                     dtGenReq = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtGenReq);
                 }
@@ -1124,13 +1124,13 @@ namespace NiveshMitra.User.CFE
                     dtAct1996 = objcfebal.GetApprovalsReqWithFee(objCFEQ);
                     dtApprReq.Merge(dtAct1996);
                 }
-                //if (rblLabourAct.SelectedValue == "Y")
-                //{
-                //    objCFEQ.ApprovalID = "28";
-                //    objCFEQ.PropEmployment = txtContractWorkers.Text;
-                //    dtContrLbrAct = objcfebal.GetApprovalsReqWithFee(objCFEQ);
-                //    dtApprReq.Merge(dtContrLbrAct);
-                //}
+                if (rblLabourAct.SelectedValue == "Y")
+                {
+                    objCFEQ.ApprovalID = "5";
+                    //objCFEQ.PropEmployment = txtContractWorkers.Text;
+                    dtContrLbrAct = objcfebal.GetApprovalsReqWithFee(objCFEQ);
+                    dtApprReq.Merge(dtContrLbrAct);
+                }
                 //if (rblForContr1970.SelectedValue == "Y")
                 //{
                 //    objCFEQ.ApprovalID = "29";

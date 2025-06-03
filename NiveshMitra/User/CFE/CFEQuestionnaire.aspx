@@ -1098,6 +1098,26 @@
                                                                                 </td>
                                                                             </tr>
 
+
+
+                                                                            <tr>
+                                                                                <td>12 b.</td>
+                                                                                <td>Proposed Building Plan under The Factories Act 1948 <span class="text-danger">*</span>
+                                                                                    <br />
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:RadioButtonList Style="border: none" ID="rblLabourAct" runat="server" TabIndex="1" RepeatDirection="Horizontal" AutoPostBack="true" OnSelectedIndexChanged="rblLabourAct_SelectedIndexChanged">
+                                                                                        <asp:ListItem Text="Yes" Value="Y" />
+                                                                                        <asp:ListItem Text="No" Value="N" />
+                                                                                    </asp:RadioButtonList>
+                                                                                </td>
+                                                                            </tr>
+
+
+
+
+
+
                                                                             <%--   <tr>
                                                                                 <td>21 d.</td>
                                                                                 <td>License under Contract Labour Act (For Contractor) <span class="text-danger">*</span>
