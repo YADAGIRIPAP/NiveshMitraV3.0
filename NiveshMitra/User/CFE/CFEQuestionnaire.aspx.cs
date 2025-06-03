@@ -57,6 +57,28 @@ namespace NiveshMitra.User.CFE
                         GetPowerPlants();
                         GetMunicipalAreas();
                         BindData();
+
+                        if(lblPCBCategory.Text == "RED")
+                        {
+                            lblPCBCategory.CssClass = "red-css-class";
+                        }
+                        else if (lblPCBCategory.Text == "ORANGE")
+                        {
+                            lblPCBCategory.CssClass = "orange-css-class";
+                        }
+                        else if (lblPCBCategory.Text == "GREEN")
+                        {
+                            lblPCBCategory.CssClass = "green-css-class";
+                        }
+                        else if (lblPCBCategory.Text == "BLUE")
+                        {
+                            lblPCBCategory.CssClass = "blue-css-class";
+                        }
+                        else if (lblPCBCategory.Text == "WHITE")
+                        {
+                            lblPCBCategory.CssClass = "white-css-class";
+                        }
+
                     }
                 }
             }
@@ -1692,7 +1714,32 @@ namespace NiveshMitra.User.CFE
                 {
                     lblPCBCategory.Text = mstrBAL.GetPCBCategory(ddlLine_Activity.SelectedValue);
 
+
+                    if (lblPCBCategory.Text == "RED")
+                    {
+                        lblPCBCategory.CssClass = "red-css-class";
+                    }
+                    else if (lblPCBCategory.Text == "ORANGE")
+                    {
+                        lblPCBCategory.CssClass = "orange-css-class";
+                    }
+                    else if (lblPCBCategory.Text == "GREEN")
+                    {
+                        lblPCBCategory.CssClass = "green-css-class";
+                    }
+                    else if (lblPCBCategory.Text == "BLUE")
+                    {
+                        lblPCBCategory.CssClass = "blue-css-class";
+                    }
+                    else if (lblPCBCategory.Text == "WHITE")
+                    {
+                        lblPCBCategory.CssClass = "white-css-class";
+                    }
                 }
+                //
+
+
+
             }
             catch (Exception ex)
             {
