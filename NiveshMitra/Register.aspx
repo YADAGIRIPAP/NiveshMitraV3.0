@@ -222,6 +222,11 @@
         .contact__input {
             margin-bottom: 12px;
         }
+
+        input::placeholder {
+            font-style: italic;
+            font-size:smaller
+        }
     </style>
 </head>
 <body class="login-page">
@@ -264,27 +269,27 @@
                                 <div class="col-sm-12">
                                     <div class="contact__input">
                                         <%--<input type="text"  />--%>
-                                        <asp:TextBox ID="txtEnterPrice" runat="server" placeholder="Company/Enterprise Name"></asp:TextBox>
+                                        <asp:TextBox ID="txtEnterPrice" runat="server" placeholder="Company/Enterprise name"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="contact__input">
                                             <%--    <input type="text" placeholder="Please Enter Pan Number" />--%>
-                                            <asp:TextBox ID="txtPan" runat="server" placeholder="Please Enter Pan Number"></asp:TextBox>
+                                            <asp:TextBox ID="txtPan" runat="server" placeholder="Please enter PAN number"></asp:TextBox>
 
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="contact__input">
                                             <%-- <input type="number" placeholder="Please Enter First Name" />--%>
-                                            <asp:TextBox ID="txtFirstName" runat="server" placeholder="Please Enter First Name"></asp:TextBox>
+                                            <asp:TextBox ID="txtFirstName" runat="server" placeholder="Please enter first name"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="col-sm-6 p-0-5-20">
                                         <div class="contact__input">
                                             <%--  <input type="tel" placeholder="Please Enter Last Name" />--%>
-                                            <asp:TextBox ID="txtLastName" runat="server" placeholder="Please Enter Last Name"></asp:TextBox>
+                                            <asp:TextBox ID="txtLastName" runat="server" placeholder="Please enter last name"></asp:TextBox>
 
                                         </div>
                                     </div>
@@ -292,17 +297,17 @@
                                     <div class="col-sm-6">
                                         <div class="contact__input">
                                             <%--                                            <input type="number" placeholder="Please Enter Email" />--%>
-                                            <asp:TextBox ID="txtEmail" runat="server" placeholder="Please Enter Email"></asp:TextBox>
+                                            <asp:TextBox ID="txtEmail" runat="server" placeholder="Please enter email"></asp:TextBox>
 
                                         </div>
                                     </div>
                                     <div class="col-sm-6 p-0-5-20">
                                         <div class="contact__input">
                                             <%-- <input type="tel" placeholder="Please Enter Mobile No" />--%>
-                                            <asp:TextBox ID="txtMobileNo" runat="server" placeholder="Please Enter Mobile No"></asp:TextBox>
+                                            <asp:TextBox ID="txtMobileNo" runat="server" placeholder="Please enter mobile no"></asp:TextBox>
                                         </div>
                                     </div>
-                                  <%--  <div class="col-sm-6 p-0-5-20">
+                                    <%--  <div class="col-sm-6 p-0-5-20">
                                         <div class="contact__input">
                                             <asp:TextBox ID="txtPswd" runat="server" placeholder="Please Enter Password" Visible="false"></asp:TextBox>
                                         </div>
@@ -322,9 +327,10 @@
                                         <div class="col-md-6">
                                         </div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-12" style="text-align:center">
+                                        
                                         <%--  <button type="submit" class="rr-btn mt-35" style="width: 95%;">Submit now</button>--%>
-                                        <asp:Button runat="server" class="rr-btn mt-35" Style="width: 95%;" OnClick="btnSubmit_Click" Text="Submit" ID="btnSubmit"></asp:Button>
+                                        <asp:Button runat="server" class="rr-btn mt-35" OnClick="btnSubmit_Click" Text="Submit" ID="btnSubmit"></asp:Button>
                                     </div>
                                 </div>
 
