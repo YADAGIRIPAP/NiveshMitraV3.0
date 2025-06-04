@@ -30,7 +30,7 @@
                         <h4 style="display: flex; align-items: center;">
                             <asp:Label ID="lblunitname" runat="server"></asp:Label>
                             &nbsp;&nbsp;
-                            <asp:Label ID="lblinterest" runat="server">Do you require any Pre-Establishment approvals??</asp:Label></h4>
+                            <asp:Label ID="lblinterest" runat="server">Do you require any Pre-Establishment approvals?</asp:Label></h4>
                         <h4 style="display: none" id="submitBtn"><a href="CFE/CFEQuestionnaire.aspx"><span class="badge rounded-pill bg-dark text-sm p-2" style="font-size: 16px; color: #fff; background: #033260 !important; display: flex; align-items: center;"><i class="fi fi-tr-bullseye-arrow"></i>&nbsp; Click Here</span></a></h4>
 
                     </div>
