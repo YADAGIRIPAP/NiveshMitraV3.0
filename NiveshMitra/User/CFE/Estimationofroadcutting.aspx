@@ -245,7 +245,7 @@
                                 <div class="col-md-4 form-group row align-items-center mb-2">
                                     <label class="col-sm-6 col-form-label text-sm-end">Chainages to (in Km  decimal val)<span class="text-danger">*</span></label>
                                     <div class="col-sm-6">
-                                        <<asp:TextBox ID="TextBox2" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" />
+                                        <asp:TextBox ID="TextBox2" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" />
                                     </div>
                                 </div>
 
