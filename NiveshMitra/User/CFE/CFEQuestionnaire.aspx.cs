@@ -891,10 +891,8 @@ namespace NiveshMitra.User.CFE
 
                             success.Visible = true;
                             lblmsg.Text = "Consent For Establishment - Questionnaire Details Submitted Successfully";
-                            string message = "alert('" + lblmsg.Text + "')";
+                            string message = "alert('" + lblmsg.Text + "');window.location='PrintApplicationForm.aspx';";
                             ScriptManager.RegisterClientScriptBlock((sender as Control), this.GetType(), "alert", message, true);
-
-                            Response.Redirect("PrintApplicationForm.aspx");
                         }
                     }
 
@@ -2160,10 +2158,12 @@ namespace NiveshMitra.User.CFE
             if (rblMIDCL.SelectedValue == "2")
             {
                 ddlIndustrialParkRow.Visible = false;
+                ddlAuthority.Visible = false;
             }
             else
             {
                 ddlIndustrialParkRow.Visible = true;
+                ddlAuthority.Visible = true;
             }
         }
         protected void txtPropEmp_TextChanged(object sender, EventArgs e)

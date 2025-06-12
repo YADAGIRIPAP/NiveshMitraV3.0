@@ -205,7 +205,7 @@
 
 
                                                                 <div class="col-md-12 d-flex">
-                                                                    <div class="col-md-4">
+                                                                    <div class="col-md-6">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 1. Whether land
@@ -221,6 +221,32 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+
+
+                                                                    <div class="col-md-6" runat="server" id="ddlAuthority" visible="false">
+                                                                        <div class="form-group row">
+                                                                            <label class="col-lg-6 col-form-label">
+                                                                                Select Authority<span class="star">*</span></label>
+                                                                            <div class="col-lg-6 d-flex">
+                                                                                <div class="form-check form-check-inline ">
+                                                                                    <select title="Please select" class="form-control">
+                                                                                        <option selected="selected" value="Please Select">Please Select</option>
+                                                                                        <option value="08">---</option>
+                                                                                        <option value="21">Infrastructure and Industrial Development Authority - UPSIDA</option>
+                                                                                        <option value="22">Infrastructure and Industrial Development Authority - NOIDA</option>
+                                                                                        <option value="23">Infrastructure and Industrial Development Authority - GREATER NOIDA</option>
+                                                                                        <option value="24">Infrastructure and Industrial Development Authority - YEIDA</option>
+                                                                                        <option value="53">U.P.Expressways Industrial Development Authority(UPEIDA)</option>
+                                                                                        <option value="59">DMIC IITGNL</option>
+                                                                                        <option value="60">Gorakhpur Industrial Development Authority (GIDA)</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+
                                                                 </div>
 
 
