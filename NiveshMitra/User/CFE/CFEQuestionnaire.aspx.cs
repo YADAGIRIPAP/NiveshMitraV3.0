@@ -19,7 +19,7 @@ namespace NiveshMitra.User.CFE
         CFEBAL objcfebal = new CFEBAL();
         MasterBAL mstrBAL = new MasterBAL();
         protected void Page_Load(object sender, EventArgs e)
-        {
+       {
 
             try
             {
@@ -37,13 +37,17 @@ namespace NiveshMitra.User.CFE
                         hdnUserID.Value = ObjUserInfo.Userid;
                     }
                     if (Convert.ToString(Session["CFEUNITID"]) != "")
-                    { UnitID = Convert.ToString(Session["CFEUNITID"]); }
+                    { 
+                        UnitID = Convert.ToString(Session["CFEUNITID"]); 
+                    }
                     else
                     {
                         //string newurl = "~/User/CFE/CFEUserDashboard.aspx";
                         //Response.Redirect(newurl);
                     }
+
                     Page.MaintainScrollPositionOnPostBack = true;
+
                     if (!IsPostBack)
                     {
                         MVQues.ActiveViewIndex = index;
@@ -57,6 +61,7 @@ namespace NiveshMitra.User.CFE
                         GetPowerPlants();
                         GetMunicipalAreas();
                         BindData();
+                        
 
                         if (lblPCBCategory.Text == "RED")
                         {
@@ -78,6 +83,8 @@ namespace NiveshMitra.User.CFE
                         {
                             lblPCBCategory.CssClass = "white-css-class";
                         }
+
+                       
 
                     }
                 }
@@ -122,8 +129,15 @@ namespace NiveshMitra.User.CFE
 
                     txtBuiltArea.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_BUILTUPAREA"]);
                     ddlSector.SelectedItem.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_SECTOR"]);
+
+                    ddlSector_SelectedIndexChanged(null, EventArgs.Empty);
+
+
                     //  ddlSector_SelectedIndexChanged(null, EventArgs.Empty);
                     ddlLine_Activity.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LOAID"]);
+
+                    Session["txt_LineOfActivity"]= ddlLine_Activity.SelectedItem.Text;
+
                     //  ddlLine_Activity_SelectedIndexChanged(null, EventArgs.Empty);
                     lblPCBCategory.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PCBCATEGORY"]);
 
@@ -201,6 +215,9 @@ namespace NiveshMitra.User.CFE
                     //txtContr1970wrkrs.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_NOOFWORKERSCONTR1970"]);
 
                     GetApprovals();
+
+                    
+
                 }
                 /* else
                  {
@@ -247,6 +264,7 @@ namespace NiveshMitra.User.CFE
                 lblmsg0.Text = ex.Message;
                 //  MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
             }
+
         }
         protected void Link1_Click(object sender, EventArgs e)
         {
