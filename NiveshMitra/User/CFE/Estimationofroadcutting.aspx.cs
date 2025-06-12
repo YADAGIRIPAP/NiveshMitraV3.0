@@ -17,56 +17,6 @@ namespace NiveshMitra.User.CFE
         string UnitID, ErrorMsg = "", ErrorMsg1 = "", ErrorMsg2 = "";
         int index; Decimal TotalFee = 0;
         CFEBAL objcfebal = new CFEBAL();
-
-        protected void btnNext_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]));
-                Session["PageDt"] = dt;
-                string nextPageUrl = "";
-
-
-                nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "20", "45");
-                if (!string.IsNullOrEmpty(nextPageUrl))
-                    Response.Redirect("~/User/CFE/" + nextPageUrl + ".aspx");
-                else
-                    lblmsg0.Text = "No Dept. found.";
-            }
-
-
-
-
-            catch (Exception ex)
-            {
-                lblmsg.Text = ex.Message;
-                Failure.Visible = true;
-                if (ex.Message != "Thread was being aborted.")
-                {
-                    MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
-                }
-            }
-
-
-            //try
-            //{
-            //    //btnSave_Click(sender, e);
-            //    //if (ErrorMsg == "")
-            //    //Response.Redirect("~/User/CFE/CFEWaterDetails.aspx?Next=" + "N");
-            //    GetAppliedorNot();
-            //}
-            //catch (Exception ex)
-            //{
-            //    lblmsg0.Text = ex.Message;
-            //    Failure.Visible = true;
-            //    if (ex.Message != "Thread was being aborted.")
-            //    {
-            //        MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
-            //    }
-            //}
-
-        }
-
         MasterBAL mstrBAL = new MasterBAL();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -113,7 +63,7 @@ namespace NiveshMitra.User.CFE
         {
 
         }
-
+         
 
 
     }

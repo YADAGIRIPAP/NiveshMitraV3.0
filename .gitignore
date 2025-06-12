@@ -398,3 +398,5 @@ FodyWeavers.xsd
 /NiveshMitra/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 /.gitignore
 /NiveshMitra/bin/NiveshMitra.dll.config
+/NiveshMitra.Common/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/NiveshMitra.DAL/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

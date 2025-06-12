@@ -18,7 +18,7 @@ namespace NiveshMitra.User.CFE
         int index; Decimal TotalFee = 0;
         CFEBAL objcfebal = new CFEBAL();
 
-        
+
 
         MasterBAL mstrBAL = new MasterBAL();
         protected void Page_Load(object sender, EventArgs e)
@@ -49,6 +49,8 @@ namespace NiveshMitra.User.CFE
                     {
                         BindState();
                         BindDistricts();
+                        BindData();
+                        BindConstitutionType();
                     }
                 }
 
@@ -67,10 +69,10 @@ namespace NiveshMitra.User.CFE
         protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-       
+
             //try
             //{
-                 
+
             //    if (ddlState.SelectedItem.Text != "--Select--")
             //    {
             //        BindState(ddlState, ddlState.SelectedValue);
@@ -81,7 +83,7 @@ namespace NiveshMitra.User.CFE
             //{
             //    lblmsg0.Text = ex.Message;
             //    Failure.Visible = true;
-                 
+
             //}
         }
 
@@ -159,7 +161,7 @@ namespace NiveshMitra.User.CFE
             }
         }
 
-       
+
         protected void BindState()
         {
 
@@ -168,7 +170,7 @@ namespace NiveshMitra.User.CFE
 
                 ddlState.Items.Clear();
                 ddlState.Items.Clear();
-                 
+
 
                 List<MasterState> objStateModel = new List<MasterState>();
 
@@ -188,7 +190,7 @@ namespace NiveshMitra.User.CFE
 
                 }
                 //AddSelect(ddlState);
-                 
+
 
             }
             catch (Exception ex)
@@ -243,7 +245,7 @@ namespace NiveshMitra.User.CFE
             }
         }
 
-       
+
         protected void BindTehsil(DropDownList ddlTesil, string DistrictID)
         {
             try
@@ -276,16 +278,16 @@ namespace NiveshMitra.User.CFE
 
         }
 
-        
+
         protected void ddlTehsil_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
 
                 if (ddlTehsil.SelectedItem.Text != "--Select--")
-               {
+                {
                     BindTownVillage(ddlTehsil, ddlTehsil.SelectedValue);
-               }
+                }
                 else return;
             }
             catch (Exception ex)
@@ -303,14 +305,14 @@ namespace NiveshMitra.User.CFE
                 List<MasterVillages> objTownvillage = mstrBAL.GetVillages(ddtehsilId);
 
                 if (objTownvillage != null && objTownvillage.Count > 0)
-               {
+                {
                     ddlVillageTown.DataSource = objTownvillage;
                     ddlVillageTown.DataValueField = "VillageId";
                     ddlVillageTown.DataTextField = "VillageName";
                     ddlVillageTown.DataBind();
                 }
-               else
-              {
+                else
+                {
 
                     ddlVillageTown.DataSource = null;
                     ddlVillageTown.DataBind();
@@ -329,16 +331,79 @@ namespace NiveshMitra.User.CFE
         }
         protected void btnPrevious_Click(object sender, EventArgs e)
         {
-             
+
         }
 
 
         protected void btnNext_Click(object sender, EventArgs e)
         {
 
-           Response.Redirect("LocationOfUnit.aspx");
+            Response.Redirect("LocationOfUnit.aspx");
         }
+
+        public void BindData()
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                ds = objcfebal.RetrieveQuestionnaireDetails(hdnUserID.Value, Convert.ToString("212"));
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    txtIndustrialName.Text = ds.Tables[0].Rows[0]["CFEQD_COMPANYNAME"].ToString();
+                    txtLandExtent.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_TOTALEXTENTLAND"]);
+                    txtBuildUpArea.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_BUILTUPAREA"]);
+                    ddlActivityLine.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LOAID"]);
+                    ddlDistrict.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPDISTRICTID"]);
+                    ddlDistrict_SelectedIndexChanged(null, EventArgs.Empty);
+                    ddlTehsil.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPMANDALID"]);
+                    ddlTehsil_SelectedIndexChanged(null, EventArgs.Empty);
+                    ddlVillageTown.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPVILLAGEID"]);
+                    ddlActivityLine.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LOAID"]);
+                    ddlLandFromPark.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MIDCLLAND"]);
+                    ddlEnterpriseType.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYTYPE"]);
+
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                Failure.Visible = true;
+                lblmsg0.Text = ex.Message;
+                //  MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
+
+        protected void BindConstitutionType()
+        {
+            try
+            {
+                ddlEnterpriseType.Items.Clear();
+
+                List<MasterConstType> objConsttype = new List<MasterConstType>();
+
+                objConsttype = mstrBAL.GetConstitutionType();
+                if (objConsttype != null)
+                {
+                    ddlEnterpriseType.DataSource = objConsttype;
+                    ddlEnterpriseType.DataValueField = "ConstId";
+                    ddlEnterpriseType.DataTextField = "ConstName";
+                    ddlEnterpriseType.DataBind();
+                }
+                else
+                {
+                    ddlEnterpriseType.DataSource = null;
+                    ddlEnterpriseType.DataBind();
+                }
+                AddSelect(ddlEnterpriseType);
+            }
+            catch (Exception ex)
+            {
+                Failure.Visible = true;
+                lblmsg0.Text = ex.Message;
+                // MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
+
     }
-
-
 }

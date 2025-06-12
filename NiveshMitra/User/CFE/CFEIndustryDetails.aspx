@@ -313,9 +313,9 @@
                        <div class="row">
     <!-- Name of Industrial Undertaking -->
     <div class="col-md-4 form-group row align-items-center mb-2">
-        <label class="col-sm-6 col-form-label text-sm-end">Name of Industrial Undertaking <span class="text-danger">*</span></label>
+        <label class="col-sm-6 col-form-label text-sm-end">Name of Unit <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:TextBox ID="txtIndustrialName" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" />
+            <asp:TextBox ID="txtIndustrialName" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" disabled  />
         </div>
     </div>
 
@@ -323,10 +323,10 @@
     <div class="col-md-4 form-group row align-items-center mb-2">
         <label class="col-sm-6 col-form-label text-sm-end">Is land Purchased from Park <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:DropDownList ID="ddlLandFromPark" runat="server" CssClass="form-control form-control-sm">
+            <asp:DropDownList ID="ddlLandFromPark" runat="server" CssClass="form-control form-control-sm" disabled>
                 <asp:ListItem Text="--Select--" Value="" />
-                <asp:ListItem Text="Yes" Value="Yes" />
-                <asp:ListItem Text="No" Value="No" />
+                <asp:ListItem Text="Yes" Value="1" />
+                <asp:ListItem Text="No" Value="2" />
             </asp:DropDownList>
         </div>
     </div>
@@ -335,7 +335,7 @@
     <div class="col-md-4 form-group row align-items-center mb-2">
         <label class="col-sm-6 col-form-label text-sm-end">Total Extent of Land <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:TextBox ID="txtLandExtent" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" />
+            <asp:TextBox ID="txtLandExtent" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" disabled />
         </div>
     </div>
 
@@ -343,7 +343,7 @@
     <div class="col-md-4 form-group row align-items-center mb-2">
         <label class="col-sm-6 col-form-label text-sm-end">Build up Area <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:TextBox ID="txtBuildUpArea" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" />
+            <asp:TextBox ID="txtBuildUpArea" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" disabled />
         </div>
     </div>
 
@@ -351,15 +351,17 @@
     <div class="col-md-4 form-group row align-items-center mb-2">
         <label class="col-sm-6 col-form-label text-sm-end">Line of Activity <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:DropDownList ID="ddlActivityLine" runat="server" CssClass="form-control form-control-sm" />
+            <asp:DropDownList ID="ddlActivityLine" runat="server" CssClass="form-control form-control-sm" disabled />
         </div>
     </div>
 
     <!-- Type of Enterprise -->
     <div class="col-md-4 form-group row align-items-center mb-2">
-        <label class="col-sm-6 col-form-label text-sm-end">Type of Enterprise <span class="text-danger">*</span></label>
+        <label class="col-sm-6 col-form-label text-sm-end">Firm Type <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:DropDownList ID="ddlEnterpriseType" runat="server" CssClass="form-control form-control-sm" />
+             
+       <asp:DropDownList ID="ddlEnterpriseType" runat="server" class="form-control" disabled>
+     </asp:DropDownList>
         </div>
     </div>
 
@@ -393,7 +395,7 @@
     <div class="col-md-4 form-group row align-items-center mb-2">
         <label class="col-sm-6 col-form-label text-sm-end">District <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:DropDownList ID="ddlDistrict" runat="server" CssClass="form-control form-control-sm" AutoPostBack="true" TabIndex="1" onchange="validateDropdown(this)" OnSelectedIndexChanged="ddlDistrict_SelectedIndexChanged">
+            <asp:DropDownList ID="ddlDistrict" disabled runat="server" CssClass="form-control form-control-sm" AutoPostBack="true" TabIndex="1" onchange="validateDropdown(this)" OnSelectedIndexChanged="ddlDistrict_SelectedIndexChanged">
                 <asp:ListItem Text="Select District" Value="0" />
             </asp:DropDownList>
         </div>
@@ -403,7 +405,7 @@
     <div class="col-md-4 form-group row align-items-center mb-2">
         <label class="col-sm-6 col-form-label text-sm-end">Tehsil <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:DropDownList ID="ddlTehsil" runat="server" CssClass="form-control form-control-sm" AutoPostBack="True" OnSelectedIndexChanged="ddlTehsil_SelectedIndexChanged">
+            <asp:DropDownList ID="ddlTehsil" disabled runat="server" CssClass="form-control form-control-sm" AutoPostBack="True" OnSelectedIndexChanged="ddlTehsil_SelectedIndexChanged">
                 <asp:ListItem Text="--Select--" Value="0" />
             </asp:DropDownList>
         </div>
@@ -413,7 +415,7 @@
     <div class="col-md-4 form-group row align-items-center mb-2">
         <label class="col-sm-6 col-form-label text-sm-end">Village/Town <span class="text-danger">*</span></label>
         <div class="col-sm-6">
-            <asp:DropDownList ID="ddlVillageTown" runat="server" CssClass="form-control form-control-sm">
+            <asp:DropDownList ID="ddlVillageTown" disabled runat="server" CssClass="form-control form-control-sm">
                 <asp:ListItem Text="--Select--" Value="0" />
             </asp:DropDownList>
         </div>
