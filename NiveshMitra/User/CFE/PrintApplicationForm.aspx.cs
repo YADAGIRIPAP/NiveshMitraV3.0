@@ -81,7 +81,9 @@ namespace NiveshMitra.User.CFE
                 {
                     txtNameofUnit.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYNAME"]);
 
-                    LblSectionofExterprise.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_INDUSTRYTYPE"]);
+                    LblSectionofExterprise.InnerHtml = (Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_INDUSTRYTYPE"]) == "1") ? "Service" : "Manufacturing";
+
+
                     txtExtant.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_TOTALEXTENTLAND"]);
                     txtValueofLand.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LANDVALUE"]);
                     txtValueOfBuilding.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_BUILDINGVALUE"]);
@@ -100,7 +102,7 @@ namespace NiveshMitra.User.CFE
                     //txtApplicationType.InnerHtml = "";
                     txtWaterRequiredFrom.InnerHtml = ((Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_BOREWELLEXISTS"]) == "Y") ? "New Bore well, " : "") + ((Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PERRIVERPUBLICTANKERS"]) == "Y") ? "Rivers/Canals" : "");
                     //txtSpirit.InnerHtml = "";
-                    txtConsitutionOfUnit.InnerHtml = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYTYPE"]);
+                    txtConsitutionOfUnit.InnerHtml = Session["CFEQD_COMPANYTYPE"].ToString(); // Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYTYPE"]);
 
                     txtGeneratorRequirement.InnerHtml = (Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_GENREQ"]) == "Y") ? "Yes" : "No";
 
