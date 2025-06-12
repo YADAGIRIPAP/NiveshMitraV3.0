@@ -222,38 +222,28 @@
                                                                         </div>
                                                                     </div>
 
-
                                                                     <div class="col-md-6" runat="server" id="ddlAuthority" visible="false">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
                                                                                 Select Authority<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <div class="form-check form-check-inline ">
-                                                                                    <select title="Please select" class="form-control">
-                                                                                        <option selected="selected" value="Please Select">Please Select</option>
-                                                                                        <option value="08">---</option>
-                                                                                        <option value="21">Infrastructure and Industrial Development Authority - UPSIDA</option>
-                                                                                        <option value="22">Infrastructure and Industrial Development Authority - NOIDA</option>
-                                                                                        <option value="23">Infrastructure and Industrial Development Authority - GREATER NOIDA</option>
-                                                                                        <option value="24">Infrastructure and Industrial Development Authority - YEIDA</option>
-                                                                                        <option value="53">U.P.Expressways Industrial Development Authority(UPEIDA)</option>
-                                                                                        <option value="59">DMIC IITGNL</option>
-                                                                                        <option value="60">Gorakhpur Industrial Development Authority (GIDA)</option>
-                                                                                    </select>
+                                                                                    <asp:DropDownList title="Please select" class="form-control" runat="server">
+                                                                                        <asp:ListItem value="08">Please Select</asp:ListItem>
+                                                                                        <asp:ListItem value="08">---</asp:ListItem>
+                                                                                        <asp:ListItem value="21">Infrastructure and Industrial Development Authority - UPSIDA</asp:ListItem>
+                                                                                        <asp:ListItem value="22">Infrastructure and Industrial Development Authority - NOIDA</asp:ListItem>
+                                                                                        <asp:ListItem value="23">Infrastructure and Industrial Development Authority - GREATER NOIDA</asp:ListItem>
+                                                                                        <asp:ListItem value="24">Infrastructure and Industrial Development Authority - YEIDA</asp:ListItem>
+                                                                                        <asp:ListItem value="53">U.P.Expressways Industrial Development Authority(UPEIDA)</asp:ListItem>
+                                                                                        <asp:ListItem value="59">DMIC IITGNL</asp:ListItem>
+                                                                                        <asp:ListItem value="60">Gorakhpur Industrial Development Authority (GIDA)</asp:ListItem>
+                                                                                    </asp:DropDownList>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-
-
-
                                                                 </div>
-
-
-
-
-
-
                                                                 <div class="col-md-12 d-flex">
                                                                     <div class="col-md-4">
                                                                         <div class="form-group row">
