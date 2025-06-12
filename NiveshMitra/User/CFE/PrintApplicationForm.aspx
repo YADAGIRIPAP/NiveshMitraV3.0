@@ -5,124 +5,125 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>
-        <style>
-            .div3 {
-                /*-webkit-column-count: 3;
-    -moz-column-count: 3; 
-    column-count: 3; */
-                -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
-                -moz-column-gap: 40px; /* Firefox */
-                column-gap: 40px;
-            }
-
-            .w3-code {
-                border-left: 5px solid #73AD21 !important;
-                font-size: 17px;
-                padding: 5px;
-                font-weight: bold;
-                color: #082ea2;
-            }
-
-            .w4-code {
-                border-left: 5px solid #73AD21 !important;
-                font-size: 14px;
-                padding: 5px;
-                font-weight: bold;
-                color: #082ea2;
-            }
-
-            ol.u {
-                list-style-type: none;
-                ;
-                font-size: 13px;
-                padding: 10px 10px 10px 10px;
-            }
-
-            ol.v {
-                list-style-type: inherit;
-                font-size: 17px;
-                font-weight: bold;
-                padding: 10px 10px 10px 10px;
-            }
-
-            .table {
-                border-collapse: collapse;
-                width: 100%;
-            }
-
-            th, td {
-                text-align: left;
-                border: 2px solid ActiveCaptionText;
-                padding: 8px;
-            }
-
-
-
-
-
-            .GRD {
-                width: 200px;
-                height: auto;
-                border-color: #013161;
-                border-style: solid;
-                border-width: 1px;
-                padding: 10px;
-                text-transform: capitalize;
-            }
-
-            * {
-                -webkit-box-sizing: border-box;
-                -moz-box-sizing: border-box;
-                box-sizing: border-box;
-                text-align: center;
-            }
-
-            .GRDHEADER {
-                border: 1px solid #ffffff;
-                color: #0E2A46;
-                vertical-align: middle;
-                text-align: center;
-                height: 25px;
-                width: 50px;
-                padding: 10px;
-                font-size: 12px;
-                font-weight: bold;
-                text-transform: capitalize;
-                font-family: Verdana;
-                BACKGROUND-IMAGE: url('../../Resource/Styles/images/bg_blue_grd.gif');
-            }
-
-            .GRDITEM {
-                /*background-color: WHITE;*/
-                color: black;
-                font-size: 12px;
-                font-weight: normal;
-                font-family: Verdana;
-                padding: 10px;
-                /*text-decoration:none;*/
-                /*border-color:#013161;*/
-                /*border-style:solid;*/
-                text-transform: uppercase;
-                /*border-width:1px;*/
-                /*height:23px;*/
-                /*text-indent:5px;*/
-                /*BACKGROUND-IMAGE: url(../images/grid_bg_.gif);*/
-            }
-
-            a {
-                color: #337ab7;
-                text-decoration: none;
-            }
-
-            a {
-                background-color: transparent;
-            }
-
-            .style2 {
-                color: #FF0000;
-            }
-        </style>
+       Nivesh Mitra
     </title>
+        <style>
+        .div3 {
+            /*-webkit-column-count: 3;
+-moz-column-count: 3; 
+column-count: 3; */
+            -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+            -moz-column-gap: 40px; /* Firefox */
+            column-gap: 40px;
+        }
+
+        .w3-code {
+            border-left: 5px solid #73AD21 !important;
+            font-size: 17px;
+            padding: 5px;
+            font-weight: bold;
+            color: #082ea2;
+        }
+
+        .w4-code {
+            border-left: 5px solid #73AD21 !important;
+            font-size: 14px;
+            padding: 5px;
+            font-weight: bold;
+            color: #082ea2;
+        }
+
+        ol.u {
+            list-style-type: none;
+            ;
+            font-size: 13px;
+            padding: 10px 10px 10px 10px;
+        }
+
+        ol.v {
+            list-style-type: inherit;
+            font-size: 17px;
+            font-weight: bold;
+            padding: 10px 10px 10px 10px;
+        }
+
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            text-align: left;
+            border: 2px solid ActiveCaptionText;
+            padding: 8px;
+        }
+
+
+
+
+
+        .GRD {
+            width: 200px;
+            height: auto;
+            border-color: #013161;
+            border-style: solid;
+            border-width: 1px;
+            padding: 10px;
+            text-transform: capitalize;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .GRDHEADER {
+            border: 1px solid #ffffff;
+            color: #0E2A46;
+            vertical-align: middle;
+            text-align: center;
+            height: 25px;
+            width: 50px;
+            padding: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: capitalize;
+            font-family: Verdana;
+            BACKGROUND-IMAGE: url('../../Resource/Styles/images/bg_blue_grd.gif');
+        }
+
+        .GRDITEM {
+            /*background-color: WHITE;*/
+            color: black;
+            font-size: 12px;
+            font-weight: normal;
+            font-family: Verdana;
+            padding: 10px;
+            /*text-decoration:none;*/
+            /*border-color:#013161;*/
+            /*border-style:solid;*/
+            text-transform: uppercase;
+            /*border-width:1px;*/
+            /*height:23px;*/
+            /*text-indent:5px;*/
+            /*BACKGROUND-IMAGE: url(../images/grid_bg_.gif);*/
+        }
+
+        a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+
+        a {
+            background-color: transparent;
+        }
+
+        .style2 {
+            color: #FF0000;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
