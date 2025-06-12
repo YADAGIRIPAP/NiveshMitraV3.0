@@ -861,6 +861,7 @@ namespace NiveshMitra.User.CFE
 
                     int count = 0;
                     result = objcfebal.InsertQuestionnaireCFE(objCFEQsnaire);
+                   
                     if (result != "100")
                     {
                         CFEQuestionnaireDet objrm = new CFEQuestionnaireDet();
