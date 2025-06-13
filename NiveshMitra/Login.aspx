@@ -221,11 +221,11 @@ a {
 .contact__input {
     margin-bottom: 12px;
 }
-
+/*
  input::placeholder {
      font-style: italic;
      font-size:smaller
- }
+ }*/
                 </style>
     <script type="text/javascript">       
 

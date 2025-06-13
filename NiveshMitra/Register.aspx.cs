@@ -83,13 +83,9 @@ namespace NiveshMitra
 
 
                        // btnClear_Click(sender, e);
-                        lblmsg.Text = "Registered Successfully!";
+                        lblmsg.Text = "Registered successfully. Your credentials have been sent to your registered email ID. ";
                         success.Visible = true;
-
                     }
-
-
-
 
                 }
                 else

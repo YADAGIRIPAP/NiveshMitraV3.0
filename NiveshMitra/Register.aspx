@@ -240,7 +240,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <p class="login-box-msg">Entrepreneur Registration.</p>
+                    <p class="login-box-msg" style="font-weight:bold">Entrepreneur Registration</p>
                     <div class="row" align="Center">
                         <div class="col-md-12 ">
                             <div id="success" runat="server" visible="false" class="alert alert-success alert-dismissible fade show" align="Center">

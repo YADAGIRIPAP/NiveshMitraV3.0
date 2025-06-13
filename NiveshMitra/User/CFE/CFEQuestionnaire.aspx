@@ -225,7 +225,7 @@
                                                                     <div class="col-md-6" runat="server" id="ddlAuthority" visible="false">
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">
-                                                                                Select Authority<span class="star">*</span></label>
+                                                                               1(i). Select Authority<span class="star">*</span></label>
                                                                             <div class="col-lg-6 d-flex">
                                                                                 <div class="form-check form-check-inline ">
                                                                                     <asp:DropDownList title="Please select" class="form-control" runat="server">
