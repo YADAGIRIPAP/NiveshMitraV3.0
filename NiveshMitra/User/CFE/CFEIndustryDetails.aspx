@@ -347,6 +347,14 @@
         </div>
     </div>
 
+       <div class="col-md-4 form-group row align-items-center mb-2">
+    <label class="col-sm-6 col-form-label text-sm-end">Sector<span class="text-danger">*</span></label>
+    <div class="col-sm-6">
+         
+   <asp:DropDownList ID="ddlSector" runat="server" class="form-control" disabled OnSelectedIndexChanged="ddlSector_SelectedIndexChanged">
+ </asp:DropDownList>
+    </div>
+</div>
     <!-- Line of Activity -->
     <div class="col-md-4 form-group row align-items-center mb-2">
         <label class="col-sm-6 col-form-label text-sm-end">Line of Activity <span class="text-danger">*</span></label>
