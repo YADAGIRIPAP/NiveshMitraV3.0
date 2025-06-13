@@ -32,30 +32,32 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     <style>
-                .VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
-    display: none !important;
-}
-               iframe#\:2\.container {
-    display: none;
-}
+        .VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
+            display: none !important;
+        }
+
+        iframe#\:2\.container {
+            display: none;
+        }
 
         body.VIpgJd-ZVi9od-ORHb {
-   display:none !important;
-}
+            display: none !important;
+        }
+
         img.goog-te-gadget-icon {
             display: none;
         }
 
         div#\:0\.targetLanguage {
-    border-radius: 6px;
-    margin-top: -1px;
-    border-color: #b1b1b1;
-    border-top-left-radius: 100px;
-    border-top-right-radius: 100px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 0;
-    padding: 4px 9px;
-}
+            border-radius: 6px;
+            margin-top: -1px;
+            border-color: #b1b1b1;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 0;
+            padding: 4px 9px;
+        }
 
         body {
             top: 0px !important;
@@ -69,25 +71,28 @@
         body.VIpgJd-ZVi9od-ORHb {
             display: none;
         }
+
         div#google_translate_element {
-    margin-top: 8px;
-}
+            margin-top: 8px;
+        }
+
         body.hindi {
-  font-size: 16px;
-        a.nav-link {
-   
-    font-size: 12px !important;
-}
-                  
-                   
-                   }
-                           div#google_translate_element {
-    margin-top: 8px;
-        position: fixed;
-        right: 34em;
-        top: 4px;
-        z-index: 9999;
-}
+            font-size: 16px;
+            a .nav-link
+
+        {
+            font-size: 12px !important;
+        }
+
+        }
+
+        div#google_translate_element {
+            margin-top: 8px;
+            position: fixed;
+            right: 34em;
+            top: 4px;
+            z-index: 9999;
+        }
     </style>
     <style>
         table#ContentPlaceHolder1_rblLbrAct1970 tr td,
@@ -160,14 +165,14 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <a href="#" class="logo">
-                        <img src="/assets/imgs/logo1.png"   style="max-height: 50px;width: 260px;" />
+                        <img src="/assets/imgs/logo1.png" style="max-height: 50px; width: 260px;" />
                         <%--<asp:ImageButton runat="server" ID="imgLogo" ImageUrl="~/assets/assetsnew/images/Logo.png" />--%>
                     </a>
 
                 </div>
-                              
-               
-                
+
+
+
                 <div class="language dropdownn" id="google_translate_element"></div>
                 <!-- /Logo -->
                 <!-- Mobile Menu Toggle -->
@@ -225,7 +230,7 @@ font-style: italic;font-weight: bold;">"State Single<br /> Window System for<br 
                             <asp:LinkButton ID="linkChngPswd" runat="server" class="dropdown-item"><i class="fi fi-br-lock"></i> Change Password</asp:LinkButton>
 
                             <%--<a class="dropdown-item" href="ChangePassword.aspx"></i>Change Password</a>--%>
-                            <asp:LinkButton ID="linklogout" runat="server" class="dropdown-item"><i class="fi fi-br-sign-out-alt"></i> Logout</asp:LinkButton>
+                            <asp:LinkButton ID="linklogout" runat="server" class="dropdown-item" OnClick="linklogout_Click"><i class="fi fi-br-sign-out-alt"></i> Logout</asp:LinkButton>
                         </div>
                     </li>
                     <!-- /User Menu -->
@@ -246,7 +251,7 @@ font-style: italic;font-weight: bold;">"State Single<br /> Window System for<br 
                                 <li class="nav-item">
                                     <asp:LinkButton ID="linkuserdshbrd" runat="server" class="nav-link"><i class="fi fi-br-dashboard"></i> Dashboard </asp:LinkButton>
                                 </li>
-                              <%--  <li class="nav-item">
+                                <%--  <li class="nav-item">
                                     <asp:LinkButton ID="linkIndReg" runat="server" OnClick="linkIndReg_Click" class="nav-link"><i class="fi fi-br-industry-alt"></i> Industry Registration </asp:LinkButton>
                                 </li>
                                 <li class="nav-item">
@@ -278,13 +283,13 @@ font-style: italic;font-weight: bold;">"State Single<br /> Window System for<br 
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         <asp:LinkButton ID="lnkServices" runat="server" class="dropdown-item">Other Services<span class="sr-only">(current)</span></asp:LinkButton>
                                         <asp:LinkButton ID="SRVCAnnualReturns" runat="server" class="dropdown-item">Annual Returns<span class="sr-only">(current)</span></asp:LinkButton>
-                                        <asp:LinkButton ID="lnkCentralRep" runat="server" class="dropdown-item">Central Repository<span class="sr-only">(current)</span></asp:LinkButton> 
-                                        <asp:LinkButton ID="lnkCompliance" runat="server" class="dropdown-item">Compliance Dashboard<span class="sr-only">(current)</span></asp:LinkButton>                                       
-                                        
+                                        <asp:LinkButton ID="lnkCentralRep" runat="server" class="dropdown-item">Central Repository<span class="sr-only">(current)</span></asp:LinkButton>
+                                        <asp:LinkButton ID="lnkCompliance" runat="server" class="dropdown-item">Compliance Dashboard<span class="sr-only">(current)</span></asp:LinkButton>
+
                                     </div>
                                 </li>
-                               
-    
+
+
 
                             </ul>
 
@@ -406,41 +411,41 @@ font-style: italic;font-weight: bold;">"State Single<br /> Window System for<br 
 
             };
         </script>
-                  <script type="text/javascript">
-                      function googleTranslateElementInit() {
-                          new google.translate.TranslateElement({
-                              //pageLanguage: 'en',
-                              includedLanguages: 'hi,en', // Include Khasi (kha) as a target language
-                              layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-                          }, 'google_translate_element');
-                      }
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    //pageLanguage: 'en',
+                    includedLanguages: 'hi,en', // Include Khasi (kha) as a target language
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
 
-                      // Load Google Translate script
-                      (function () {
-                          var gtScript = document.createElement('script');
-                          gtScript.type = 'text/javascript';
-                          gtScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-                          document.body.appendChild(gtScript);
-                      })();
+            // Load Google Translate script
+            (function () {
+                var gtScript = document.createElement('script');
+                gtScript.type = 'text/javascript';
+                gtScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                document.body.appendChild(gtScript);
+            })();
 
-                      // Adjust font size when language changes
-                      const observer = new MutationObserver(() => {
-                          const htmlLang = document.querySelector('html').getAttribute('lang');
-                          const body = document.body;
+            // Adjust font size when language changes
+            const observer = new MutationObserver(() => {
+                const htmlLang = document.querySelector('html').getAttribute('lang');
+                const body = document.body;
 
-                          if (htmlLang === 'hi') {
-                              body.classList.add('hindi'); // Apply decreased font size
-                          } else {
-                              body.classList.remove('hindi'); // Reset to default font size
-                          }
-                      });
+                if (htmlLang === 'hi') {
+                    body.classList.add('hindi'); // Apply decreased font size
+                } else {
+                    body.classList.remove('hindi'); // Reset to default font size
+                }
+            });
 
-                      // Observe changes in the `lang` attribute of the <html> tag
-                      observer.observe(document.documentElement, {
-                          attributes: true,
-                          attributeFilter: ['lang'],
-                      });
-                  </script>
+            // Observe changes in the `lang` attribute of the <html> tag
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['lang'],
+            });
+        </script>
     </form>
 </body>
 </html>

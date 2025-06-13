@@ -13,5 +13,10 @@ namespace NiveshMitra.User
         {
 
         }
+        protected void linklogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("~/Login.aspx");//move to the next link i.e default.aspx
+        }
     }
 }

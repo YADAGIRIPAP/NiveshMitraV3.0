@@ -241,6 +241,8 @@ namespace NiveshMitra.Common
             else if (deptId == "25" && approvalId == "53") return "CFEfire";
             else if (deptId == "26" && approvalId == "54") return "CFEPowerDetails";
             else if (deptId == "19" && approvalId == "42") return "CFEWaterDetails";
+            else if (deptId == "8" && approvalId == "11") return "CFEForestDetails";
+            else if (deptId == "20" && approvalId == "45") return "Estimationofroadcutting";
             else return "";
 
         }

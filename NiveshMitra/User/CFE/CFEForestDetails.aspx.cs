@@ -137,24 +137,50 @@ namespace NiveshMitra.User.CFE
         }
         protected void btnNext_Click(object sender, EventArgs e)
         {
-            
-
             try
             {
-                //btnSave_Click(sender, e);
-                //if (ErrorMsg == "")
-                //Response.Redirect("~/User/CFE/CFEWaterDetails.aspx?Next=" + "N");
-                GetAppliedorNot();
+                DataTable dt = MGCommonClass.GetAppliedorNot(hdnUserID.Value, Convert.ToString(Session["CFEUNITID"]), Convert.ToString(Session["CFEQID"]));
+                Session["PageDt"] = dt;
+                string nextPageUrl = "";
+
+
+                nextPageUrl = MGCommonClass.GetPageUrl(dt, "Next", "8", "11");
+                if (!string.IsNullOrEmpty(nextPageUrl))
+                    Response.Redirect("~/User/CFE/" + nextPageUrl + ".aspx");
+                else
+                    lblmsg0.Text = "No Dept. found.";
             }
+
+
+
+
             catch (Exception ex)
             {
-                lblmsg0.Text = ex.Message;
+                lblmsg.Text = ex.Message;
                 Failure.Visible = true;
                 if (ex.Message != "Thread was being aborted.")
                 {
                     MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
                 }
             }
+
+
+            //try
+            //{
+            //    //btnSave_Click(sender, e);
+            //    //if (ErrorMsg == "")
+            //    //Response.Redirect("~/User/CFE/CFEWaterDetails.aspx?Next=" + "N");
+            //    GetAppliedorNot();
+            //}
+            //catch (Exception ex)
+            //{
+            //    lblmsg0.Text = ex.Message;
+            //    Failure.Visible = true;
+            //    if (ex.Message != "Thread was being aborted.")
+            //    {
+            //        MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            //    }
+            //}
 
         }
 
