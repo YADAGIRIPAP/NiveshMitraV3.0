@@ -36,6 +36,7 @@ namespace NiveshMitra.User.CFE
                     if (hdnUserID.Value == "")
                     {
                         hdnUserID.Value = ObjUserInfo.Userid;
+                        
                     }
                     if (Convert.ToString(Session["CFEUNITID"]) != "")
                     { UnitID = Convert.ToString(Session["CFEUNITID"]); }
@@ -53,8 +54,14 @@ namespace NiveshMitra.User.CFE
                         BindConstitutionType();
                         BindLineOfActivity(ddlSector.SelectedItem.Text);
                         BindData();
-                        
+                        txtEmail.Text = ObjUserInfo.Email;
+                        txtMobileNo.Text = ObjUserInfo.MobileNo;
+
                     }
+
+                     
+
+
                 }
 
 
@@ -366,6 +373,7 @@ namespace NiveshMitra.User.CFE
                     ddlActivityLine.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LOAID"]);
                     ddlLandFromPark.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MIDCLLAND"]);
                     ddlEnterpriseType.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYTYPE"]);
+                    txtTotalEmployment.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPEMP"]);
 
                 }
 

@@ -283,7 +283,7 @@
             <div class="content container-fluid mt-3">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title"><b>ENTERPRISE DETAILS Details</b></h4>
+                        <h4 class="card-title"><b>ENTERPRISE DETAILS </b></h4>
                         <p class="text-danger" style="position: absolute; right: 10px; top: 6px;">*All Fields Are Mandatory</p>
                     </div>
                     <div class="card-body">
@@ -473,7 +473,7 @@
         Email <span class="text-danger">*</span>
     </label>
     <div class="col-sm-6">
-        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control form-control-sm" AutoComplete="off"
+        <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control form-control-sm" AutoComplete="off" disabled
             onblur="validateEmail(this)" />
         <span id="EmailError" class="text-danger small d-block" style="display: none;"> </span>
     </div>
@@ -596,13 +596,13 @@
        <asp:TextBox ID="txtdirectfemale" runat="server" CssClass="form-control form-control-sm" MaxLength="10" AutoComplete="off" 
      />
     </div>
-</div>
-
+</div> 
+                            
  <!-- Total Employment-->
 <div class="col-md-4 form-group row align-items-center mb-2">
-    <label class="col-sm-6 col-form-label text-sm-end">Total Employment <span class="text-danger">*</span></label>
+    <label class="col-sm-6 col-form-label text-sm-end">Proposed Employment<span class="text-danger">*</span></label>
     <div class="col-sm-6">
-       <asp:TextBox ID="txtTotalEmployment" runat="server" CssClass="form-control form-control-sm" MaxLength="10" AutoComplete="off" 
+       <asp:TextBox ID="txtTotalEmployment" runat="server" CssClass="form-control form-control-sm" MaxLength="10" AutoComplete="off" disabled
      />
     </div>
 </div>
