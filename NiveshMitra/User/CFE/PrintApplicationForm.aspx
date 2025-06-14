@@ -270,7 +270,7 @@ column-count: 3; */
 
                                                                     <td>Line of Activity*</td>
                                                                     <td>
-                                                                        <span id="txtActivity" runat="server">Manufactures of Copper Rods &amp; Bare and Copper Wires</span>
+                                                                        <span id="txtActivity" runat="server"></span>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
