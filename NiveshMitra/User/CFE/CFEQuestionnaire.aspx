@@ -500,7 +500,7 @@
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">2. Value of Land as per sale Deed(In INR)<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
-                                                                                <asp:TextBox ID="txtLandValue" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="8" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtLandValue" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="20" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -510,7 +510,7 @@
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">3. Value of Building(In INR)<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
-                                                                                <asp:TextBox ID="txtBuildingValue" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="8" onkeyup="handleKeyUp(this)"></asp:TextBox>
+                                                                                <asp:TextBox ID="txtBuildingValue" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="20" onkeyup="handleKeyUp(this)"></asp:TextBox>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -518,7 +518,7 @@
                                                                         <div class="form-group row">
                                                                             <label class="col-lg-6 col-form-label">4. Value of Plant & Machinery(In INR)<span class="star">*</span></label>
                                                                             <div class="col-lg-4">
-                                                                                <asp:TextBox ID="txtPMCost" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="8"
+                                                                                <asp:TextBox ID="txtPMCost" runat="server" class="form-control" TabIndex="1" onkeypress="return NumberOnly()" MaxLength="20"
                                                                                     AutoPostBack="true" OnTextChanged="txtPMCost_TextChanged" onkeyup="handleKeyUp(this)">
                                                                                 </asp:TextBox>
                                                                             </div>

@@ -1277,7 +1277,7 @@ namespace NiveshMitra.User.CFE
         //}
 
         protected void txtAnnualTurnOver_TextChanged(object sender, EventArgs e)
-        {
+            {
             try
             {
                 if (txtAnnualTurnOver.Text != "" && txtPMCost.Text != "")
@@ -1303,8 +1303,38 @@ namespace NiveshMitra.User.CFE
                                 {
                                     Result = "Large";
                                 }
-                                lblEntCategory.Text = Result;
+                               // lblEntCategory.Text = Result; //to be change
                                 lblTotProjCost.Text = Convert.ToString(Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text));
+
+                                decimal _tpc = Convert.ToDecimal(txtLandValue.Text) + Convert.ToDecimal(txtBuildingValue.Text) + Convert.ToDecimal(txtPMCost.Text);
+                                if (_tpc > 0 && _tpc <= 25000000)
+                                {
+                                    lblEntCategory.Text = "Micro";
+                                }
+                                else if (_tpc > 25000000 && _tpc <= 250000000)
+                                {
+                                    lblEntCategory.Text = "Small";
+                                }
+                                else if (_tpc > 250000000 && _tpc <= 500000000)
+                                {
+                                    lblEntCategory.Text = "Medium";
+                                }
+                                else if (_tpc > 500000000 && _tpc <= 2000000000)
+                                {
+                                    lblEntCategory.Text = "Large";
+                                }
+                                else if (_tpc > 2000000000 && _tpc <= 5000000000)
+                                {
+                                    lblEntCategory.Text = "Mega";
+                                }
+                                else if (_tpc > 5000000000 && _tpc <= 30000000000)
+                                {
+                                    lblEntCategory.Text = "SuperMega";
+                                }
+                                else
+                                {
+                                    lblEntCategory.Text = "UltraMega";
+                                }
                             }
                         }
                     }
@@ -1356,11 +1386,6 @@ namespace NiveshMitra.User.CFE
             }
 
         }
-
-
-
-
-
 
 
         protected void rblFelltrees_SelectedIndexChanged(object sender, EventArgs e)
