@@ -36,6 +36,7 @@ namespace NiveshMitra.User.CFE
                     if (hdnUserID.Value == "")
                     {
                         hdnUserID.Value = ObjUserInfo.Userid;
+                        
                     }
                     if (Convert.ToString(Session["CFEUNITID"]) != "")
                     { UnitID = Convert.ToString(Session["CFEUNITID"]); }
@@ -49,9 +50,18 @@ namespace NiveshMitra.User.CFE
                     {
                         BindState();
                         BindDistricts();
-                        BindData();
+                        BindSectors();
                         BindConstitutionType();
+                        BindLineOfActivity(ddlSector.SelectedItem.Text);
+                        BindData();
+                        txtEmail.Text = ObjUserInfo.Email;
+                        txtMobileNo.Text = ObjUserInfo.MobileNo;
+
                     }
+
+                     
+
+
                 }
 
 
@@ -357,10 +367,13 @@ namespace NiveshMitra.User.CFE
                     ddlDistrict_SelectedIndexChanged(null, EventArgs.Empty);
                     ddlTehsil.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPMANDALID"]);
                     ddlTehsil_SelectedIndexChanged(null, EventArgs.Empty);
+                    ddlSector.SelectedItem.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_SECTOR"]);
+                    ddlSector_SelectedIndexChanged(null, EventArgs.Empty);
                     ddlVillageTown.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPVILLAGEID"]);
                     ddlActivityLine.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_LOAID"]);
                     ddlLandFromPark.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_MIDCLLAND"]);
                     ddlEnterpriseType.SelectedValue = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_COMPANYTYPE"]);
+                    txtTotalEmployment.Text = Convert.ToString(ds.Tables[0].Rows[0]["CFEQD_PROPEMP"]);
 
                 }
 
@@ -405,5 +418,88 @@ namespace NiveshMitra.User.CFE
             }
         }
 
+        
+
+        protected void BindSectors()
+        {
+            try
+            {
+                ddlSector.Items.Clear();
+
+                List<MasterSector> objSectorModel = new List<MasterSector>();
+
+                objSectorModel = mstrBAL.GetSectors();
+                if (objSectorModel != null)
+                {
+                    ddlSector.DataSource = objSectorModel;
+                    ddlSector.DataValueField = "SectorName";
+                    ddlSector.DataTextField = "SectorName";
+                    ddlSector.DataBind();
+                }
+                else
+                {
+                    ddlSector.DataSource = null;
+                    ddlSector.DataBind();
+                }
+                AddSelect(ddlSector);
+            }
+            catch (Exception ex)
+            {
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                //  MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
+        protected void BindLineOfActivity(string Sector)
+        {
+            try
+            {
+                List<MasterLineOfActivity> objLOA = mstrBAL.GetLineOfActivity(Sector);
+
+                if (objLOA != null && objLOA.Count > 0)
+                {
+                    ddlActivityLine.DataSource = objLOA;
+                    ddlActivityLine.DataValueField = "LOAId";
+                    ddlActivityLine.DataTextField = "LOAName";
+                    ddlActivityLine.DataBind();
+                }
+                else
+                {
+
+                    ddlActivityLine.DataSource = null;
+                    ddlActivityLine.DataBind();
+                }
+
+                AddSelect(ddlActivityLine);
+            }
+            catch (Exception ex)
+            {
+
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                //MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
+        protected void ddlSector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ddlSector.SelectedValue.ToString() != "--Select--")
+                {
+                    ddlActivityLine.Items.Clear();
+                    AddSelect(ddlActivityLine);
+                    //lblPCBCategory.Text = "";
+                    BindLineOfActivity(ddlSector.SelectedItem.Text);
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                lblmsg0.Text = ex.Message;
+                Failure.Visible = true;
+                //  MGCommonClass.LogerrorDB(ex, HttpContext.Current.Request.Url.AbsoluteUri, hdnUserID.Value);
+            }
+        }
     }
 }
